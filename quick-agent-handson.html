@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Quick ハンズオン｜AI 検索エージェントを作成しよう</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Amazon Quick Hands-on</span>
+      <ul class="nav-links">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="#intro">エージェントとは</a></li>
+        <li><a href="#mcp">MCP 設定</a></li>
+        <li><a href="#agent">エージェント作成</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ヒーロー -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">Amazon Quick ハンズオン</p>
+      <h1>自分専用の<br>AI 検索エージェントを作成する</h1>
+      <p class="hero-desc">MCP 連携で AWS の最新情報を常に検索できる、あなた専用の AI エージェントを作りましょう。</p>
+      <a href="#mcp" class="btn-primary">ハンズオンを始める</a>
+    </div>
+  </header>
+
+  <!-- 戻るリンク -->
+  <div class="section" style="padding-top: 40px; padding-bottom: 0;">
+    <a href="index.html" class="back-link">← ハンズオン一覧に戻る</a>
+  </div>
+
+  <!-- なぜエージェントを作るのか -->
+  <section id="intro" class="section">
+    <h2 class="section-title">なぜ AI エージェントを作成するのか？</h2>
+    <p class="section-desc">汎用 AI の限界を、自分専用のエージェントで乗り越えましょう。</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">📚</div>
+        <h3>学習データの限界</h3>
+        <p class="card-subtitle">最新情報に弱い</p>
+        <p>汎用 AI が持つ知識は学習時点のデータに限られています。最新情報は学習データに含まれていないため、正確に回答できない、または回答できないという状況が発生します。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h3>社内情報へのアクセス不可</h3>
+        <p class="card-subtitle">非公開情報は検索できない</p>
+        <p>社内規定や過去の提案資料など、公開されていない社内のドキュメント・ナレッジは汎用 AI では検索できません。学習データに含まれていないため回答できないのです。</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">✨</div>
+        <h3>自分専用 AI エージェント</h3>
+        <p class="card-subtitle">これらを解決する</p>
+        <p>集約した情報やツールと連携したエージェントを作成することで、汎用 AI にはない情報を自然言語で検索できるようになります。</p>
+      </div>
+    </div>
+
+    <h4 class="block-title">課題と解決策</h4>
+    <table class="compare-table">
+      <thead>
+        <tr><th>課題</th><th>解決策</th><th>効果</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>最新情報が取得できない</td>
+          <td>AWS MCP 連携</td>
+          <td>AWS の最新ドキュメントをリアルタイム検索し、正確性の高い情報を取得</td>
+        </tr>
+        <tr>
+          <td>社内情報にアクセスできない</td>
+          <td>社内情報スペースとの接続</td>
+          <td>社内情報を集約し、公開されていない社内情報も検索・活用可能</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4 class="block-title">MCP（Model Context Protocol）とは？</h4>
+    <p>AI が外部ツールやデータソースにアクセスするための標準的なプロトコルの仕組みです。これにより AI がファイル操作、API 呼び出し、データベースクエリなどを安全かつ効率的に実行できるようになります。MCP サーバは、AI と外部のリソースを繋ぐ「通訳」や「接続ハブ」の役割を果たします。</p>
+
+    <div class="tip-box">
+      <strong>💡 補足：</strong>自作の MCP サーバを作成することで、インターネット上にない情報（社内情報等）を AI を通じて自然言語で検索できるようになります。
+    </div>
+  </section>
+
+  <!-- MCP 設定 -->
+  <section id="mcp" class="section section-alt">
+    <h2 class="section-title">実践 1：AWS Knowledge MCP を設定する</h2>
+    <p class="section-desc">MCP 連携で最新情報を常に検索できるようにします。</p>
+
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="true">
+        <span class="accordion-icon">🔌</span>
+        <span class="accordion-label">
+          <strong>MCP の設定手順（ステップ 1〜6）</strong>
+          <small>インテグレーション設定 → 検証 → 有効化</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>ステップ 1：インテグレーションページを開く</h4>
+          <p>インテグレーションページを開きます。本ページでは、さまざまな外部システムとの連携オプションが表示されます。画面上部の「アクション」をクリックし、「Model Context Protocol」セクションを見つけて MCP 統合情報の設定を開始します。</p>
+          <div class="screenshot">
+            <img src="images/mcp-step1-integrations.png" alt="インテグレーションページとアクションメニューのスクリーンショット">
+            <p class="screenshot-caption">アクション → Model Context Protocol を選択</p>
+          </div>
+
+          <h4>ステップ 2：名前とエンドポイントを入力</h4>
+          <ol>
+            <li>名前と説明に「<strong>AWS Knowledge Base</strong>」を入力</li>
+            <li>MCP サーバーエンドポイントに以下の URL を入力して「次へ」</li>
+          </ol>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">🔗 MCP サーバーエンドポイント</div>
+            <pre><code>https://knowledge-mcp.global.api.aws</code></pre>
+          </div>
+          <div class="screenshot">
+            <img src="images/mcp-step2-endpoint.png" alt="名前とエンドポイント入力画面のスクリーンショット">
+            <p class="screenshot-caption">名前・説明・エンドポイントを入力</p>
+          </div>
+
+          <h4>ステップ 3：認証情報を検証する</h4>
+          <p>MCP 統合を設定する前に、認証情報が正しく設定されているかを確認します。「作成して続行」ボタンをクリックして、接続に必要な認証情報を検証します。</p>
+          <div class="screenshot">
+            <img src="images/mcp-step3-validate.png" alt="認証情報の検証画面のスクリーンショット">
+            <p class="screenshot-caption">「作成して続行」で認証情報を検証</p>
+          </div>
+
+          <h4>ステップ 4：利用可能なアクションを確認する</h4>
+          <p>統合設定を進めると、利用可能なアクションが表示されます。「Review Action」画面でどのような操作が可能かを確認し、「Next」を押して次に進みます。</p>
+          <div class="tip-box">
+            <strong>ℹ️ 補足：</strong>本 MCP サーバは AWS のドキュメント検索・取得、関連コンテンツの取得などが可能です。
+          </div>
+          <div class="screenshot">
+            <img src="images/mcp-step4-review-action.png" alt="Review Action 画面のスクリーンショット">
+            <p class="screenshot-caption">Review Action で操作内容を確認</p>
+          </div>
+
+          <h4>ステップ 5：設定を完了する</h4>
+          <p>「完了」を押します。</p>
+          <div class="tip-box">
+            <strong>💡 ポイント：</strong>ここで同じ Quick Suite のアカウントを利用しているユーザに対して、自分が設定した MCP サーバを共有することが可能です。一人が設定すれば組織全体に共有できます。
+          </div>
+          <div class="screenshot">
+            <img src="images/mcp-step5-complete.png" alt="設定完了画面のスクリーンショット">
+            <p class="screenshot-caption">「完了」で MCP 設定が完了</p>
+          </div>
+
+          <h4>ステップ 6：アクションが有効になったことを確認する</h4>
+          <p>「アクション」タブを押すと、利用可能なアクションが一覧表示されます。ここで MCP 統合が有効になったことを確認してください。</p>
+          <div class="screenshot">
+            <img src="images/mcp-step6-actions-tab.png" alt="アクションタブの一覧表示スクリーンショット">
+            <p class="screenshot-caption">アクションタブで MCP 統合の有効化を確認</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- エージェント作成 -->
+  <section id="agent" class="section">
+    <h2 class="section-title">実践 2：AWS 検索エージェントを作成する</h2>
+    <p class="section-desc">MCP 初期設定が完了していれば、すべての利用者が実行できます。ぜひご体験ください。</p>
+
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="true">
+        <span class="accordion-icon">🤖</span>
+        <span class="accordion-label">
+          <strong>エージェントの作成手順（ステップ 7〜12）</strong>
+          <small>チャットエージェント作成 → プロンプト設定 → プレビュー → 起動</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>ステップ 7：チャットエージェントを作成する</h4>
+          <p>MCP 統合が完了したら、チャットエージェント画面に移動し、「チャットエージェントを作成」を押してください。ここから先は、あなた専用の AI Agent を作成します。</p>
+          <div class="screenshot">
+            <img src="images/agent-step7-create.png" alt="チャットエージェント作成画面のスクリーンショット">
+            <p class="screenshot-caption">「チャットエージェントを作成」を押下</p>
+          </div>
+
+          <h4>ステップ 8：初期プロンプトを設定する</h4>
+          <p>チャットエージェントの動作を最適化するため、初期プロンプトを設定します。以下のプロンプトをコピーして貼り付けてください。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 初期プロンプト</div>
+            <pre><code>私は社内の役員のためにAWSの質問に答えるチャットエージェントが欲しいです。
+AWSに関する質問は、AWS Knowledge MCPを使ってできるようにする必要があります。
+トーンはビジネスに合ったものであるべきです。</code></pre>
+          </div>
+          <div class="tip-box">
+            <strong>📝 テンプレート：</strong>自分用にアレンジする場合は、以下のテンプレートを参考にしてください。<br>
+            私は「<strong>誰</strong>」のために「<strong>何をする</strong>」チャットエージェントが欲しいです。「<strong>トピック</strong>」に関する知識ベースを使用し、「<strong>特定の機能</strong>」ができるようにする必要があります。トーンは「<strong>スタイル</strong>」であるべきです。
+          </div>
+          <div class="screenshot">
+            <img src="images/agent-step8-prompt.png" alt="初期プロンプト設定画面のスクリーンショット">
+            <p class="screenshot-caption">初期プロンプトを入力</p>
+          </div>
+
+          <h4>ステップ 9：設定を確認してプレビューで質問する</h4>
+          <p>すべての設定が完了すると、右のような画面になります。アクションのセクションに「<strong>AWS Knowledge Base</strong>」があることを確認してください。確認できたら、右側のプレビューエリア（チャット）で以下のような質問を投稿してみましょう。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>Quick Suite を使ってみたいんだけど、新しい新サービスなのでよくわかりません。
+MCPを使って最新情報を調べて教えて。</code></pre>
+          </div>
+          <div class="screenshot">
+            <img src="images/agent-step9-preview.png" alt="設定確認とプレビュー画面のスクリーンショット">
+            <p class="screenshot-caption">アクションに「AWS Knowledge Base」があることを確認してプレビューで質問</p>
+          </div>
+
+          <h4>ステップ 10：出力形式を調整する（任意）</h4>
+          <p>出力形式を変えてほしい場合は、以下の観点で設定を調整できます。AI エージェントが自分好みの出力をするように調整してみてください。</p>
+          <ol>
+            <li><strong>トーン</strong>：話し方の雰囲気や感情表現（フォーマル、カジュアル、フレンドリー、プロフェッショナル）</li>
+            <li><strong>レスポンスの形式</strong>：回答の構造やフォーマット（箇条書き、段落形式）</li>
+            <li><strong>長さ</strong>：回答の詳細度や分量（簡潔、標準、詳細）</li>
+          </ol>
+          <div class="screenshot">
+            <img src="images/agent-step10-output-format.png" alt="出力形式の調整画面のスクリーンショット">
+            <p class="screenshot-caption">トーン・形式・長さを調整</p>
+          </div>
+
+          <h4>ステップ 11：チャットエージェントを起動する</h4>
+          <p>プレビューでの動作に問題がなければ、「チャットエージェントを起動」を押してください。</p>
+
+          <h4>ステップ 12：作成したエージェントを利用する</h4>
+          <p>起動完了後、チャットエージェントが作成されていることを確認し、「チャット」を押すことで、先ほど作成した AI エージェントを利用できるようになります。</p>
+          <div class="screenshot">
+            <img src="images/agent-step12-launch.png" alt="起動後のチャットエージェント画面のスクリーンショット">
+            <p class="screenshot-caption">作成したエージェントでチャットを開始</p>
+          </div>
+
+          <div class="tip-box">
+            <strong>🎉 完成：</strong>これで、AWS の最新情報を MCP 経由でリアルタイムに検索できる、あなた専用の AI 検索エージェントが完成しました。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="index.html" class="back-link">← ハンズオン一覧に戻る</a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>&copy; 2026 Amazon Quick Hands-on. Powered by Amazon Web Services.</p>
+  </footer>
+
+  <script>
+    // ===== アコーディオン =====
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+      });
+    });
+
+    // ===== スムーススクロール =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href.startsWith('#')) return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // ===== プロンプトボックスのコピーボタン =====
+    document.querySelectorAll('.prompt-copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const box = btn.closest('.prompt-box');
+        const code = box.querySelector('code');
+        if (code) {
+          navigator.clipboard.writeText(code.textContent).then(() => {
+            btn.textContent = '✅ コピー済み';
+            setTimeout(() => btn.textContent = '📋 コピー', 1500);
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

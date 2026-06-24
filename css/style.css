@@ -1,0 +1,917 @@
+/* ===== AWS カラーパレット ===== */
+:root {
+  --aws-orange: #ff9900;
+  --aws-dark: #232f3e;
+  --aws-navy: #1a2332;
+  --aws-light: #f5f7fa;
+  --aws-blue: #2074d5;
+  --aws-teal: #1dc7b0;
+  --aws-text: #333;
+  --aws-text-light: #666;
+  --aws-border: #e0e4e8;
+  --radius: 12px;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== リセット & ベース ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Segoe UI", sans-serif;
+  color: var(--aws-text);
+  line-height: 1.7;
+  background: #fff;
+}
+
+a {
+  color: var(--aws-blue);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== ナビゲーション ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--aws-dark);
+  color: #fff;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--aws-orange);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #ccc;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--aws-orange);
+  text-decoration: none;
+}
+
+/* ===== ヒーロー ===== */
+.hero {
+  background: linear-gradient(135deg, var(--aws-dark) 0%, var(--aws-navy) 100%);
+  color: #fff;
+  padding: 140px 24px 80px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--aws-orange);
+  color: var(--aws-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  color: #b0bec5;
+  margin-bottom: 32px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--aws-orange);
+  color: var(--aws-dark);
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.4);
+  text-decoration: none;
+}
+
+/* ===== セクション共通 ===== */
+.section {
+  padding: 80px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-alt {
+  background: var(--aws-light);
+  max-width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section-alt > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--aws-dark);
+}
+
+.section-desc {
+  text-align: center;
+  color: var(--aws-text-light);
+  margin-bottom: 40px;
+}
+
+/* ===== 製品カード ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--aws-border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-icon {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  color: var(--aws-dark);
+  margin-bottom: 4px;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: var(--aws-orange);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--aws-text-light);
+  margin-bottom: 16px;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--aws-blue);
+}
+
+/* ===== アコーディオン ===== */
+.accordion {
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.accordion-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: background 0.2s;
+}
+.accordion-btn:hover {
+  background: #fafafa;
+}
+
+.accordion-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.accordion-label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.accordion-label strong {
+  font-size: 1.05rem;
+  color: var(--aws-dark);
+}
+
+.accordion-label small {
+  font-size: 0.8rem;
+  color: var(--aws-text-light);
+}
+
+.accordion-arrow {
+  font-size: 0.8rem;
+  color: var(--aws-text-light);
+  transition: transform 0.3s;
+}
+
+.accordion-btn[aria-expanded="true"] .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.accordion-btn[aria-expanded="true"] + .accordion-content {
+  max-height: 30000px;
+}
+
+.handson-body {
+  padding: 8px 28px 32px;
+  background: #fff;
+  border-top: 1px solid var(--aws-border);
+}
+
+.handson-body h4 {
+  font-size: 1rem;
+  color: var(--aws-dark);
+  margin: 24px 0 8px;
+  padding-left: 12px;
+  border-left: 3px solid var(--aws-orange);
+}
+
+.handson-body p,
+.handson-body ol,
+.handson-body ul {
+  font-size: 0.95rem;
+  color: var(--aws-text);
+  margin-bottom: 12px;
+}
+
+.handson-body ol {
+  padding-left: 20px;
+}
+
+/* ===== プロンプト・出力ボックス ===== */
+.prompt-box,
+.output-box {
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 12px 0 16px;
+  font-size: 0.9rem;
+}
+
+.prompt-box {
+  background: #eef4ff;
+  border-left: 4px solid var(--aws-blue);
+  position: relative;
+}
+
+.prompt-copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  border: 1px solid var(--aws-border);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  color: var(--aws-text-light);
+  transition: background 0.2s, color 0.2s;
+  z-index: 1;
+}
+
+.prompt-copy-btn:hover {
+  background: var(--aws-light);
+  color: var(--aws-text);
+}
+
+/* ===== フォーム入力風コピーフィールド ===== */
+.copy-field {
+  margin-bottom: 14px;
+}
+
+.copy-field-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--aws-dark);
+  margin-bottom: 4px;
+}
+
+.copy-field-value {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid var(--aws-border);
+  border-radius: 6px;
+  padding: 10px 12px;
+  gap: 8px;
+}
+
+.copy-field-text {
+  flex: 1;
+  font-family: "Consolas", "SFMono-Regular", monospace;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--aws-text);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.copy-field-btn {
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid var(--aws-border);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  color: var(--aws-text-light);
+  transition: background 0.2s, color 0.2s;
+}
+
+.copy-field-btn:hover {
+  background: var(--aws-light);
+  color: var(--aws-text);
+}
+
+.output-box {
+  background: #e8f8f0;
+  border-left: 4px solid var(--aws-teal);
+}
+
+.prompt-label,
+.output-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.prompt-label {
+  color: var(--aws-blue);
+}
+
+.output-label {
+  color: #0d8a5e;
+}
+
+.prompt-box pre {
+  background: #fff;
+  border-radius: 6px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.prompt-box code {
+  font-family: "Consolas", "SFMono-Regular", monospace;
+  white-space: pre-wrap;
+}
+
+.output-box ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.tip-box {
+  background: #fff8e6;
+  border-left: 4px solid var(--aws-orange);
+  border-radius: 8px;
+  padding: 14px 20px;
+  margin: 16px 0;
+  font-size: 0.9rem;
+  color: #6b5900;
+}
+
+/* ===== トラブルシューティング ===== */
+.troubleshoot-box {
+  border: 1px solid var(--aws-border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 12px 0 16px;
+}
+
+.troubleshoot-item {
+  background: #fff;
+}
+
+.troubleshoot-item + .troubleshoot-item {
+  border-top: 1px solid var(--aws-border);
+}
+
+.troubleshoot-symptom {
+  background: #fef2f2;
+  border-left: 4px solid #e53e3e;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #c53030;
+}
+
+.troubleshoot-solution {
+  padding: 16px 20px;
+  font-size: 0.9rem;
+}
+
+.troubleshoot-solution p {
+  margin-bottom: 12px;
+}
+
+/* ===== Kiro レスポンス表示 ===== */
+.kiro-response {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 8px;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--aws-text);
+  border: 1px solid var(--aws-border);
+}
+
+.kiro-response p {
+  margin-bottom: 10px;
+}
+
+.kiro-response p:last-child {
+  margin-bottom: 0;
+}
+
+.coming-soon {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--aws-text-light);
+}
+
+.coming-soon p {
+  margin-bottom: 12px;
+}
+
+/* ===== 環境情報 ===== */
+.env-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.env-card {
+  background: #fff;
+  border: 1px solid var(--aws-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.env-card h3 {
+  font-size: 1.1rem;
+  color: var(--aws-dark);
+  margin-bottom: 16px;
+}
+
+.env-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.env-table th,
+.env-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--aws-border);
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+.env-table th {
+  background: var(--aws-light);
+  font-weight: 600;
+  color: var(--aws-dark);
+  width: 100px;
+  white-space: nowrap;
+}
+
+.env-table td {
+  max-width: 0;
+  position: relative;
+}
+
+.env-table td a {
+  word-break: break-all;
+}
+
+.env-table code {
+  font-family: "Consolas", "SFMono-Regular", monospace;
+  font-size: 0.85rem;
+  word-break: break-all;
+}
+
+.placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+.env-note {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: var(--aws-text-light);
+}
+
+/* ===== フッター ===== */
+.footer {
+  background: var(--aws-dark);
+  color: #888;
+  text-align: center;
+  padding: 24px;
+  font-size: 0.85rem;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .env-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .handson-body {
+    padding: 8px 16px 24px;
+  }
+}
+
+/* ===== 画像関連 ===== */
+.card-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.screenshot {
+  margin: 16px 0;
+  text-align: left;
+}
+
+.screenshot img {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--aws-border);
+  box-shadow: var(--shadow);
+}
+
+.screenshot-caption {
+  font-size: 0.82rem;
+  color: var(--aws-text-light);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.hero-image {
+  margin-top: 32px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: var(--radius);
+}
+
+/* ===== ユーザー選択 ===== */
+.user-selector {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.user-selector label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--aws-dark);
+  margin-right: 12px;
+}
+
+.user-selector select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 16px;
+  border: 2px solid var(--aws-orange);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--aws-dark);
+  cursor: pointer;
+  min-width: 220px;
+  transition: box-shadow 0.2s;
+}
+
+.user-selector select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.3);
+}
+
+.env-placeholder {
+  text-align: center;
+  padding: 48px 20px;
+  background: var(--aws-light);
+  border-radius: var(--radius);
+  border: 2px dashed var(--aws-border);
+}
+
+.env-placeholder p {
+  font-size: 1.05rem;
+  color: var(--aws-text-light);
+  margin-bottom: 8px;
+}
+
+.env-placeholder-sub {
+  font-size: 0.85rem !important;
+}
+
+.env-placeholder code {
+  background: #e8e8e8;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.env-user-badge {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--aws-dark);
+  background: linear-gradient(135deg, #fff3d6, #ffe8b0);
+  border: 2px solid var(--aws-orange);
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin-bottom: 24px;
+}
+
+.env-info {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.copy-btn {
+  background: none;
+  border: 1px solid var(--aws-border);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 2px 6px;
+  margin-left: 8px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  background: var(--aws-light);
+}
+
+/* Password/Account セル内のレイアウト */
+.env-table td code {
+  display: inline;
+}
+
+.env-table td .copy-btn {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+/* ===== ロック解除UI ===== */
+.env-locked {
+  text-align: center;
+  padding: 48px 20px;
+  background: var(--aws-light);
+  border-radius: var(--radius);
+  border: 2px solid var(--aws-border);
+  margin-bottom: 24px;
+}
+
+.lock-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.env-locked p {
+  color: var(--aws-text-light);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.unlock-form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.unlock-form input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 12px 16px;
+  border: 2px solid var(--aws-border);
+  border-radius: 8px;
+  width: 260px;
+  transition: border-color 0.2s;
+}
+
+.unlock-form input:focus {
+  outline: none;
+  border-color: var(--aws-orange);
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
+}
+
+.btn-unlock {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 28px;
+  background: var(--aws-orange);
+  color: var(--aws-dark);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-unlock:hover {
+  background: #e88a00;
+}
+
+.unlock-error {
+  color: #e53e3e;
+  font-size: 0.9rem;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+/* ===== 追加ハンズオンへのリンク（アコーディオン風） ===== */
+.accordion-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: #fff;
+  border: none;
+  text-align: left;
+  transition: background 0.2s, transform 0.2s;
+}
+.accordion-link:hover {
+  background: #fafafa;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+.accordion-link .accordion-arrow {
+  font-size: 1rem;
+  color: var(--aws-orange);
+  font-weight: 700;
+}
+
+/* ===== 戻るリンク ===== */
+.back-link {
+  display: inline-block;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--aws-blue);
+}
+.back-link:hover {
+  color: var(--aws-orange);
+  text-decoration: none;
+}
+
+/* ===== ブロック見出し ===== */
+.block-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--aws-dark);
+  margin: 40px 0 16px;
+  padding-left: 14px;
+  border-left: 4px solid var(--aws-orange);
+}
+
+/* ===== 比較テーブル ===== */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--aws-border);
+  vertical-align: top;
+}
+
+.compare-table thead th {
+  background: var(--aws-dark);
+  color: #fff;
+  font-weight: 700;
+}
+
+.compare-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.compare-table tbody tr:nth-child(even) td {
+  background: var(--aws-light);
+}
+
+@media (max-width: 768px) {
+  .compare-table {
+    font-size: 0.82rem;
+  }
+  .compare-table th,
+  .compare-table td {
+    padding: 10px 12px;
+  }
+}

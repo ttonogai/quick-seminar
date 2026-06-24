@@ -1,0 +1,24 @@
+# ===== 公開サイトに含めないもの =====
+
+# 参考用の旧サイト（独自の .git を含むため丸ごと除外）
+202605-ai-seminar/
+
+# ハンズオン元資料（大容量・内部資料）
+samples/
+
+# ===== エディタ / IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== OS / Windows 生成ファイル =====
+.DS_Store
+Thumbs.db
+desktop.ini
+*Zone.Identifier
+
+# ===== ログ・一時ファイル =====
+*.log
+*.tmp
+*.bak

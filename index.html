@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Quick ハンズオン</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Amazon Quick Hands-on</span>
+      <ul class="nav-links">
+        <li><a href="#products">製品紹介</a></li>
+        <li><a href="#handson">ハンズオン</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ヒーロー -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">Amazon Quick</p>
+      <h1>Amazon Quick<br>ハンズオン</h1>
+      <p class="hero-desc">Amazon Quick を使って、AI を活用したデータ分析と業務自動化を体験しましょう。</p>
+      <a href="#handson" class="btn-primary">ハンズオンを始める</a>
+    </div>
+  </header>
+
+  <!-- 製品紹介 -->
+  <section id="products" class="section">
+    <h2 class="section-title">製品紹介</h2>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Amazon Quick</h3>
+        <p class="card-subtitle">Unified Business Intelligence</p>
+        <p>Amazon Quick は、AI エージェントを活用したビジネス支援サービスです。自然言語で質問するだけでデータ分析やリサーチができ、ダッシュボード作成やレポート生成、業務の自動化まで幅広くサポートします。専門知識がなくても、社内データをもとにした分析結果や気づきをすぐに引き出すことができます。</p>
+        <a href="https://aws.amazon.com/jp/quick/" target="_blank" class="card-link">公式サイト →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ハンズオン内容 -->
+  <section id="handson" class="section section-alt">
+    <h2 class="section-title">ハンズオン内容</h2>
+    <p class="section-desc">体験したいハンズオンを選んで、手順ページに進んでください。</p>
+
+    <!-- ダッシュボード分析ハンズオン -->
+    <a href="quick-dashboard-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">📊</span>
+      <span class="accordion-label">
+        <strong>ダッシュボードを AI で分析しよう</strong>
+        <small>所要時間：約 30 分 ・ 自然言語でデータ分析 → 資料・レポート自動作成</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <!-- AI 検索エージェント作成ハンズオン -->
+    <a href="quick-agent-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🤖</span>
+      <span class="accordion-label">
+        <strong>自分専用の AI 検索エージェントを作成しよう</strong>
+        <small>所要時間：約 30 分 ・ MCP 連携で AWS の最新情報を検索</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>&copy; 2026 Amazon Quick Hands-on. Powered by Amazon Web Services.</p>
+  </footer>
+
+  <script>
+    // ===== スムーススクロール =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href.startsWith('#')) return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+
+</body>
+</html>

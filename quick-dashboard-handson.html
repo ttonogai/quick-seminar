@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Quick ハンズオン｜ダッシュボードを AI で分析しよう</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Amazon Quick Hands-on</span>
+      <ul class="nav-links">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="#handson">手順</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ヒーロー -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">Amazon Quick ハンズオン</p>
+      <h1>ダッシュボードを<br>AI で分析しよう</h1>
+      <p class="hero-desc">営業売上データを AI に自然言語で質問しながら分析し、結果をパワーポイント資料やレポートに自動でまとめます。</p>
+      <a href="#handson" class="btn-primary">ハンズオンを始める</a>
+    </div>
+  </header>
+
+  <!-- 戻るリンク -->
+  <div class="section" style="padding-top: 40px; padding-bottom: 0;">
+    <a href="index.html" class="back-link">← ハンズオン一覧に戻る</a>
+  </div>
+
+  <!-- ハンズオン手順 -->
+  <section id="handson" class="section">
+    <h2 class="section-title">ダッシュボード分析ハンズオン</h2>
+    <p class="section-desc">所要時間：約 30 分</p>
+
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="true">
+        <span class="accordion-icon">📊</span>
+        <span class="accordion-label">
+          <strong>ダッシュボードを AI で分析しよう（ステップ 1〜5）</strong>
+          <small>データ分析 → パワーポイント作成 → フロー自動化</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>概要</h4>
+          <p>Amazon Quick のダッシュボードを使って、営業売上データを AI に自然言語で質問しながら分析します。最後に分析結果をパワーポイント資料として出力します。</p>
+
+          <h4>ステップ 1：Amazon Quick にアクセス</h4>
+          <p>当日配布された URL・認証情報で Amazon Quick にログインしてください。</p>
+
+          <h4>ステップ 2：ダッシュボードを開く</h4>
+          <ol>
+            <li>左メニューから「ダッシュボード」を選択</li>
+            <li>「営業売上ダッシュボード」をクリック</li>
+            <li>画面右上の「チャット」ボタンをクリック
+              <div class="screenshot">
+                <img src="images/quick-chat.png" alt="チャットボタンの位置を示すスクリーンショット">
+              </div>
+            </li>
+            <li>チャットのデータが「売上分析ダッシュボード」になっていることを確認
+              <div class="screenshot">
+                <img src="images/quick-data.png" alt="チャットのデータソース確認のスクリーンショット">
+              </div>
+            </li>
+          </ol>
+
+          <h4>ステップ 3：ダッシュボードを AI で分析</h4>
+          <p>ダッシュボードの画面で、以下のような質問を自然言語で入力してみましょう。気になる観点から自由に試してください。</p>
+
+          <p><strong>📈 パフォーマンス分析</strong></p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>売上トップの担当者03は、なぜ他の担当者より成績が良いのか？取り扱い製品や顧客に特徴はありますか？</code></pre>
+          </div>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>粗利率が最も高い担当者は誰ですか？売り上げは高いが粗利率が低い担当者はいますか？</code></pre>
+          </div>
+
+          <p><strong>📅 トレンド・季節性分析</strong></p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>製品カテゴリ別に、直近4四半期の売上トレンドを比較してください。成長しているカテゴリと衰退しているカテゴリを教えてください。</code></pre>
+          </div>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>2024年Q4が売上ピークであるが、2025年Q4と比べてどう変化しましたか？</code></pre>
+          </div>
+
+          <p><strong>🏢 顧客・業界分析</strong></p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>金融業が売上トップだが、1社あたりの平均受注金額が最も高い業界はどこですか？</code></pre>
+          </div>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>売上上位5社の顧客はどの営業部門が担当していますか？</code></pre>
+          </div>
+
+          <div class="tip-box">
+            <strong>💡 ポイント：</strong>上記はあくまで例です。ダッシュボードを見て気になったことを自由に質問してみましょう。AI が自然言語を理解してデータから回答してくれます。
+          </div>
+
+          <h4>ステップ 4：パワーポイントを作成</h4>
+          <p>分析が終わったら、以下のプロンプトで結果をパワーポイント資料にまとめてみましょう。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 入力プロンプト</div>
+            <pre><code>売り上げ分析ダッシュボードの2025年の内容を要約し、経営層に報告するためのパワーポイントファイルを作成して</code></pre>
+          </div>
+
+          <h4>ステップ 5：フローで月次報告を自動化</h4>
+          <p>次に、Quick の「フロー」機能を使って、ダッシュボードのデータ取得から報告書作成までを自動化してみましょう。</p>
+          <ol>
+            <li>左メニューから「フロー」を選択</li>
+            <li>「フローを作成」をクリック</li>
+            <li>以下のプロンプトを入力して送信：</li>
+          </ol>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 入力プロンプト</div>
+            <pre><code>売上分析ダッシュボード内の最新月のデータを取得し、月次報告用のドキュメントを作成するフローを作成してください。
+
+【取得するデータ】
+• 総売上金額・総粗利額・平均粗利率
+• 営業部門別売上構成比
+
+【出力ドキュメントの構成】
+以下の2セクションのみ、です・ます調で作成してください。
+
+1. 今月の実績サマリー：主要KPIと前月比の総括（3〜4文）
+2. 分析と来月のアクション：
+   部門別パフォーマンスと来月の施策（3〜4文）
+   製品カテゴリ別の売上分析（3〜4文）
+   来月の目標・アクションプラン（3〜4文）</code></pre>
+          </div>
+
+          <p>フローが実行されたら、出力結果からドキュメントをダウンロードして内容を確認してみましょう。</p>
+
+          <div class="tip-box">
+            <strong>💡 ポイント：</strong>フローを使えば、毎月の定型レポート作成を自動化できます。データ取得→分析→ドキュメント生成までを AI が一気通貫で実行します。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="index.html" class="back-link">← ハンズオン一覧に戻る</a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>&copy; 2026 Amazon Quick Hands-on. Powered by Amazon Web Services.</p>
+  </footer>
+
+  <script>
+    // ===== アコーディオン =====
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+      });
+    });
+
+    // ===== スムーススクロール =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href.startsWith('#')) return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // ===== プロンプトボックスのコピーボタン =====
+    document.querySelectorAll('.prompt-copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const box = btn.closest('.prompt-box');
+        const code = box.querySelector('code');
+        if (code) {
+          navigator.clipboard.writeText(code.textContent).then(() => {
+            btn.textContent = '✅ コピー済み';
+            setTimeout(() => btn.textContent = '📋 コピー', 1500);
+          });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
