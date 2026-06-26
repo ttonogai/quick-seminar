@@ -915,3 +915,45 @@ a:hover {
     padding: 10px 12px;
   }
 }
+
+/* ===== データファイル一覧 ===== */
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 16px;
+}
+
+.file-list li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  background: #fff;
+  border: 1px solid var(--aws-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+}
+
+.file-list li a {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.file-list .file-note {
+  font-size: 0.82rem;
+  color: var(--aws-text-light);
+}
+
+/* ===== ハンズオン一覧のグループ見出し ===== */
+.handson-group-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--aws-dark);
+  margin: 28px 0 12px;
+  padding-left: 12px;
+  border-left: 4px solid var(--aws-orange);
+}
+.handson-group-title:first-of-type {
+  margin-top: 8px;
+}

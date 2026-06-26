@@ -1,0 +1,95 @@
+職種コード,職種名,部門,標準付与権限,SaaSサービス,権限レベル,承認者,承認フロー,備考
+JOB-001,一般社員（営業）,営業部,Microsoft 365 / Salesforce / Slack / Box / Zoom,Salesforce,標準ユーザー,所属部長,部長承認→情シス発行,CRMデータ閲覧・編集可
+JOB-002,一般社員（営業）,営業部,Microsoft 365 / Salesforce / Slack / Box / Zoom,Box,コラボレーター,所属部長,部長承認→情シス発行,営業部フォルダのみ
+JOB-003,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub,Jira,プロジェクトメンバー,所属部長,部長承認→情シス発行,担当プロジェクトのみ
+JOB-004,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub,GitHub,Developer,所属部長,部長承認→情シス発行,担当リポジトリのみ
+JOB-005,一般社員（経理）,経理部,Microsoft 365 / freee会計 / Slack / Box,freee会計,一般ユーザー,経理部長,部長承認→情シス発行,仕訳入力・経費申請
+JOB-006,一般社員（人事）,人事部,Microsoft 365 / SmartHR / Slack / Box,SmartHR,一般ユーザー,人事部長,部長承認→情シス発行,従業員情報閲覧（自部門のみ）
+JOB-007,一般社員（マーケ）,マーケティング部,Microsoft 365 / Slack / Box / Google Analytics / HubSpot,HubSpot,マーケティングユーザー,所属部長,部長承認→情シス発行,キャンペーン作成・レポート閲覧
+JOB-008,課長職,全部門共通,所属部門の全SaaS + 承認権限,Salesforce,マネージャー,所属部長,部長承認→情シス発行,レポート・ダッシュボード作成可
+JOB-009,課長職,全部門共通,所属部門の全SaaS + 承認権限,freee会計,承認者,経理部長,部長承認→情シス発行,経費承認権限
+JOB-010,部長職,全部門共通,全社SaaS + 管理者権限（一部）,Salesforce,システム管理者（制限付き）,情報システム部長,役員承認→情シス発行,ユーザー管理権限含む
+JOB-011,部長職,全部門共通,全社SaaS + 管理者権限（一部）,Box,共同管理者,情報システム部長,役員承認→情シス発行,部門フォルダ管理権限
+JOB-012,役員,経営層,全社SaaS + 経営ダッシュボード,Salesforce,システム管理者,代表取締役,取締役会承認→情シス発行,全データアクセス可
+JOB-013,役員,経営層,全社SaaS + 経営ダッシュボード,freee会計,管理者,代表取締役,取締役会承認→情シス発行,決算データ閲覧可
+JOB-014,派遣社員,全部門共通,Microsoft 365（制限付き）/ Slack（閲覧のみ）,Microsoft 365,制限付きユーザー,受入部門長,部長承認→情シス発行,外部共有不可・DLP適用
+JOB-015,派遣社員,全部門共通,Microsoft 365（制限付き）/ Slack（閲覧のみ）,Slack,ゲスト,受入部門長,部長承認→情シス発行,指定チャンネルのみ
+JOB-016,業務委託,開発部,Jira / Confluence / GitHub（制限付き）,GitHub,Outside Collaborator,開発部長+情シス部長,二重承認→情シス発行,指定リポジトリのみ・IP制限あり
+JOB-017,業務委託,開発部,Jira / Confluence / GitHub（制限付き）,Jira,制限付きメンバー,開発部長+情シス部長,二重承認→情シス発行,担当チケットのみ
+JOB-018,インターン,人事部,Microsoft 365（制限付き）/ Slack（閲覧のみ）,Microsoft 365,制限付きユーザー,人事部長,部長承認→情シス発行,期間限定アカウント（最大3ヶ月）
+JOB-019,情報システム部員,情報システム部,全社SaaS + 管理コンソール,Azure AD,グローバル管理者,情報システム部長,部長承認+CISO承認,特権アカウント・PIM適用
+JOB-020,情報システム部員,情報システム部,全社SaaS + 管理コンソール,Intune,Intune管理者,情報システム部長,部長承認+CISO承認,端末ポリシー管理
+JOB-021,監査部員,監査部,全社SaaS（読取専用）+ 監査ログ,Salesforce,読取専用ユーザー,監査部長,監査部長承認→情シス発行,データエクスポート不可
+JOB-022,監査部員,監査部,全社SaaS（読取専用）+ 監査ログ,Azure AD,セキュリティ閲覧者,監査部長+CISO,二重承認→情シス発行,監査ログ閲覧のみ
+JOB-023,一般社員（営業）,営業部,Microsoft 365 / Salesforce / Slack / Box / Zoom,Microsoft 365,標準ユーザー,所属部長,部長承認→情シス発行,E3ライセンス・外部共有制限あり
+JOB-024,一般社員（営業）,営業部,Microsoft 365 / Salesforce / Slack / Box / Zoom,Slack,メンバー,所属部長,部長承認→情シス発行,全パブリックチャンネル参加可
+JOB-025,一般社員（営業）,営業部,Microsoft 365 / Salesforce / Slack / Box / Zoom,Zoom,ライセンスユーザー,所属部長,部長承認→情シス発行,会議主催可・録画権限なし
+JOB-026,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub,Confluence,標準ユーザー,所属部長,部長承認→情シス発行,開発部スペース編集可
+JOB-027,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub,Slack,メンバー,所属部長,部長承認→情シス発行,全パブリックチャンネル参加可
+JOB-028,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub / AWS,AWS（開発環境）,PowerUser,開発部長+CISO,二重承認→情シス発行,開発アカウントのみ・本番アクセス不可
+JOB-029,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub,Datadog,閲覧者,開発部長,部長承認→情シス発行,ダッシュボード閲覧のみ
+JOB-030,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub,Notion,メンバー,開発部長,部長承認→情シス発行,開発部ワークスペースのみ
+JOB-031,一般社員（経理）,経理部,Microsoft 365 / freee会計 / Slack / Box,Microsoft 365,標準ユーザー,経理部長,部長承認→情シス発行,E3ライセンス
+JOB-032,一般社員（経理）,経理部,Microsoft 365 / freee会計 / Slack / Box,Box,コラボレーター,経理部長,部長承認→情シス発行,経理部フォルダのみ
+JOB-033,一般社員（経理）,経理部,Microsoft 365 / freee会計 / Slack / Box,Slack,メンバー,経理部長,部長承認→情シス発行,全パブリックチャンネル参加可
+JOB-034,一般社員（人事）,人事部,Microsoft 365 / SmartHR / Slack / Box,Microsoft 365,標準ユーザー,人事部長,部長承認→情シス発行,E3ライセンス
+JOB-035,一般社員（人事）,人事部,Microsoft 365 / SmartHR / Slack / Box,Box,コラボレーター,人事部長,部長承認→情シス発行,人事部フォルダのみ
+JOB-036,一般社員（マーケ）,マーケティング部,Microsoft 365 / Slack / Box / Google Analytics / HubSpot,Google Analytics,閲覧者,所属部長,部長承認→情シス発行,データエクスポート不可
+JOB-037,一般社員（マーケ）,マーケティング部,Microsoft 365 / Slack / Box / Google Analytics / HubSpot / Adobe CC,Adobe Creative Cloud,ライセンスユーザー,マーケティング部長,部長承認→情シス発行,デザイン担当者のみ
+JOB-038,一般社員（マーケ）,マーケティング部,Microsoft 365 / Slack / Box / Google Analytics / HubSpot,Box,コラボレーター,所属部長,部長承認→情シス発行,マーケ部フォルダのみ
+JOB-039,一般社員（総務）,総務部,Microsoft 365 / Slack / Box,Microsoft 365,標準ユーザー,総務部長,部長承認→情シス発行,E3ライセンス
+JOB-040,一般社員（総務）,総務部,Microsoft 365 / Slack / Box,Box,コラボレーター,総務部長,部長承認→情シス発行,総務部フォルダのみ
+JOB-041,一般社員（総務）,総務部,Microsoft 365 / Slack / Box,Slack,メンバー,総務部長,部長承認→情シス発行,全パブリックチャンネル参加可
+JOB-042,テックリード,開発部,開発部全SaaS + AWS本番ReadOnly,AWS（本番環境）,ReadOnly,開発部長+CISO,二重承認→情シス発行,障害時のみPIMで昇格
+JOB-043,テックリード,開発部,開発部全SaaS + AWS本番ReadOnly,GitHub,Maintainer,開発部長,部長承認→情シス発行,複数リポジトリ管理可
+JOB-044,テックリード,開発部,開発部全SaaS + AWS本番ReadOnly,Datadog,編集者,開発部長,部長承認→情シス発行,ダッシュボード作成・アラート設定可
+JOB-045,課長職（経理）,経理部,経理部全SaaS + 承認権限,freee会計,マネージャー,経理部長,部長承認→情シス発行,月次決算・レポート閲覧可
+JOB-046,課長職（人事）,人事部,人事部全SaaS + 承認権限,SmartHR,部門管理者,人事部長,部長承認→情シス発行,全部門データ閲覧可
+JOB-047,課長職（開発）,開発部,開発部全SaaS + 承認権限,Jira,プロジェクト管理者,開発部長,部長承認→情シス発行,プロジェクト設定変更可
+JOB-048,部長職（経理）,経理部,全社SaaS + 管理者権限,freee会計,管理者,情報システム部長+CFO,役員承認→情シス発行,全データアクセス可
+JOB-049,部長職（人事）,人事部,全社SaaS + 管理者権限,SmartHR,システム管理者,情報システム部長+CHRO,役員承認→情シス発行,全従業員データアクセス可
+JOB-050,業務委託,マーケティング部,Figma / Slack（制限付き）,Figma,編集者,マーケティング部長+情シス部長,二重承認→情シス発行,指定プロジェクトのみ
+JOB-051,業務委託,マーケティング部,Figma / Slack（制限付き）,Slack,ゲスト,マーケティング部長,部長承認→情シス発行,指定チャンネルのみ
+JOB-052,インターン,開発部,Jira（閲覧のみ）/ Slack（閲覧のみ）,Jira,閲覧者,開発部長,部長承認→情シス発行,期間限定アカウント（最大3ヶ月）
+JOB-053,役員,経営層,全社SaaS + 経営ダッシュボード,Microsoft 365,E5ライセンス,代表取締役,取締役会承認→情シス発行,高度なセキュリティ機能付き
+JOB-054,役員,経営層,全社SaaS + 経営ダッシュボード,Box,共同管理者,代表取締役,取締役会承認→情シス発行,全社フォルダ管理権限
+JOB-055,情報システム部員,情報システム部,全社SaaS + 管理コンソール,CrowdStrike,管理者,情報システム部長+CISO,部長承認+CISO承認,EDR管理・ポリシー設定
+JOB-056,情報システム部員,情報システム部,全社SaaS + 管理コンソール,1Password,管理者,情報システム部長,部長承認→CISO承認,パスワードポリシー管理
+JOB-057,監査部員,監査部,全社SaaS（読取専用）+ 監査ログ,freee会計,読取専用ユーザー,監査部長,監査部長承認→情シス発行,仕訳データ閲覧のみ
+JOB-058,監査部員,監査部,全社SaaS（読取専用）+ 監査ログ,SmartHR,読取専用ユーザー,監査部長+人事部長,二重承認→情シス発行,従業員データ閲覧のみ
+JOB-023,一般社員（営業）,営業部,Microsoft 365 / Salesforce / Slack / Box / Zoom,Microsoft 365,標準ユーザー,所属部長,部長承認→情シス発行,E3ライセンス・外部共有制限あり
+JOB-024,一般社員（営業）,営業部,Microsoft 365 / Salesforce / Slack / Box / Zoom,Slack,メンバー,所属部長,部長承認→情シス発行,全パブリックチャンネル参加可
+JOB-025,一般社員（営業）,営業部,Microsoft 365 / Salesforce / Slack / Box / Zoom,Zoom,ライセンスユーザー,所属部長,部長承認→情シス発行,会議主催可・録画権限なし
+JOB-026,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub,Confluence,標準ユーザー,所属部長,部長承認→情シス発行,開発部スペース編集可
+JOB-027,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub,Slack,メンバー,所属部長,部長承認→情シス発行,全パブリックチャンネル参加可
+JOB-028,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub / AWS,AWS（開発環境）,PowerUser,開発部長+CISO,二重承認→情シス発行,開発アカウントのみ・本番アクセス不可
+JOB-029,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub,Datadog,閲覧者,開発部長,部長承認→情シス発行,ダッシュボード閲覧のみ
+JOB-030,一般社員（開発）,開発部,Microsoft 365 / Jira / Confluence / Slack / GitHub,Notion,メンバー,開発部長,部長承認→情シス発行,開発部ワークスペースのみ
+JOB-031,一般社員（経理）,経理部,Microsoft 365 / freee会計 / Slack / Box,Microsoft 365,標準ユーザー,経理部長,部長承認→情シス発行,E3ライセンス
+JOB-032,一般社員（経理）,経理部,Microsoft 365 / freee会計 / Slack / Box,Box,コラボレーター,経理部長,部長承認→情シス発行,経理部フォルダのみ
+JOB-033,一般社員（経理）,経理部,Microsoft 365 / freee会計 / Slack / Box,Slack,メンバー,経理部長,部長承認→情シス発行,全パブリックチャンネル参加可
+JOB-034,一般社員（人事）,人事部,Microsoft 365 / SmartHR / Slack / Box,Microsoft 365,標準ユーザー,人事部長,部長承認→情シス発行,E3ライセンス
+JOB-035,一般社員（人事）,人事部,Microsoft 365 / SmartHR / Slack / Box,Box,コラボレーター,人事部長,部長承認→情シス発行,人事部フォルダのみ
+JOB-036,一般社員（マーケ）,マーケティング部,Microsoft 365 / Slack / Box / Google Analytics / HubSpot,Google Analytics,閲覧者,所属部長,部長承認→情シス発行,データエクスポート不可
+JOB-037,一般社員（マーケ）,マーケティング部,Microsoft 365 / Slack / Box / Google Analytics / HubSpot / Adobe CC,Adobe Creative Cloud,ライセンスユーザー,マーケティング部長,部長承認→情シス発行,デザイン担当者のみ
+JOB-038,一般社員（マーケ）,マーケティング部,Microsoft 365 / Slack / Box / Google Analytics / HubSpot,Box,コラボレーター,所属部長,部長承認→情シス発行,マーケ部フォルダのみ
+JOB-039,一般社員（総務）,総務部,Microsoft 365 / Slack / Box,Microsoft 365,標準ユーザー,総務部長,部長承認→情シス発行,E3ライセンス
+JOB-040,一般社員（総務）,総務部,Microsoft 365 / Slack / Box,Box,コラボレーター,総務部長,部長承認→情シス発行,総務部フォルダのみ
+JOB-041,一般社員（総務）,総務部,Microsoft 365 / Slack / Box,Slack,メンバー,総務部長,部長承認→情シス発行,全パブリックチャンネル参加可
+JOB-042,テックリード,開発部,開発部全SaaS + AWS本番ReadOnly,AWS（本番環境）,ReadOnly,開発部長+CISO,二重承認→情シス発行,障害時のみPIMで昇格
+JOB-043,テックリード,開発部,開発部全SaaS + AWS本番ReadOnly,GitHub,Maintainer,開発部長,部長承認→情シス発行,複数リポジトリ管理可
+JOB-044,テックリード,開発部,開発部全SaaS + AWS本番ReadOnly,Datadog,編集者,開発部長,部長承認→情シス発行,ダッシュボード作成・アラート設定可
+JOB-045,課長職（経理）,経理部,経理部全SaaS + 承認権限,freee会計,マネージャー,経理部長,部長承認→情シス発行,月次決算・レポート閲覧可
+JOB-046,課長職（人事）,人事部,人事部全SaaS + 承認権限,SmartHR,部門管理者,人事部長,部長承認→情シス発行,全部門データ閲覧可
+JOB-047,課長職（開発）,開発部,開発部全SaaS + 承認権限,Jira,プロジェクト管理者,開発部長,部長承認→情シス発行,プロジェクト設定変更可
+JOB-048,部長職（経理）,経理部,全社SaaS + 管理者権限,freee会計,管理者,情報システム部長+CFO,役員承認→情シス発行,全データアクセス可
+JOB-049,部長職（人事）,人事部,全社SaaS + 管理者権限,SmartHR,システム管理者,情報システム部長+CHRO,役員承認→情シス発行,全従業員データアクセス可
+JOB-050,業務委託,マーケティング部,Figma / Slack（制限付き）,Figma,編集者,マーケティング部長+情シス部長,二重承認→情シス発行,指定プロジェクトのみ
+JOB-051,業務委託,マーケティング部,Figma / Slack（制限付き）,Slack,ゲスト,マーケティング部長,部長承認→情シス発行,指定チャンネルのみ
+JOB-052,インターン,開発部,Jira（閲覧のみ）/ Slack（閲覧のみ）,Jira,閲覧者,開発部長,部長承認→情シス発行,期間限定アカウント（最大3ヶ月）
+JOB-053,役員,経営層,全社SaaS + 経営ダッシュボード,Microsoft 365,E5ライセンス,代表取締役,取締役会承認→情シス発行,高度なセキュリティ機能付き
+JOB-054,役員,経営層,全社SaaS + 経営ダッシュボード,Box,共同管理者,代表取締役,取締役会承認→情シス発行,全社フォルダ管理権限
+JOB-055,情報システム部員,情報システム部,全社SaaS + 管理コンソール,CrowdStrike,管理者,情報システム部長+CISO,部長承認+CISO承認,EDR管理・ポリシー設定
+JOB-056,情報システム部員,情報システム部,全社SaaS + 管理コンソール,1Password,管理者,情報システム部長,部長承認→CISO承認,パスワードポリシー管理
+JOB-057,監査部員,監査部,全社SaaS（読取専用）+ 監査ログ,freee会計,読取専用ユーザー,監査部長,監査部長承認→情シス発行,仕訳データ閲覧のみ
+JOB-058,監査部員,監査部,全社SaaS（読取専用）+ 監査ログ,SmartHR,読取専用ユーザー,監査部長+人事部長,二重承認→情シス発行,従業員データ閲覧のみ
