@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Quick ハンズオン｜使い方（Space とエージェントの作り方）</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Amazon Quick Hands-on</span>
+      <ul class="nav-links">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="#flow">基本の流れ</a></li>
+        <li><a href="#next">次のステップ</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ヒーロー -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">共通ガイド</p>
+      <h1>使い方<br>Space とエージェントの作り方</h1>
+      <p class="hero-desc">各ハンズオン（保守サービス・社内ヘルプデスク・就業勤怠運用）で共通する、Amazon Quick 上で Space を作りエージェントを動かすまでの流れです。</p>
+      <a href="#flow" class="btn-primary">流れを見る</a>
+    </div>
+  </header>
+
+  <!-- 戻るリンク -->
+  <div class="section" style="padding-top: 40px; padding-bottom: 0;">
+    <a href="index.html#handson" class="back-link">← ハンズオン一覧に戻る</a>
+  </div>
+
+  <!-- 基本の流れ -->
+  <section id="flow" class="section">
+    <h2 class="section-title">基本の流れ</h2>
+    <p class="section-desc">所要時間：約 10 分 ・ どのハンズオンでも手順は同じです</p>
+
+    <div class="tip-box">
+      <strong>📌 このページの位置づけ：</strong>ここでは「Space の作り方」「エージェントの作り方」という共通操作を説明します。Space 名・アップロードするデータ・エージェント定義プロンプト・質問例といった<strong>ケースごとの具体的な中身は、各ハンズオンページに記載</strong>しています。まず本ページで流れをつかみ、各ハンズオンページの値をコピーしながら進めてください。
+    </div>
+
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="true">
+        <span class="accordion-icon">🧭</span>
+        <span class="accordion-label">
+          <strong>ステップ 1〜7：Space 作成 → ナレッジ追加 → エージェント作成 → 質問</strong>
+          <small>Amazon Quick の画面で操作します</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>ステップ 1：取り組むハンズオンを選ぶ</h4>
+          <p>本セミナーでは、現場業務での活用イメージがつかみやすい 3 つのシナリオを用意しています。トップページから取り組みたいハンズオンを選んでください。</p>
+          <ul>
+            <li><a href="quick-maintenance-handson.html">保守サービス</a>（フィールド保守の訪問計画・顧客対応）</li>
+            <li><a href="quick-helpdesk-handson.html">社内ヘルプデスク</a>（IT 一次対応の自動化）</li>
+            <li><a href="quick-attendance-handson.html">就業・勤怠運用</a>（勤怠の問い合わせ対応と自動チェック）</li>
+          </ul>
+          <p>どのケースを選んでも、このあとの操作手順はまったく同じです。</p>
+
+          <h4>ステップ 2：Amazon Quick にログイン</h4>
+          <p>当日配布された URL・認証情報で Amazon Quick にログインします。ブラウザで <code>https://quicksight.aws.amazon.com/</code> にアクセスするか、AWS マネジメントコンソールの検索窓に「Quick」と入力して <strong>Amazon Quick</strong> を開いても同じ画面に到達できます。</p>
+
+          <h4>ステップ 3：Space を作成する</h4>
+          <p>左側のペインメニューから「<strong>スペース</strong>」を選択し、「<strong>スペースを作成する</strong>」をクリックします。新しい Space の編集画面に遷移します。</p>
+          <div class="screenshot">
+            <img src="images/usage/step03_space_pane.png" alt="Quick のスペース一覧画面" loading="lazy">
+            <p class="screenshot-caption">左ペインから「スペース」を選択</p>
+          </div>
+          <div class="screenshot">
+            <img src="images/usage/step03_create_space.png" alt="スペース作成画面" loading="lazy">
+            <p class="screenshot-caption">「スペースを作成する」をクリック</p>
+          </div>
+          <div class="tip-box">
+            <strong>💡 Space とは：</strong>エージェントが回答の根拠として参照するデータ（ナレッジ）をまとめて格納する「データ空間」です。
+          </div>
+
+          <h4>ステップ 4：Space に名前を付ける</h4>
+          <p>画面上部の Space 名（初期値は「無題のスペース」）をクリックすると編集できます。各ハンズオンページに記載された <strong>Space 名</strong>をコピーして貼り付けてください。</p>
+          <div class="screenshot">
+            <img src="images/usage/step04_space_name.png" alt="Quick で Space 名を入力する画面" loading="lazy">
+            <p class="screenshot-caption">Space 名を入力</p>
+          </div>
+
+          <h4>ステップ 5：データ（ナレッジ）をアップロードする</h4>
+          <ol>
+            <li>各ハンズオンページの「データファイル」からファイルをすべてダウンロードします（CSV・Markdown）</li>
+            <li>Space 画面中央の「<strong>ナレッジを追加</strong>」→「<strong>ファイルのアップロード</strong>」を選択</li>
+            <li>ダウンロードしたファイルをすべて選んでアップロード</li>
+          </ol>
+          <div class="screenshot">
+            <img src="images/usage/step05_upload_menu.png" alt="ナレッジを追加メニュー" loading="lazy">
+            <p class="screenshot-caption">「ナレッジを追加」→「ファイルのアップロード」</p>
+          </div>
+          <div class="screenshot">
+            <img src="images/usage/step05_uploaded.png" alt="ファイルアップロード完了の状態" loading="lazy">
+            <p class="screenshot-caption">ファイルがアップロードされた状態</p>
+          </div>
+          <div class="tip-box">
+            <strong>💡 ポイント：</strong>ここでアップロードしたファイルが、エージェントの回答の根拠（ナレッジ）になります。一般的な知識ではなく、あなたが渡したデータに基づいた回答が返ってくるのが Quick の強みです。アップロード前に「プレビュー」で中身を確認することもできます。
+          </div>
+          <div class="screenshot">
+            <img src="images/usage/step05_preview.png" alt="ファイルのプレビュー表示" loading="lazy">
+            <p class="screenshot-caption">プレビューで中身を確認できる</p>
+          </div>
+
+          <h4>ステップ 6：チャットエージェントを作成する</h4>
+          <ol>
+            <li>左ペインから「<strong>チャットエージェント</strong>」→「<strong>チャットエージェントを作成</strong>」をクリック（Space は自動保存されるのでそのまま進んで大丈夫です）</li>
+            <li>各ハンズオンページの「<strong>エージェント定義プロンプト</strong>」をコピーし、プロンプト入力欄に貼り付け</li>
+            <li>「<strong>生成</strong>」をクリック</li>
+          </ol>
+          <div class="screenshot">
+            <img src="images/usage/step06_agent_pane.png" alt="チャットエージェントのペイン" loading="lazy">
+            <p class="screenshot-caption">左ペインから「チャットエージェント」を選択</p>
+          </div>
+          <div class="screenshot">
+            <img src="images/usage/step06_agent_create.png" alt="エージェント作成画面" loading="lazy">
+            <p class="screenshot-caption">「チャットエージェントを作成」</p>
+          </div>
+          <div class="screenshot">
+            <img src="images/usage/step06_paste_generate.png" alt="プロンプトを貼り付けて生成" loading="lazy">
+            <p class="screenshot-caption">プロンプトを貼り付けて「生成」</p>
+          </div>
+          <div class="tip-box">
+            <strong>💡 ポイント：</strong>AI がプロンプトを解釈し、エージェントの名前・説明・ガードレールまで自動構成します。複雑なシステムプロンプト設計は不要です。数分でエージェントが完成します。
+          </div>
+          <div class="screenshot">
+            <img src="images/usage/step06_agent_done.png" alt="エージェント完成の画面" loading="lazy">
+            <p class="screenshot-caption">エージェント完成</p>
+          </div>
+
+          <h4>ステップ 7：エージェントに質問してみる</h4>
+          <p>完成したら画面下部のチャット欄から質問しましょう。各ハンズオンページの「質問してみよう」にある質問例をそのままコピーしてもOKです。回答にはアップロードしたデータが根拠として使われます。</p>
+          <div class="screenshot">
+            <img src="images/usage/step07_answer.png" alt="エージェントの回答例" loading="lazy">
+            <p class="screenshot-caption">アップロードしたデータに基づいた回答が返ってくる</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 次のステップ：業務シナリオ -->
+  <section id="next" class="section section-alt">
+    <h2 class="section-title">次のステップ：業務シナリオを試す</h2>
+    <p class="section-desc">基本の流れがつかめたら、自分の業務に近いシナリオで実際に作ってみましょう。各シナリオで「分析」「ダッシュボード作成」「Flow 自動化」まで体験できます。</p>
+
+    <a href="quick-maintenance-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🔧</span>
+      <span class="accordion-label">
+        <strong>保守サービス：訪問計画と顧客対応を支援しよう</strong>
+        <small>SLA 判断・フォローアップ・契約更新提案</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-helpdesk-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">💻</span>
+      <span class="accordion-label">
+        <strong>社内ヘルプデスク：IT 一次対応を自動化しよう</strong>
+        <small>FAQ 一次回答・申請案内・傾向分析</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-attendance-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🕐</span>
+      <span class="accordion-label">
+        <strong>就業・勤怠運用：問い合わせ対応と自動チェック</strong>
+        <small>規則の根拠つき回答・残業リスク分析・自動通知</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="index.html#handson" class="back-link">← ハンズオン一覧に戻る</a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>&copy; 2026 Amazon Quick Hands-on. Powered by Amazon Web Services.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+      });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href.startsWith('#')) return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
+
+</body>
+</html>
