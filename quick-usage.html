@@ -15,7 +15,7 @@
       <ul class="nav-links">
         <li><a href="index.html">トップ</a></li>
         <li><a href="#flow">基本の流れ</a></li>
-        <li><a href="#advanced">応用編</a></li>
+        <li><a href="#next">次のステップ</a></li>
       </ul>
     </div>
   </nav>
@@ -32,7 +32,7 @@
 
   <!-- 戻るリンク -->
   <div class="section" style="padding-top: 40px; padding-bottom: 0;">
-    <a href="index.html" class="back-link">← ハンズオン一覧に戻る</a>
+    <a href="index.html#handson" class="back-link">← ハンズオン一覧に戻る</a>
   </div>
 
   <!-- 基本の流れ -->
@@ -149,34 +149,40 @@
     </div>
   </section>
 
-  <!-- 応用編 -->
-  <section id="advanced" class="section section-alt">
-    <h2 class="section-title">応用編：もっとやりこむ</h2>
-    <p class="section-desc">基本の質問応答ができたら、Quick の 3 つの力を引き出してみましょう。</p>
+  <!-- 次のステップ：業務シナリオ -->
+  <section id="next" class="section section-alt">
+    <h2 class="section-title">次のステップ：業務シナリオを試す</h2>
+    <p class="section-desc">基本の流れがつかめたら、自分の業務に近いシナリオで実際に作ってみましょう。各シナリオで「分析」「ダッシュボード作成」「Flow 自動化」まで体験できます。</p>
 
-    <div class="cards">
-      <div class="card">
-        <div class="card-icon">📈</div>
-        <h3>分析させる</h3>
-        <p class="card-subtitle">Chat で集計・比較</p>
-        <p>アップロードした CSV に対して「部門別の平均を比較して」「上位5件を出して」のような分析クエリを投げると、エージェントがデータを読み取り集計・比較した結果を返します。</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">📊</div>
-        <h3>ダッシュボードを作る</h3>
-        <p class="card-subtitle">自然言語で可視化</p>
-        <p>各ハンズオンに同梱の日次データ（大規模 CSV）を使い、ダッシュボード作成プロンプトを投げると、自然言語の指示だけで可視化ダッシュボードが構築できます。</p>
-      </div>
-      <div class="card">
-        <div class="card-icon">⚙️</div>
-        <h3>Flow で自動化する</h3>
-        <p class="card-subtitle">定型業務を一気通貫</p>
-        <p>「フロー」機能を使うと、データ取得 → 判定 → 通知文やレポートの生成までを自動化できます。各ハンズオンに Flow 用プロンプトを用意しています。</p>
-      </div>
-    </div>
+    <a href="quick-maintenance-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🔧</span>
+      <span class="accordion-label">
+        <strong>保守サービス：訪問計画と顧客対応を支援しよう</strong>
+        <small>SLA 判断・フォローアップ・契約更新提案</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-helpdesk-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">💻</span>
+      <span class="accordion-label">
+        <strong>社内ヘルプデスク：IT 一次対応を自動化しよう</strong>
+        <small>FAQ 一次回答・申請案内・傾向分析</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-attendance-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🕐</span>
+      <span class="accordion-label">
+        <strong>就業・勤怠運用：問い合わせ対応と自動チェック</strong>
+        <small>規則の根拠つき回答・残業リスク分析・自動通知</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
 
     <div style="text-align:center; margin-top: 40px;">
-      <a href="index.html" class="back-link">← ハンズオン一覧に戻る</a>
+      <a href="index.html#handson" class="back-link">← ハンズオン一覧に戻る</a>
     </div>
   </section>
 
