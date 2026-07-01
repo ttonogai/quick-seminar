@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Quick ハンズオン｜フローで提案資料を自動作成</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Amazon Quick Hands-on</span>
+      <ul class="nav-links">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="#steps">手順</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">第1部 ・ 講師と一緒</p>
+      <h1>フローで<br>提案資料を自動作成しよう</h1>
+      <p class="hero-desc">IT 営業がエンドユーザー向けの AWS 提案資料を作るフローを構築し、ソリューションと顧客情報を入力するだけで資料が完成する流れを体験します。</p>
+      <a href="#steps" class="btn-primary">ハンズオンを始める</a>
+    </div>
+  </header>
+
+  <div class="section" style="padding-top: 40px; padding-bottom: 0;">
+    <a href="index.html#handson" class="back-link">← ハンズオン一覧に戻る</a>
+  </div>
+
+  <section id="steps" class="section">
+    <h2 class="section-title">フロー ハンズオン</h2>
+    <p class="section-desc">所要時間：約 15 分</p>
+
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="true">
+        <span class="accordion-icon">⚙️</span>
+        <span class="accordion-label">
+          <strong>フローの作成と実行（ステップ 1〜7）</strong>
+          <small>フロー作成 → 生成 → 実行モードで資料出力</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>概要</h4>
+          <p>Amazon Quick の「フロー」機能を使って、IT 営業がエンドユーザー向けの AWS 提案資料を作成する仕組みを構築します。一度フローを作っておけば、提案するソリューションと顧客情報を入力するだけで、専門用語を抑えたわかりやすい提案資料が自動で完成します。営業の提案準備にかかる手間を大きく減らせるのがポイントです。</p>
+
+          <h4>ステップ 1：フローを開く</h4>
+          <p>左メニューから「<strong>フロー</strong>」を選択します。</p>
+          <!-- スクリーンショット挿入予定: images/flow/step1-select-flow.png -->
+          <div class="screenshot">
+            <img src="images/flow/flow_step1.png" alt="左メニューから「フロー」を選択">
+          </div>
+
+          <h4>ステップ 2：フローを作成する</h4>
+          <p>「<strong>フローを作成</strong>」をクリックします。</p>
+          <!-- スクリーンショット挿入予定: images/flow/step2-create-flow.png -->
+          <div class="screenshot">
+            <img src="images/flow/flow_step2.png" alt="「フローを作成」をクリック">
+          </div>
+
+          <h4>ステップ 3：プロンプトを入力して生成する</h4>
+          <p>以下のプロンプトを入力欄に貼り付けた後に、「生成」をクリックします。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 入力プロンプト</div>
+            <pre><code>IT営業がエンドユーザにAWSを提案する資料をフローで作成したい。エンドユーザはAWS経験は未経験もしくは初心者レベルの知識なので、専門用語は極力避ける。営業は、提案するソリューション（例：Amazon Quick、VMwareからの移行）と入力すると、フローが回り、提案資料が作成される。</code></pre>
+          </div>
+          <!-- スクリーンショット挿入予定: images/flow/step3-prompt.png -->
+          <div class="screenshot">
+            <img src="images/flow/flow_step3.png" alt="プロンプトを入力">
+          </div>
+
+          <h4>ステップ 4：フローが作成される</h4>
+          <p>フローが作成されます。</p>
+          <div class="tip-box">
+            <strong>ℹ️ 注意：</strong>作成されるフローの内容は人それぞれで微妙に異なります。生成結果が多少違っても問題ありません。
+          </div>
+          <!-- スクリーンショット挿入予定: images/flow/step4-generated.png -->
+          <div class="screenshot">
+            <img src="images/flow/flow_step4.png" alt="「生成」をクリックしてフローが作成された状態">
+          </div>
+
+          <h4>ステップ 5：実行モードに切り替える</h4>
+          <p>画面右上の「<strong>実行モード</strong>」をクリックします。</p>
+          <!-- スクリーンショット挿入予定: images/flow/step5-run-mode.png -->
+          <div class="screenshot">
+            <img src="images/flow/flow_step5.png" alt="画面右上の「実行モード」をクリック">
+          </div>
+
+          <h4>ステップ 6：情報を入力して開始する</h4>
+          <p>「提案ソリューション名」と「顧客情報」、「提案の目的・ゴールを入力」がそれぞれ分かれて表示されます。各欄に以下をコピーして入力してください。その後、「<strong>開始</strong>」をクリックします。</p>
+          <div class="prompt-box">
+            <div class="prompt-label">💬 入力例</div>
+            <div class="copy-field">
+              <div class="copy-field-label">提案ソリューション名を入力</div>
+              <div class="copy-field-value">
+                <span class="copy-field-text">VMwareからの移行</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+            <div class="copy-field">
+              <div class="copy-field-label">顧客情報を入力</div>
+              <div class="copy-field-value">
+                <span class="copy-field-text">製造業、VM30台</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+            <div class="copy-field">
+              <div class="copy-field-label">提案の目的・ゴールを入力</div>
+              <div class="copy-field-value">
+                <span class="copy-field-text">コスト削減、運用負荷削減</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+          </div>
+          <!-- スクリーンショット挿入予定: images/flow/step6-input.png -->
+          <div class="screenshot">
+            <img src="images/flow/flow_step6.png" alt="提案ソリューション名と顧客情報を入力">
+          </div>
+
+          <h4>ステップ 7：資料が作成される</h4>
+          <p>フローが流れて提案資料が作成されます。</p>
+          <!-- スクリーンショット挿入予定: images/flow/step7-result.png -->
+          <div class="screenshot">
+            <img src="images/flow/flow_step7.png" alt="「開始」をクリックしてフローが資料を作成した状態">
+          </div>
+
+          <div class="tip-box">
+            <strong>🎉 完成：</strong>ソリューションと顧客情報を入力するだけで、提案資料を自動生成するフローができました。営業の提案準備を大きく効率化できます。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="index.html#handson" class="back-link">← ハンズオン一覧に戻る</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Amazon Quick Hands-on. Powered by Amazon Web Services.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+      });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href.startsWith('#')) return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    document.querySelectorAll('.prompt-copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.closest('.prompt-box').querySelector('code');
+        if (code) navigator.clipboard.writeText(code.textContent).then(() => {
+          btn.textContent = '✅ コピー済み';
+          setTimeout(() => btn.textContent = '📋 コピー', 1500);
+        });
+      });
+    });
+    document.querySelectorAll('.copy-field-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.closest('.copy-field-value').querySelector('.copy-field-text').textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          btn.textContent = '✅';
+          setTimeout(() => btn.textContent = '📋', 1500);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

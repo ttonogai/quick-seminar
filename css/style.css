@@ -945,6 +945,19 @@ a:hover {
   color: var(--aws-text-light);
 }
 
+/* ===== ハンズオン一覧のコンテナ（見出しとカードの左端を揃える） ===== */
+.handson-list {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.handson-list .accordion,
+.handson-list .accordion-link {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* ===== ハンズオン一覧のグループ見出し ===== */
 .handson-group-title {
   font-size: 1.05rem;
@@ -1003,4 +1016,26 @@ a:hover {
 }
 .accordion-link-guide:hover {
   background: #fff8e8;
+}
+
+/* ===== スクリーンショット挿入用プレースホルダー ===== */
+.screenshot-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  margin: 16px 0;
+  padding: 24px;
+  background: repeating-linear-gradient(
+    45deg,
+    #f7f8fa,
+    #f7f8fa 10px,
+    #eef1f5 10px,
+    #eef1f5 20px
+  );
+  border: 2px dashed var(--aws-border);
+  border-radius: 8px;
+  color: var(--aws-text-light);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
