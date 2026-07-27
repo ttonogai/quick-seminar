@@ -434,6 +434,51 @@ a:hover {
   white-space: pre-wrap;
 }
 
+/* ===== 折りたたみ式プロンプト ===== */
+.prompt-collapsible .prompt-code {
+  position: relative;
+  max-height: 260px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.prompt-collapsible .prompt-code::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.prompt-collapsible.expanded .prompt-code {
+  max-height: none;
+}
+
+.prompt-collapsible.expanded .prompt-code::after {
+  opacity: 0;
+}
+
+.prompt-toggle-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: var(--aws-blue);
+  background: #fff;
+  border: 1px solid var(--aws-blue);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.prompt-toggle-btn:hover {
+  background: #eef4ff;
+}
+
 .output-box ul {
   padding-left: 20px;
   margin-bottom: 0;
@@ -644,6 +689,34 @@ a:hover {
   color: var(--aws-text-light);
   margin-top: 8px;
   font-style: italic;
+}
+
+/* ===== 画像上の「ここをクリック」赤枠オーバーレイ ===== */
+.img-annotate {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 0;
+}
+
+.img-annotate img {
+  max-width: 100%;
+  height: auto;
+}
+
+.click-box {
+  position: absolute;
+  border: 3px solid #ff3b30;
+  border-radius: 6px;
+  box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.25);
+  pointer-events: none;
+  box-sizing: border-box;
+  animation: click-box-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes click-box-pulse {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.25); }
+  50%      { box-shadow: 0 0 0 6px rgba(255, 59, 48, 0.10); }
 }
 
 .hero-image {
@@ -1038,4 +1111,89 @@ a:hover {
   color: var(--aws-text-light);
   font-size: 0.9rem;
   font-weight: 600;
+}
+
+
+/* ===== 背景ストーリー（OLA→MGN→Quick）の3ステップ図 ===== */
+.flow-steps {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.flow-step {
+  flex: 1 1 220px;
+  max-width: 300px;
+  background: #fff;
+  border: 1px solid var(--aws-border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.flow-step-active {
+  border: 2px solid var(--aws-blue);
+  background: #f5f9ff;
+}
+
+.flow-step-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.flow-step-num {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--aws-text);
+}
+
+.flow-step p {
+  font-size: 0.86rem;
+  color: var(--aws-text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.flow-step-arrow {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: var(--aws-orange);
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .flow-step-arrow {
+    transform: rotate(90deg);
+    justify-content: center;
+  }
+}
+
+
+/* 背景図：座学で触れた OLA/MGN は控えめに、Quick を主役に */
+.flow-step-muted {
+  background: #f7f8fa;
+  border-style: dashed;
+  box-shadow: none;
+  opacity: 0.85;
+}
+
+.flow-step-muted .flow-step-icon {
+  filter: grayscale(0.4);
+}
+
+.flow-step-tag {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--aws-text-light);
+  background: #e9edf2;
+  border-radius: 999px;
+  padding: 2px 10px;
 }

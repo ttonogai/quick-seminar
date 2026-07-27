@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Quick ハンズオン｜管理者用ダッシュボード作成手順（オプション）</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Amazon Quick Hands-on</span>
+      <ul class="nav-links">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="#steps">手順</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ヒーロー -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">オプション ・ 管理者向け</p>
+      <h1>管理者用<br>ダッシュボード作成手順</h1>
+      <p class="hero-desc">大規模な日次データを使って、自然言語でダッシュボードを作成します。ダッシュボードの作成には管理者権限が必要なため、オプション手順として切り出しています。</p>
+      <a href="#steps" class="btn-primary">手順を見る</a>
+    </div>
+  </header>
+
+  <!-- 戻るリンク -->
+  <div class="section" style="padding-top: 40px; padding-bottom: 0;">
+    <a href="index.html#handson" class="back-link">← ハンズオン一覧に戻る</a>
+  </div>
+
+  <!-- 手順 -->
+  <section id="steps" class="section">
+    <h2 class="section-title">ダッシュボード作成（管理者向け）</h2>
+    <p class="section-desc">所要時間：約 10 分 ・ 管理者権限が必要です</p>
+
+    <div class="tip-box">
+      <strong>⚠️ 前提：</strong>ダッシュボードの作成には <strong>管理者（Admin）権限</strong>が必要です。一般ユーザーの権限では作成できないため、この手順は管理者アカウントで実施してください。各業務シナリオのハンズオンで作成した Space に、可視化用の日次データを追加して進めます。
+    </div>
+
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="true">
+        <span class="accordion-icon">📊</span>
+        <span class="accordion-label">
+          <strong>ダッシュボードを作成する（共通手順）</strong>
+          <small>日次データをアップロード → 自然言語で可視化</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>ステップ 1：対象の Space を開く</h4>
+          <p>各業務シナリオのハンズオンで作成した Space（例：「保守サービス Space」など）を開きます。まだ Space を作っていない場合は、<a href="quick-usage.html">使い方</a>のステップ 3〜4 を参考に作成してください。</p>
+
+          <h4>ステップ 2：可視化用の日次データをアップロード</h4>
+          <p>取り組んでいるシナリオに対応する日次データ（大規模な可視化用データ）をダウンロードし、Space に「ナレッジを追加」→「ファイルのアップロード」で取り込みます。</p>
+          <ul class="file-list">
+            <li><a href="data/maintenance/保守訪問日次.csv" download>📊 保守訪問日次.csv</a><span class="file-note">保守サービス／1500行・可視化用データ</span></li>
+            <li><a href="data/helpdesk/チケット日次.csv" download>📊 チケット日次.csv</a><span class="file-note">社内ヘルプデスク／2000行・可視化用データ</span></li>
+            <li><a href="data/attendance/勤怠日次.csv" download>📊 勤怠日次.csv</a><span class="file-note">就業・勤怠運用／2400行・可視化用データ</span></li>
+          </ul>
+
+          <h4>ステップ 3：ダッシュボードを作成する</h4>
+          <p>シナリオに合わせて、以下のプロンプトをそのままコピーして入力してください。自然言語の指示だけでダッシュボードが生成されます。</p>
+
+          <p><strong>🔧 保守サービス</strong></p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 ダッシュボード作成プロンプト</div>
+            <pre><code>契約プラン別のSLA達成率と一次解決率、設備型式別の対応コスト、再訪問率を可視化する保守ダッシュボードを作って</code></pre>
+          </div>
+
+          <p><strong>💻 社内ヘルプデスク</strong></p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 ダッシュボード作成プロンプト</div>
+            <pre><code>カテゴリと部門別の問合せ件数推移、SLA達成率、FCR率、要因区分を可視化するヘルプデスクダッシュボードを作って</code></pre>
+          </div>
+
+          <p><strong>🕐 就業・勤怠運用</strong></p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 ダッシュボード作成プロンプト</div>
+            <pre><code>部門別の残業時間推移と36協定到達リスク、有休取得率、打刻漏れ件数を可視化する勤怠ダッシュボードを作って</code></pre>
+          </div>
+
+          <div class="tip-box">
+            <strong>🎉 完成：</strong>アップロードした日次データをもとに、自然言語の指示だけで業務ダッシュボードが完成しました。作成したダッシュボードは「ダッシュボードを AI で分析しよう」のハンズオンと同じ要領で、AI に質問しながら分析できます。
+          </div>
+          <div class="tip-box">
+            <strong>🤝 共有：</strong>作成したダッシュボードを一般ユーザーに共有することで、ユーザーが自由に分析することが可能になります。例：本ハンズオン「<a href="quick-dashboard-handson.html">ダッシュボードを AI で分析しよう</a>」
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="index.html#handson" class="back-link">← ハンズオン一覧に戻る</a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>&copy; 2026 Amazon Quick Hands-on. Powered by Amazon Web Services.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+      });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href.startsWith('#')) return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    document.querySelectorAll('.prompt-copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.closest('.prompt-box').querySelector('code');
+        if (code) navigator.clipboard.writeText(code.textContent).then(() => {
+          btn.textContent = '✅ コピー済み';
+          setTimeout(() => btn.textContent = '📋 コピー', 1500);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

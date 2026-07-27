@@ -52,28 +52,75 @@
 
           <h4>ステップ 1：フローを開く</h4>
           <p>左メニューから「<strong>フロー</strong>」を選択します。</p>
-          <!-- スクリーンショット挿入予定: images/flow/step1-select-flow.png -->
           <div class="screenshot">
-            <img src="images/flow/flow_step1.png" alt="左メニューから「フロー」を選択">
+            <img src="images/flow/flow-step1-select-flow.png" alt="左メニューから「フロー」を選択">
           </div>
 
           <h4>ステップ 2：フローを作成する</h4>
           <p>「<strong>フローを作成</strong>」をクリックします。</p>
-          <!-- スクリーンショット挿入予定: images/flow/step2-create-flow.png -->
           <div class="screenshot">
-            <img src="images/flow/flow_step2.png" alt="「フローを作成」をクリック">
+            <img src="images/flow/flow-step2-create-flow.png" alt="「フローを作成」をクリック">
           </div>
 
           <h4>ステップ 3：プロンプトを入力して生成する</h4>
-          <p>以下のプロンプトを入力欄に貼り付けた後に、「生成」をクリックします。</p>
-          <div class="prompt-box">
+          <p>以下のプロンプトを入力欄に貼り付けた後に、「生成」をクリックします。プロンプトは長いので、下の「全文を表示」で展開できます。コピーボタンは折りたたんだままでも全文をコピーできます。</p>
+          <div class="prompt-box prompt-collapsible">
             <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
             <div class="prompt-label">💬 入力プロンプト</div>
-            <pre><code>IT営業がエンドユーザにAWSを提案する資料をフローで作成したい。エンドユーザはAWS経験は未経験もしくは初心者レベルの知識なので、専門用語は極力避ける。営業は、提案するソリューション（例：Amazon Quick、VMwareからの移行）と入力すると、フローが回り、提案資料が作成される。</code></pre>
+            <pre class="prompt-code"><code>IT営業がAWS未経験・初心者のエンドユーザ向けに提案資料を作成するフローを作ってください。専門用語（EC2、S3、VPC等）は一切使わず、経営者や業務担当者が理解できる平易な言葉で資料を作ることが目的です。以下の5ステップで構成してください：
+
+【ステップ1：ユーザー入力（テキスト）】
+営業に以下を入力させる：
+- 提案するAWSソリューション名（必須。例：Amazon Quick、VMwareからの移行、バックアップのクラウド化、ファイルサーバー移行）
+- エンドユーザの業種（任意）
+- エンドユーザの現在の課題（任意）
+
+【ステップ2：AI応答（Web検索を有効にする）】
+入力されたソリューションについて以下を調査・整理する：
+1. このソリューションが解決する「ビジネス上の課題」（技術用語不可、経営者が分かる言葉で）
+2. 導入前と導入後の変化（Before/After）
+3. 導入効果（コスト削減率、業務効率化、セキュリティ向上など具体的数字を含む）
+4. 中小〜中堅企業の導入事例・活用シーン
+5. 概算の月額費用レンジ
+※AWS用語は「仮想サーバー」「クラウド上の保管庫」等に置き換えること
+
+【ステップ3：AI応答（一般知識）】
+ステップ2の結果をもとに、以下の構成で提案ストーリーを作成する：
+1. 共感：「こんなお悩みありませんか？」形式で課題を3〜4つ列挙
+2. 解決策：技術ではなく「何ができるようになるか」で説明
+3. メリット：3〜5つの導入効果（数字・比較を交える）
+4. 導入イメージ：3ステップのシンプルな流れ（例：ヒアリング→設計→移行）
+5. 安心材料：セキュリティ・サポート体制・AWS実績
+6. 次のアクション：無料相談・PoC提案
+トーン：親しみやすく、「難しそう」と思わせない表現。押し売り感なし。
+
+【ステップ4：AI応答（一般知識）】
+ステップ3のストーリーをもとに、プレゼン資料（8〜10スライド構成）のドラフトを作成する：
+- スライド1：表紙（タイトル＋キャッチコピー）
+- スライド2：お客様の課題（「こんなお悩みありませんか？」）
+- スライド3：解決の方向性（図解イメージの説明付き）
+- スライド4-5：具体的なメリット（見出し＋2〜3行説明）
+- スライド6：導入の流れ（3ステップ）
+- スライド7：費用イメージ（月額概算＋従来比較）
+- スライド8：セキュリティ・安心ポイント
+- スライド9：導入事例（1〜2社、業種・課題・効果）
+- スライド10：次のステップ（無料相談・連絡先）
+各スライドは見出し＋箇条書き3〜5項目。情報量は少なめで読みやすさ重視。専門用語禁止。
+
+【ステップ5：AI応答（一般知識）】
+ステップ4の資料に対応した営業トークスクリプトを作成する：
+- 各スライドごとに「伝えたいこと（1文）」「話し方の例（セリフ2〜3文）」「想定質問と回答（1〜2個）」を記載
+- トーン：相談ベース、「一緒に考えましょう」スタンス、お客様が質問しやすい雰囲気
+- 最後に「よくある質問FAQ」を5つ追加（例：「クラウドって安全？」「今のシステムどうなる？」等、回答は2〜3文で簡潔に）
+
+全体の制約：
+- エンドユーザはAWS未経験〜初心者。専門用語は絶対に使わない
+- 「クラウド」「AWS」は使用OK、それ以外の技術用語は平易な日本語に置き換える
+- 実行モードは会話モード（Conversational）にする</code></pre>
+            <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
           </div>
-          <!-- スクリーンショット挿入予定: images/flow/step3-prompt.png -->
           <div class="screenshot">
-            <img src="images/flow/flow_step3.png" alt="プロンプトを入力">
+            <img src="images/flow/flow-step3-prompt.png" alt="プロンプトを入力">
           </div>
 
           <h4>ステップ 4：フローが作成される</h4>
@@ -81,20 +128,21 @@
           <div class="tip-box">
             <strong>ℹ️ 注意：</strong>作成されるフローの内容は人それぞれで微妙に異なります。生成結果が多少違っても問題ありません。
           </div>
-          <!-- スクリーンショット挿入予定: images/flow/step4-generated.png -->
           <div class="screenshot">
-            <img src="images/flow/flow_step4.png" alt="「生成」をクリックしてフローが作成された状態">
+            <img src="images/flow/flow-step4-generated.png" alt="「生成」をクリックしてフローが作成された状態">
           </div>
 
           <h4>ステップ 5：実行モードに切り替える</h4>
           <p>画面右上の「<strong>実行モード</strong>」をクリックします。</p>
-          <!-- スクリーンショット挿入予定: images/flow/step5-run-mode.png -->
           <div class="screenshot">
-            <img src="images/flow/flow_step5.png" alt="画面右上の「実行モード」をクリック">
+            <div class="img-annotate">
+              <img src="images/flow/flow-step5-run-mode.png" alt="画面右上の「実行モード」をクリック">
+              <span class="click-box" style="top:13.5%; left:65%; width:14.5%; height:6.5%;"></span>
+            </div>
           </div>
 
           <h4>ステップ 6：情報を入力して開始する</h4>
-          <p>「提案ソリューション名」と「顧客情報」、「提案の目的・ゴールを入力」がそれぞれ分かれて表示されます。各欄に以下をコピーして入力してください。その後、「<strong>開始</strong>」をクリックします。</p>
+          <p>「提案ソリューション名」「エンドユーザの業種」「エンドユーザの現在の課題」がそれぞれ分かれて表示されます。各欄に以下をコピーして入力してください。その後、「<strong>開始</strong>」をクリックします。</p>
           <div class="prompt-box">
             <div class="prompt-label">💬 入力例</div>
             <div class="copy-field">
@@ -105,30 +153,28 @@
               </div>
             </div>
             <div class="copy-field">
-              <div class="copy-field-label">顧客情報を入力</div>
+              <div class="copy-field-label">エンドユーザの業種</div>
               <div class="copy-field-value">
-                <span class="copy-field-text">製造業、VM30台</span>
+                <span class="copy-field-text">製造業</span>
                 <button class="copy-field-btn" title="コピー">📋</button>
               </div>
             </div>
             <div class="copy-field">
-              <div class="copy-field-label">提案の目的・ゴールを入力</div>
+              <div class="copy-field-label">エンドユーザの現在の課題</div>
               <div class="copy-field-value">
-                <span class="copy-field-text">コスト削減、運用負荷削減</span>
+                <span class="copy-field-text">サーバの老朽化</span>
                 <button class="copy-field-btn" title="コピー">📋</button>
               </div>
             </div>
           </div>
-          <!-- スクリーンショット挿入予定: images/flow/step6-input.png -->
           <div class="screenshot">
-            <img src="images/flow/flow_step6.png" alt="提案ソリューション名と顧客情報を入力">
+            <img src="images/flow/flow-step6-input.png" alt="提案ソリューション名と顧客情報を入力">
           </div>
 
           <h4>ステップ 7：資料が作成される</h4>
           <p>フローが流れて提案資料が作成されます。</p>
-          <!-- スクリーンショット挿入予定: images/flow/step7-result.png -->
           <div class="screenshot">
-            <img src="images/flow/flow_step7.png" alt="「開始」をクリックしてフローが資料を作成した状態">
+            <img src="images/flow/flow-step7-result.png" alt="「開始」をクリックしてフローが資料を作成した状態">
           </div>
 
           <div class="tip-box">
@@ -180,6 +226,15 @@
           btn.textContent = '✅';
           setTimeout(() => btn.textContent = '📋', 1500);
         });
+      });
+    });
+    // 折りたたみプロンプトの開閉
+    document.querySelectorAll('.prompt-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const box = btn.closest('.prompt-collapsible');
+        const expanded = box.classList.toggle('expanded');
+        btn.setAttribute('aria-expanded', expanded);
+        btn.textContent = expanded ? '折りたたむ ▲' : '全文を表示 ▼';
       });
     });
   </script>

@@ -1,0 +1,481 @@
+請求月,利用日,アカウントID,アカウント名,サービスコード,サービス名,利用タイプ,リージョン,リソースID,利用量,単位,コスト_円,部門,システム,環境
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,14638.8,時間,234220,管理部門,ERP基幹システム,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2857.5,時間,80010,管理部門,ERP基幹システム,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,3158.5,GB-月,41060,管理部門,ERP基幹システム,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,425.4,メトリクス,20420,管理部門,ERP基幹システム,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,7165.0,GB-月,42990,管理部門,ERP基幹システム,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,6945.6,時間,111130,EC事業部,ECサイト,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,1447.5,時間,40530,EC事業部,ECサイト,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,1917.7,GB-月,24930,EC事業部,ECサイト,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,2948.6,GB,41280,EC事業部,ECサイト,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,4460.0,時間,22300,EC事業部,ECサイト,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,4210.0,GB-月,12630,EC事業部,ECサイト,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,162.5,メトリクス,7800,EC事業部,ECサイト,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,9235.0,時間,147760,製造部門,生産管理システム,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,1953.6,時間,54700,製造部門,生産管理システム,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3302.3,GB-月,42930,製造部門,生産管理システム,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,295.0,メトリクス,14160,製造部門,生産管理システム,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2285.0,GB-月,13710,製造部門,生産管理システム,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,5517.5,時間,88280,営業部門,顧客管理(CRM),本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1288.6,時間,36080,営業部門,顧客管理(CRM),本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1535.4,GB-月,19960,営業部門,顧客管理(CRM),本番
+2025-07,2025-07-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,1030.7,GB,14430,営業部門,顧客管理(CRM),本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,185.8,メトリクス,8920,営業部門,顧客管理(CRM),本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,2870.0,GB-月,8610,営業部門,顧客管理(CRM),本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,3620.6,時間,57930,経営企画部門,データ分析基盤,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,13070.0,GB-月,39210,経営企画部門,データ分析基盤,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1134.6,GB-月,14750,経営企画部門,データ分析基盤,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,822.1,GB,11510,経営企画部門,データ分析基盤,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,514.3,時間,14400,経営企画部門,データ分析基盤,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,226.2,メトリクス,10860,経営企画部門,データ分析基盤,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,4862.5,時間,77800,管理部門,社内ポータル・グループウェア,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1664.6,GB-月,21640,管理部門,社内ポータル・グループウェア,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,511.4,時間,14320,管理部門,社内ポータル・グループウェア,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2248.0,時間,11240,管理部門,社内ポータル・グループウェア,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,213.8,メトリクス,10260,管理部門,社内ポータル・グループウェア,本番
+2025-07,2025-07-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2303.3,GB-月,6910,管理部門,社内ポータル・グループウェア,本番
+2025-07,2025-07-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,12659.4,時間,202550,開発部門,開発・検証環境,開発
+2025-07,2025-07-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,4926.2,GB-月,64040,開発部門,開発・検証環境,開発
+2025-07,2025-07-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,896.1,時間,25090,開発部門,開発・検証環境,開発
+2025-07,2025-07-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,267.7,メトリクス,12850,開発部門,開発・検証環境,開発
+2025-07,2025-07-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3123.3,GB-月,9370,開発部門,開発・検証環境,開発
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,14733.1,時間,235730,管理部門,ERP基幹システム,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2863.6,時間,80180,管理部門,ERP基幹システム,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,3143.1,GB-月,40860,管理部門,ERP基幹システム,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,428.3,メトリクス,20560,管理部門,ERP基幹システム,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,6706.7,GB-月,40240,管理部門,ERP基幹システム,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,6841.9,時間,109470,EC事業部,ECサイト,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,1377.5,時間,38570,EC事業部,ECサイト,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,2014.6,GB-月,26190,EC事業部,ECサイト,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,3102.1,GB,43430,EC事業部,ECサイト,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,4756.0,時間,23780,EC事業部,ECサイト,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,4406.7,GB-月,13220,EC事業部,ECサイト,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,162.5,メトリクス,7800,EC事業部,ECサイト,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,9065.0,時間,145040,製造部門,生産管理システム,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,2012.9,時間,56360,製造部門,生産管理システム,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3161.5,GB-月,41100,製造部門,生産管理システム,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,284.4,メトリクス,13650,製造部門,生産管理システム,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2176.7,GB-月,13060,製造部門,生産管理システム,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,5650.0,時間,90400,営業部門,顧客管理(CRM),本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1220.0,時間,34160,営業部門,顧客管理(CRM),本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1611.5,GB-月,20950,営業部門,顧客管理(CRM),本番
+2025-08,2025-08-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,1059.3,GB,14830,営業部門,顧客管理(CRM),本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,186.7,メトリクス,8960,営業部門,顧客管理(CRM),本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,2963.3,GB-月,8890,営業部門,顧客管理(CRM),本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,4048.1,時間,64770,経営企画部門,データ分析基盤,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,13703.3,GB-月,41110,経営企画部門,データ分析基盤,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1256.9,GB-月,16340,経営企画部門,データ分析基盤,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,884.3,GB,12380,経営企画部門,データ分析基盤,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,541.4,時間,15160,経営企画部門,データ分析基盤,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,227.5,メトリクス,10920,経営企画部門,データ分析基盤,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,4724.4,時間,75590,管理部門,社内ポータル・グループウェア,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1576.9,GB-月,20500,管理部門,社内ポータル・グループウェア,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,524.6,時間,14690,管理部門,社内ポータル・グループウェア,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2336.0,時間,11680,管理部門,社内ポータル・グループウェア,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,201.5,メトリクス,9670,管理部門,社内ポータル・グループウェア,本番
+2025-08,2025-08-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2380.0,GB-月,7140,管理部門,社内ポータル・グループウェア,本番
+2025-08,2025-08-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,12711.2,時間,203380,開発部門,開発・検証環境,開発
+2025-08,2025-08-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,5066.2,GB-月,65860,開発部門,開発・検証環境,開発
+2025-08,2025-08-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,899.6,時間,25190,開発部門,開発・検証環境,開発
+2025-08,2025-08-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,257.3,メトリクス,12350,開発部門,開発・検証環境,開発
+2025-08,2025-08-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3083.3,GB-月,9250,開発部門,開発・検証環境,開発
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,14526.2,時間,232420,管理部門,ERP基幹システム,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2928.9,時間,82010,管理部門,ERP基幹システム,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,3258.5,GB-月,42360,管理部門,ERP基幹システム,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,455.0,メトリクス,21840,管理部門,ERP基幹システム,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,6930.0,GB-月,41580,管理部門,ERP基幹システム,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,7031.2,時間,112500,EC事業部,ECサイト,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,1550.0,時間,43400,EC事業部,ECサイト,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,2122.3,GB-月,27590,EC事業部,ECサイト,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,3020.7,GB,42290,EC事業部,ECサイト,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,4736.0,時間,23680,EC事業部,ECサイト,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,4413.3,GB-月,13240,EC事業部,ECサイト,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,174.4,メトリクス,8370,EC事業部,ECサイト,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,10826.2,時間,173220,製造部門,生産管理システム,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,2168.6,時間,60720,製造部門,生産管理システム,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3376.9,GB-月,43900,製造部門,生産管理システム,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,315.0,メトリクス,15120,製造部門,生産管理システム,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2676.7,GB-月,16060,製造部門,生産管理システム,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,5594.4,時間,89510,営業部門,顧客管理(CRM),本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1335.0,時間,37380,営業部門,顧客管理(CRM),本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1706.9,GB-月,22190,営業部門,顧客管理(CRM),本番
+2025-09,2025-09-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,970.0,GB,13580,営業部門,顧客管理(CRM),本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,190.0,メトリクス,9120,営業部門,顧客管理(CRM),本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,3030.0,GB-月,9090,営業部門,顧客管理(CRM),本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,4215.6,時間,67450,経営企画部門,データ分析基盤,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,13673.3,GB-月,41020,経営企画部門,データ分析基盤,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1310.8,GB-月,17040,経営企画部門,データ分析基盤,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,922.9,GB,12920,経営企画部門,データ分析基盤,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,596.1,時間,16690,経営企画部門,データ分析基盤,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,244.0,メトリクス,11710,経営企画部門,データ分析基盤,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,5081.2,時間,81300,管理部門,社内ポータル・グループウェア,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1693.1,GB-月,22010,管理部門,社内ポータル・グループウェア,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,493.2,時間,13810,管理部門,社内ポータル・グループウェア,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2262.0,時間,11310,管理部門,社内ポータル・グループウェア,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,199.6,メトリクス,9580,管理部門,社内ポータル・グループウェア,本番
+2025-09,2025-09-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2453.3,GB-月,7360,管理部門,社内ポータル・グループウェア,本番
+2025-09,2025-09-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,13582.5,時間,217320,開発部門,開発・検証環境,開発
+2025-09,2025-09-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,4860.0,GB-月,63180,開発部門,開発・検証環境,開発
+2025-09,2025-09-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,933.9,時間,26150,開発部門,開発・検証環境,開発
+2025-09,2025-09-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,271.7,メトリクス,13040,開発部門,開発・検証環境,開発
+2025-09,2025-09-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3113.3,GB-月,9340,開発部門,開発・検証環境,開発
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,11260.6,時間,180170,管理部門,ERP基幹システム,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2288.9,時間,64090,管理部門,ERP基幹システム,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,2523.8,GB-月,32810,管理部門,ERP基幹システム,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,333.5,メトリクス,16010,管理部門,ERP基幹システム,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,5055.0,GB-月,30330,管理部門,ERP基幹システム,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,7308.1,時間,116930,EC事業部,ECサイト,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,1445.4,時間,40470,EC事業部,ECサイト,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,2273.8,GB-月,29560,EC事業部,ECサイト,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,3361.4,GB,47060,EC事業部,ECサイト,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,5270.0,時間,26350,EC事業部,ECサイト,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,4633.3,GB-月,13900,EC事業部,ECサイト,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,169.4,メトリクス,8130,EC事業部,ECサイト,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,11772.5,時間,188360,製造部門,生産管理システム,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,2462.5,時間,68950,製造部門,生産管理システム,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3650.0,GB-月,47450,製造部門,生産管理システム,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,343.3,メトリクス,16480,製造部門,生産管理システム,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2631.7,GB-月,15790,製造部門,生産管理システム,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,5779.4,時間,92470,営業部門,顧客管理(CRM),本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1321.8,時間,37010,営業部門,顧客管理(CRM),本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1602.3,GB-月,20830,営業部門,顧客管理(CRM),本番
+2025-10,2025-10-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,1027.1,GB,14380,営業部門,顧客管理(CRM),本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,188.8,メトリクス,9060,営業部門,顧客管理(CRM),本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,2933.3,GB-月,8800,営業部門,顧客管理(CRM),本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,4590.0,時間,73440,経営企画部門,データ分析基盤,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,14636.7,GB-月,43910,経営企画部門,データ分析基盤,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1322.3,GB-月,17190,経営企画部門,データ分析基盤,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,1015.7,GB,14220,経営企画部門,データ分析基盤,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,646.8,時間,18110,経営企画部門,データ分析基盤,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,250.4,メトリクス,12020,経営企画部門,データ分析基盤,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,4792.5,時間,76680,管理部門,社内ポータル・グループウェア,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1720.8,GB-月,22370,管理部門,社内ポータル・グループウェア,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,515.0,時間,14420,管理部門,社内ポータル・グループウェア,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2260.0,時間,11300,管理部門,社内ポータル・グループウェア,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,207.5,メトリクス,9960,管理部門,社内ポータル・グループウェア,本番
+2025-10,2025-10-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2280.0,GB-月,6840,管理部門,社内ポータル・グループウェア,本番
+2025-10,2025-10-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,12981.9,時間,207710,開発部門,開発・検証環境,開発
+2025-10,2025-10-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,4973.8,GB-月,64660,開発部門,開発・検証環境,開発
+2025-10,2025-10-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,947.1,時間,26520,開発部門,開発・検証環境,開発
+2025-10,2025-10-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,266.5,メトリクス,12790,開発部門,開発・検証環境,開発
+2025-10,2025-10-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3193.3,GB-月,9580,開発部門,開発・検証環境,開発
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,10501.9,時間,168030,管理部門,ERP基幹システム,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2310.0,時間,64680,管理部門,ERP基幹システム,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,2388.5,GB-月,31050,管理部門,ERP基幹システム,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,346.0,メトリクス,16610,管理部門,ERP基幹システム,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,5511.7,GB-月,33070,管理部門,ERP基幹システム,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,7316.2,時間,117060,EC事業部,ECサイト,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,1519.3,時間,42540,EC事業部,ECサイト,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,2277.7,GB-月,29610,EC事業部,ECサイト,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,3232.9,GB,45260,EC事業部,ECサイト,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,5048.0,時間,25240,EC事業部,ECサイト,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,5063.3,GB-月,15190,EC事業部,ECサイト,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,183.3,メトリクス,8800,EC事業部,ECサイト,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,11518.1,時間,184290,製造部門,生産管理システム,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,2468.2,時間,69110,製造部門,生産管理システム,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3996.2,GB-月,51950,製造部門,生産管理システム,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,339.2,メトリクス,16280,製造部門,生産管理システム,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2686.7,GB-月,16120,製造部門,生産管理システム,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,5648.1,時間,90370,営業部門,顧客管理(CRM),本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1290.0,時間,36120,営業部門,顧客管理(CRM),本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1674.6,GB-月,21770,営業部門,顧客管理(CRM),本番
+2025-11,2025-11-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,1063.6,GB,14890,営業部門,顧客管理(CRM),本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,192.9,メトリクス,9260,営業部門,顧客管理(CRM),本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,3180.0,GB-月,9540,営業部門,顧客管理(CRM),本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,4463.1,時間,71410,経営企画部門,データ分析基盤,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,15350.0,GB-月,46050,経営企画部門,データ分析基盤,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1407.7,GB-月,18300,経営企画部門,データ分析基盤,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,1101.4,GB,15420,経営企画部門,データ分析基盤,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,647.5,時間,18130,経営企画部門,データ分析基盤,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,262.9,メトリクス,12620,経営企画部門,データ分析基盤,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,4883.8,時間,78140,管理部門,社内ポータル・グループウェア,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1634.6,GB-月,21250,管理部門,社内ポータル・グループウェア,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,498.6,時間,13960,管理部門,社内ポータル・グループウェア,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2228.0,時間,11140,管理部門,社内ポータル・グループウェア,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,217.1,メトリクス,10420,管理部門,社内ポータル・グループウェア,本番
+2025-11,2025-11-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2366.7,GB-月,7100,管理部門,社内ポータル・グループウェア,本番
+2025-11,2025-11-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,14092.5,時間,225480,開発部門,開発・検証環境,開発
+2025-11,2025-11-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,5176.9,GB-月,67300,開発部門,開発・検証環境,開発
+2025-11,2025-11-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,913.6,時間,25580,開発部門,開発・検証環境,開発
+2025-11,2025-11-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,292.9,メトリクス,14060,開発部門,開発・検証環境,開発
+2025-11,2025-11-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3460.0,GB-月,10380,開発部門,開発・検証環境,開発
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,11486.9,時間,183790,管理部門,ERP基幹システム,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2377.1,時間,66560,管理部門,ERP基幹システム,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,2540.8,GB-月,33030,管理部門,ERP基幹システム,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,321.5,メトリクス,15430,管理部門,ERP基幹システム,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,5311.7,GB-月,31870,管理部門,ERP基幹システム,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,10673.8,時間,170780,EC事業部,ECサイト,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,2220.4,時間,62170,EC事業部,ECサイト,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,3077.7,GB-月,40010,EC事業部,ECサイト,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,4726.4,GB,66170,EC事業部,ECサイト,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,7900.0,時間,39500,EC事業部,ECサイト,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,6813.3,GB-月,20440,EC事業部,ECサイト,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,269.0,メトリクス,12910,EC事業部,ECサイト,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,10779.4,時間,172470,製造部門,生産管理システム,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,2232.5,時間,62510,製造部門,生産管理システム,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3800.8,GB-月,49410,製造部門,生産管理システム,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,344.4,メトリクス,16530,製造部門,生産管理システム,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2640.0,GB-月,15840,製造部門,生産管理システム,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,5867.5,時間,93880,営業部門,顧客管理(CRM),本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1267.1,時間,35480,営業部門,顧客管理(CRM),本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1661.5,GB-月,21600,営業部門,顧客管理(CRM),本番
+2025-12,2025-12-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,1099.3,GB,15390,営業部門,顧客管理(CRM),本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,192.9,メトリクス,9260,営業部門,顧客管理(CRM),本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,3076.7,GB-月,9230,営業部門,顧客管理(CRM),本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,4995.6,時間,79930,経営企画部門,データ分析基盤,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,15530.0,GB-月,46590,経営企画部門,データ分析基盤,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1512.3,GB-月,19660,経営企画部門,データ分析基盤,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,1114.3,GB,15600,経営企画部門,データ分析基盤,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,721.1,時間,20190,経営企画部門,データ分析基盤,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,274.6,メトリクス,13180,経営企画部門,データ分析基盤,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,5160.0,時間,82560,管理部門,社内ポータル・グループウェア,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1586.2,GB-月,20620,管理部門,社内ポータル・グループウェア,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,496.4,時間,13900,管理部門,社内ポータル・グループウェア,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2318.0,時間,11590,管理部門,社内ポータル・グループウェア,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,212.9,メトリクス,10220,管理部門,社内ポータル・グループウェア,本番
+2025-12,2025-12-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2330.0,GB-月,6990,管理部門,社内ポータル・グループウェア,本番
+2025-12,2025-12-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,13326.2,時間,213220,開発部門,開発・検証環境,開発
+2025-12,2025-12-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,5450.8,GB-月,70860,開発部門,開発・検証環境,開発
+2025-12,2025-12-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,949.6,時間,26590,開発部門,開発・検証環境,開発
+2025-12,2025-12-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,286.9,メトリクス,13770,開発部門,開発・検証環境,開発
+2025-12,2025-12-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3450.0,GB-月,10350,開発部門,開発・検証環境,開発
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,10883.8,時間,174140,管理部門,ERP基幹システム,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2298.9,時間,64370,管理部門,ERP基幹システム,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,2460.8,GB-月,31990,管理部門,ERP基幹システム,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,346.9,メトリクス,16650,管理部門,ERP基幹システム,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,5163.3,GB-月,30980,管理部門,ERP基幹システム,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,8227.5,時間,131640,EC事業部,ECサイト,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,1600.7,時間,44820,EC事業部,ECサイト,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,2335.4,GB-月,30360,EC事業部,ECサイト,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,3566.4,GB,49930,EC事業部,ECサイト,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,5412.0,時間,27060,EC事業部,ECサイト,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,5020.0,GB-月,15060,EC事業部,ECサイト,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,196.7,メトリクス,9440,EC事業部,ECサイト,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,9378.1,時間,150050,製造部門,生産管理システム,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,2027.1,時間,56760,製造部門,生産管理システム,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3452.3,GB-月,44880,製造部門,生産管理システム,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,311.7,メトリクス,14960,製造部門,生産管理システム,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2273.3,GB-月,13640,製造部門,生産管理システム,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,5630.6,時間,90090,営業部門,顧客管理(CRM),本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1293.9,時間,36230,営業部門,顧客管理(CRM),本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1786.2,GB-月,23220,営業部門,顧客管理(CRM),本番
+2026-01,2026-01-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,1100.7,GB,15410,営業部門,顧客管理(CRM),本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,200.6,メトリクス,9630,営業部門,顧客管理(CRM),本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,3050.0,GB-月,9150,営業部門,顧客管理(CRM),本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,4925.6,時間,78810,経営企画部門,データ分析基盤,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,17566.7,GB-月,52700,経営企画部門,データ分析基盤,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1601.5,GB-月,20820,経営企画部門,データ分析基盤,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,1178.6,GB,16500,経営企画部門,データ分析基盤,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,763.9,時間,21390,経営企画部門,データ分析基盤,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,302.1,メトリクス,14500,経営企画部門,データ分析基盤,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,4713.1,時間,75410,管理部門,社内ポータル・グループウェア,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1716.9,GB-月,22320,管理部門,社内ポータル・グループウェア,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,504.6,時間,14130,管理部門,社内ポータル・グループウェア,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2344.0,時間,11720,管理部門,社内ポータル・グループウェア,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,219.6,メトリクス,10540,管理部門,社内ポータル・グループウェア,本番
+2026-01,2026-01-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2316.7,GB-月,6950,管理部門,社内ポータル・グループウェア,本番
+2026-01,2026-01-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,13562.5,時間,217000,開発部門,開発・検証環境,開発
+2026-01,2026-01-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,5131.5,GB-月,66710,開発部門,開発・検証環境,開発
+2026-01,2026-01-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,997.1,時間,27920,開発部門,開発・検証環境,開発
+2026-01,2026-01-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,282.7,メトリクス,13570,開発部門,開発・検証環境,開発
+2026-01,2026-01-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3510.0,GB-月,10530,開発部門,開発・検証環境,開発
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,11211.2,時間,179380,管理部門,ERP基幹システム,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2212.5,時間,61950,管理部門,ERP基幹システム,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,2488.5,GB-月,32350,管理部門,ERP基幹システム,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,324.6,メトリクス,15580,管理部門,ERP基幹システム,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,5313.3,GB-月,31880,管理部門,ERP基幹システム,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,8593.1,時間,137490,EC事業部,ECサイト,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,1743.6,時間,48820,EC事業部,ECサイト,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,2321.5,GB-月,30180,EC事業部,ECサイト,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,3567.9,GB,49950,EC事業部,ECサイト,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,5536.0,時間,27680,EC事業部,ECサイト,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,4983.3,GB-月,14950,EC事業部,ECサイト,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,201.9,メトリクス,9690,EC事業部,ECサイト,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,10140.0,時間,162240,製造部門,生産管理システム,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,2028.9,時間,56810,製造部門,生産管理システム,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3438.5,GB-月,44700,製造部門,生産管理システム,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,304.8,メトリクス,14630,製造部門,生産管理システム,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2406.7,GB-月,14440,製造部門,生産管理システム,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,5564.4,時間,89030,営業部門,顧客管理(CRM),本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1280.7,時間,35860,営業部門,顧客管理(CRM),本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1794.6,GB-月,23330,営業部門,顧客管理(CRM),本番
+2026-02,2026-02-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,1113.6,GB,15590,営業部門,顧客管理(CRM),本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,196.0,メトリクス,9410,営業部門,顧客管理(CRM),本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,3226.7,GB-月,9680,営業部門,顧客管理(CRM),本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,5368.8,時間,85900,経営企画部門,データ分析基盤,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,17126.7,GB-月,51380,経営企画部門,データ分析基盤,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1577.7,GB-月,20510,経営企画部門,データ分析基盤,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,1193.6,GB,16710,経営企画部門,データ分析基盤,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,791.1,時間,22150,経営企画部門,データ分析基盤,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,319.8,メトリクス,15350,経営企画部門,データ分析基盤,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,5160.6,時間,82570,管理部門,社内ポータル・グループウェア,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1738.5,GB-月,22600,管理部門,社内ポータル・グループウェア,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,502.5,時間,14070,管理部門,社内ポータル・グループウェア,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2260.0,時間,11300,管理部門,社内ポータル・グループウェア,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,202.9,メトリクス,9740,管理部門,社内ポータル・グループウェア,本番
+2026-02,2026-02-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2483.3,GB-月,7450,管理部門,社内ポータル・グループウェア,本番
+2026-02,2026-02-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,14646.9,時間,234350,開発部門,開発・検証環境,開発
+2026-02,2026-02-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,5291.5,GB-月,68790,開発部門,開発・検証環境,開発
+2026-02,2026-02-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,1003.9,時間,28110,開発部門,開発・検証環境,開発
+2026-02,2026-02-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,279.4,メトリクス,13410,開発部門,開発・検証環境,開発
+2026-02,2026-02-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3620.0,GB-月,10860,開発部門,開発・検証環境,開発
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,11372.5,時間,181960,管理部門,ERP基幹システム,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2388.6,時間,66880,管理部門,ERP基幹システム,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,2531.5,GB-月,32910,管理部門,ERP基幹システム,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,345.2,メトリクス,16570,管理部門,ERP基幹システム,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,5066.7,GB-月,30400,管理部門,ERP基幹システム,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,8663.1,時間,138610,EC事業部,ECサイト,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,1698.2,時間,47550,EC事業部,ECサイト,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,2586.9,GB-月,33630,EC事業部,ECサイト,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,3795.7,GB,53140,EC事業部,ECサイト,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,6014.0,時間,30070,EC事業部,ECサイト,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,5540.0,GB-月,16620,EC事業部,ECサイト,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,196.9,メトリクス,9450,EC事業部,ECサイト,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,11457.5,時間,183320,製造部門,生産管理システム,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,2223.6,時間,62260,製造部門,生産管理システム,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3877.7,GB-月,50410,製造部門,生産管理システム,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,349.6,メトリクス,16780,製造部門,生産管理システム,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2625.0,GB-月,15750,製造部門,生産管理システム,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,6093.1,時間,97490,営業部門,顧客管理(CRM),本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1344.6,時間,37650,営業部門,顧客管理(CRM),本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1710.8,GB-月,22240,営業部門,顧客管理(CRM),本番
+2026-03,2026-03-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,1112.1,GB,15570,営業部門,顧客管理(CRM),本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,191.5,メトリクス,9190,営業部門,顧客管理(CRM),本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,3000.0,GB-月,9000,営業部門,顧客管理(CRM),本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,5379.4,時間,86070,経営企画部門,データ分析基盤,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,18183.3,GB-月,54550,経営企画部門,データ分析基盤,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1770.0,GB-月,23010,経営企画部門,データ分析基盤,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,1327.9,GB,18590,経営企画部門,データ分析基盤,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,775.4,時間,21710,経営企画部門,データ分析基盤,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,328.3,メトリクス,15760,経営企画部門,データ分析基盤,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,4955.0,時間,79280,管理部門,社内ポータル・グループウェア,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1760.8,GB-月,22890,管理部門,社内ポータル・グループウェア,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,521.8,時間,14610,管理部門,社内ポータル・グループウェア,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2432.0,時間,12160,管理部門,社内ポータル・グループウェア,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,204.2,メトリクス,9800,管理部門,社内ポータル・グループウェア,本番
+2026-03,2026-03-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2540.0,GB-月,7620,管理部門,社内ポータル・グループウェア,本番
+2026-03,2026-03-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,13651.9,時間,218430,開発部門,開発・検証環境,開発
+2026-03,2026-03-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,5588.5,GB-月,72650,開発部門,開発・検証環境,開発
+2026-03,2026-03-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,968.6,時間,27120,開発部門,開発・検証環境,開発
+2026-03,2026-03-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,277.9,メトリクス,13340,開発部門,開発・検証環境,開発
+2026-03,2026-03-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3450.0,GB-月,10350,開発部門,開発・検証環境,開発
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,11223.1,時間,179570,管理部門,ERP基幹システム,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2237.5,時間,62650,管理部門,ERP基幹システム,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,2481.5,GB-月,32260,管理部門,ERP基幹システム,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,332.9,メトリクス,15980,管理部門,ERP基幹システム,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,5258.3,GB-月,31550,管理部門,ERP基幹システム,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,8734.4,時間,139750,EC事業部,ECサイト,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,1725.7,時間,48320,EC事業部,ECサイト,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,2593.1,GB-月,33710,EC事業部,ECサイト,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,3585.7,GB,50200,EC事業部,ECサイト,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,6196.0,時間,30980,EC事業部,ECサイト,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,5523.3,GB-月,16570,EC事業部,ECサイト,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,210.8,メトリクス,10120,EC事業部,ECサイト,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,10350.6,時間,165610,製造部門,生産管理システム,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,2135.7,時間,59800,製造部門,生産管理システム,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3346.2,GB-月,43500,製造部門,生産管理システム,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,293.1,メトリクス,14070,製造部門,生産管理システム,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2490.0,GB-月,14940,製造部門,生産管理システム,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,5860.0,時間,93760,営業部門,顧客管理(CRM),本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1337.1,時間,37440,営業部門,顧客管理(CRM),本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1822.3,GB-月,23690,営業部門,顧客管理(CRM),本番
+2026-04,2026-04-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,1114.3,GB,15600,営業部門,顧客管理(CRM),本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,194.8,メトリクス,9350,営業部門,顧客管理(CRM),本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,3120.0,GB-月,9360,営業部門,顧客管理(CRM),本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,5721.9,時間,91550,経営企画部門,データ分析基盤,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,19063.3,GB-月,57190,経営企画部門,データ分析基盤,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1740.8,GB-月,22630,経営企画部門,データ分析基盤,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,1270.7,GB,17790,経営企画部門,データ分析基盤,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,818.6,時間,22920,経営企画部門,データ分析基盤,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,351.7,メトリクス,16880,経営企画部門,データ分析基盤,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,5118.1,時間,81890,管理部門,社内ポータル・グループウェア,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1756.2,GB-月,22830,管理部門,社内ポータル・グループウェア,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,528.6,時間,14800,管理部門,社内ポータル・グループウェア,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2294.0,時間,11470,管理部門,社内ポータル・グループウェア,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,214.4,メトリクス,10290,管理部門,社内ポータル・グループウェア,本番
+2026-04,2026-04-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2316.7,GB-月,6950,管理部門,社内ポータル・グループウェア,本番
+2026-04,2026-04-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,13804.4,時間,220870,開発部門,開発・検証環境,開発
+2026-04,2026-04-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,5303.8,GB-月,68950,開発部門,開発・検証環境,開発
+2026-04,2026-04-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,1000.0,時間,28000,開発部門,開発・検証環境,開発
+2026-04,2026-04-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,293.8,メトリクス,14100,開発部門,開発・検証環境,開発
+2026-04,2026-04-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3460.0,GB-月,10380,開発部門,開発・検証環境,開発
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,10908.8,時間,174540,管理部門,ERP基幹システム,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2214.6,時間,62010,管理部門,ERP基幹システム,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,2448.5,GB-月,31830,管理部門,ERP基幹システム,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,345.8,メトリクス,16600,管理部門,ERP基幹システム,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,5476.7,GB-月,32860,管理部門,ERP基幹システム,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,8579.4,時間,137270,EC事業部,ECサイト,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,1735.4,時間,48590,EC事業部,ECサイト,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,2603.8,GB-月,33850,EC事業部,ECサイト,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,3914.3,GB,54800,EC事業部,ECサイト,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,5984.0,時間,29920,EC事業部,ECサイト,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,5813.3,GB-月,17440,EC事業部,ECサイト,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,216.5,メトリクス,10390,EC事業部,ECサイト,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,10490.6,時間,167850,製造部門,生産管理システム,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,2083.9,時間,58350,製造部門,生産管理システム,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3357.7,GB-月,43650,製造部門,生産管理システム,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,297.7,メトリクス,14290,製造部門,生産管理システム,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2436.7,GB-月,14620,製造部門,生産管理システム,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,6000.6,時間,96010,営業部門,顧客管理(CRM),本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1423.2,時間,39850,営業部門,顧客管理(CRM),本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1700.8,GB-月,22110,営業部門,顧客管理(CRM),本番
+2026-05,2026-05-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,1090.7,GB,15270,営業部門,顧客管理(CRM),本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,203.1,メトリクス,9750,営業部門,顧客管理(CRM),本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,3110.0,GB-月,9330,営業部門,顧客管理(CRM),本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,6118.1,時間,97890,経営企画部門,データ分析基盤,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,19990.0,GB-月,59970,経営企画部門,データ分析基盤,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1799.2,GB-月,23390,経営企画部門,データ分析基盤,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,1392.9,GB,19500,経営企画部門,データ分析基盤,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,814.6,時間,22810,経営企画部門,データ分析基盤,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,358.8,メトリクス,17220,経営企画部門,データ分析基盤,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,5189.4,時間,83030,管理部門,社内ポータル・グループウェア,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1629.2,GB-月,21180,管理部門,社内ポータル・グループウェア,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,521.1,時間,14590,管理部門,社内ポータル・グループウェア,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2276.0,時間,11380,管理部門,社内ポータル・グループウェア,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,224.2,メトリクス,10760,管理部門,社内ポータル・グループウェア,本番
+2026-05,2026-05-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2453.3,GB-月,7360,管理部門,社内ポータル・グループウェア,本番
+2026-05,2026-05-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,13470.6,時間,215530,開発部門,開発・検証環境,開発
+2026-05,2026-05-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,5207.7,GB-月,67700,開発部門,開発・検証環境,開発
+2026-05,2026-05-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,1026.4,時間,28740,開発部門,開発・検証環境,開発
+2026-05,2026-05-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,288.1,メトリクス,13830,開発部門,開発・検証環境,開発
+2026-05,2026-05-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3576.7,GB-月,10730,開発部門,開発・検証環境,開発
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-5d4e7eacd3d4,11156.2,時間,178500,管理部門,ERP基幹システム,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-b82588652c47,2391.1,時間,66950,管理部門,ERP基幹システム,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-c9346574db46,2478.5,GB-月,32220,管理部門,ERP基幹システム,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-f1a74376fb95,347.5,メトリクス,16680,管理部門,ERP基幹システム,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-f32c7227d7a8,5528.3,GB-月,33170,管理部門,ERP基幹システム,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-592e648b9ba0,9179.4,時間,146870,EC事業部,ECサイト,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-da6219ad37ae,1893.2,時間,53010,EC事業部,ECサイト,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d7aa8da513fd,2661.5,GB-月,34600,EC事業部,ECサイト,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-fd500ad95a5d,4082.9,GB,57160,EC事業部,ECサイト,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-b4d068975c34,6254.0,時間,31270,EC事業部,ECサイト,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-bd2801c823b4,5993.3,GB-月,17980,EC事業部,ECサイト,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-b8713bb4863f,221.5,メトリクス,10630,EC事業部,ECサイト,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-576e1f442659,10595.0,時間,169520,製造部門,生産管理システム,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-87c149a5529e,2153.9,時間,60310,製造部門,生産管理システム,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-98292be191a9,3475.4,GB-月,45180,製造部門,生産管理システム,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-ccbb8505a995,326.2,メトリクス,15660,製造部門,生産管理システム,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AWSBackup,AWS Backup,Backup:VolumeStorage,ap-northeast-1 (東京),bk-8d32d728bf40,2643.3,GB-月,15860,製造部門,生産管理システム,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-ea595f7d8b2f,6083.1,時間,97330,営業部門,顧客管理(CRM),本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-35e79365bd29,1405.0,時間,39340,営業部門,顧客管理(CRM),本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-45f42d028870,1752.3,GB-月,22780,営業部門,顧客管理(CRM),本番
+2026-06,2026-06-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-4aa24517263b,1062.9,GB,14880,営業部門,顧客管理(CRM),本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-afecbd4809b5,197.9,メトリクス,9500,営業部門,顧客管理(CRM),本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-8d08b6a0923b,3163.3,GB-月,9490,営業部門,顧客管理(CRM),本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-509585ee4c9d,6112.5,時間,97800,経営企画部門,データ分析基盤,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-b1f13c96c7e9,20833.3,GB-月,62500,経営企画部門,データ分析基盤,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-d48e4c539bf3,1846.2,GB-月,24000,経営企画部門,データ分析基盤,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AWSDataTransfer,データ転送,DataTransfer-Out-Bytes,ap-northeast-1 (東京),dt-6c0ca7247c02,1384.3,GB,19380,経営企画部門,データ分析基盤,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-6dda8b18fe31,906.4,時間,25380,経営企画部門,データ分析基盤,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-4b2fdf91136e,370.6,メトリクス,17790,経営企画部門,データ分析基盤,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-fa07cef6c9f3,4856.2,時間,77700,管理部門,社内ポータル・グループウェア,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-b219a86e80ba,1688.5,GB-月,21950,管理部門,社内ポータル・グループウェア,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-7a30e5b3780b,529.6,時間,14830,管理部門,社内ポータル・グループウェア,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AWSELB,Elastic Load Balancing,LoadBalancerUsage,ap-northeast-1 (東京),elb-eb3103928700,2344.0,時間,11720,管理部門,社内ポータル・グループウェア,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-a74b98144e35,209.2,メトリクス,10040,管理部門,社内ポータル・グループウェア,本番
+2026-06,2026-06-01,111122223333,本番アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-3b70a77e73d5,2443.3,GB-月,7330,管理部門,社内ポータル・グループウェア,本番
+2026-06,2026-06-01,444455556666,開発アカウント,AmazonEC2,Amazon EC2,BoxUsage:m6i.large,ap-northeast-1 (東京),i-2fe1a486b200,14676.2,時間,234820,開発部門,開発・検証環境,開発
+2026-06,2026-06-01,444455556666,開発アカウント,AmazonEBS,Amazon EBS,EBS:VolumeUsage.gp3,ap-northeast-1 (東京),vol-5a1f1beb20e4,5386.2,GB-月,70020,開発部門,開発・検証環境,開発
+2026-06,2026-06-01,444455556666,開発アカウント,AmazonRDS,Amazon RDS,InstanceUsage:db.m6i.large,ap-northeast-1 (東京),db-5e2379cea750,1011.4,時間,28320,開発部門,開発・検証環境,開発
+2026-06,2026-06-01,444455556666,開発アカウント,AmazonCloudWatch,Amazon CloudWatch,MetricMonitorUsage,ap-northeast-1 (東京),cw-1fae9926cade,299.6,メトリクス,14380,開発部門,開発・検証環境,開発
+2026-06,2026-06-01,444455556666,開発アカウント,AmazonS3,Amazon S3,TimedStorage-ByteHrs,ap-northeast-1 (東京),s3-809104da2c0a,3563.3,GB-月,10690,開発部門,開発・検証環境,開発

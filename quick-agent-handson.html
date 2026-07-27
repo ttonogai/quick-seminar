@@ -176,7 +176,7 @@
       <button class="accordion-btn" aria-expanded="true">
         <span class="accordion-icon">🤖</span>
         <span class="accordion-label">
-          <strong>エージェントの作成手順（ステップ 7〜12）</strong>
+          <strong>エージェントの作成手順（ステップ 7〜11）</strong>
           <small>チャットエージェント作成 → プロンプト設定 → プレビュー → 起動</small>
         </span>
         <span class="accordion-arrow">▼</span>
@@ -187,7 +187,7 @@
           <h4>ステップ 7：チャットエージェントを作成する</h4>
           <p>MCP 統合が完了したら、チャットエージェント画面に移動し、「チャットエージェントを作成」を押してください。ここから先は、あなた専用の AI Agent を作成します。</p>
           <div class="screenshot">
-            <img src="images/agent-step7-create.png" alt="チャットエージェント作成画面のスクリーンショット">
+            <img src="images/agent-step7-create-agent.png" alt="チャットエージェント作成画面のスクリーンショット">
             <p class="screenshot-caption">「チャットエージェントを作成」を押下</p>
           </div>
 
@@ -196,16 +196,18 @@
           <div class="prompt-box">
             <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
             <div class="prompt-label">💬 初期プロンプト</div>
-            <pre><code>私は社内の役員のためにAWSの質問に答えるチャットエージェントが欲しいです。
-AWSに関する質問は、AWS Knowledge MCPを使ってできるようにする必要があります。
-トーンはビジネスに合ったものであるべきです。</code></pre>
+            <pre><code>社内の役員のためにAWSの質問に答えるチャットエージェントを作成します。
+AWSに関する質問は、AWS Knowledge MCPを使って最新情報を取得できるようにする必要があります。
+出力トーンはビジネスにふさわしくフォーマルにします。</code></pre>
           </div>
           <div class="tip-box">
-            <strong>📝 テンプレート：</strong>自分用にアレンジする場合は、以下のテンプレートを参考にしてください。<br>
-            私は「<strong>誰</strong>」のために「<strong>何をする</strong>」チャットエージェントが欲しいです。「<strong>トピック</strong>」に関する知識ベースを使用し、「<strong>特定の機能</strong>」ができるようにする必要があります。トーンは「<strong>スタイル</strong>」であるべきです。
+            <strong>📝 テンプレート：</strong>自分用にアレンジする場合は、以下の <span style="color:var(--aws-blue);">［　］</span> の部分を書き換えてください。<br><br>
+            ［<strong>対象ユーザー</strong>］のために［<strong>回答する分野・目的</strong>］チャットエージェントを作成します。<br>
+            ［<strong>対象の分野</strong>］に関する質問は、［<strong>使用する MCP・知識ベース</strong>］を使って最新情報を取得できるようにする必要があります。<br>
+            出力トーンは［<strong>トーン・スタイル</strong>］にします。
           </div>
           <div class="screenshot">
-            <img src="images/agent-step8-prompt.png" alt="初期プロンプト設定画面のスクリーンショット">
+            <img src="images/agent-step8-initial-prompt.png" alt="初期プロンプト設定画面のスクリーンショット">
             <p class="screenshot-caption">初期プロンプトを入力</p>
           </div>
 
@@ -214,33 +216,20 @@ AWSに関する質問は、AWS Knowledge MCPを使ってできるようにする
           <div class="prompt-box">
             <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
             <div class="prompt-label">💬 質問例</div>
-            <pre><code>Quick Suite を使ってみたいんだけど、新しい新サービスなのでよくわかりません。
-MCPを使って最新情報を調べて教えて。</code></pre>
+            <pre><code>Amazon Quickという新しいサービスの概要を教えて</code></pre>
           </div>
           <div class="screenshot">
-            <img src="images/agent-step9-preview.png" alt="設定確認とプレビュー画面のスクリーンショット">
+            <img src="images/agent-step9-confirm-preview.png" alt="設定確認とプレビュー画面のスクリーンショット">
             <p class="screenshot-caption">アクションに「AWS Knowledge Base」があることを確認してプレビューで質問</p>
           </div>
 
-          <h4>ステップ 10：出力形式を調整する（任意）</h4>
-          <p>出力形式を変えてほしい場合は、以下の観点で設定を調整できます。AI エージェントが自分好みの出力をするように調整してみてください。</p>
-          <ol>
-            <li><strong>トーン</strong>：話し方の雰囲気や感情表現（フォーマル、カジュアル、フレンドリー、プロフェッショナル）</li>
-            <li><strong>レスポンスの形式</strong>：回答の構造やフォーマット（箇条書き、段落形式）</li>
-            <li><strong>長さ</strong>：回答の詳細度や分量（簡潔、標準、詳細）</li>
-          </ol>
-          <div class="screenshot">
-            <img src="images/agent-step10-output-format.png" alt="出力形式の調整画面のスクリーンショット">
-            <p class="screenshot-caption">トーン・形式・長さを調整</p>
-          </div>
-
-          <h4>ステップ 11：チャットエージェントを起動する</h4>
+          <h4>ステップ 10：チャットエージェントを起動する</h4>
           <p>プレビューでの動作に問題がなければ、「チャットエージェントを起動」を押してください。</p>
 
-          <h4>ステップ 12：作成したエージェントを利用する</h4>
+          <h4>ステップ 11：作成したエージェントを利用する</h4>
           <p>起動完了後、チャットエージェントが作成されていることを確認し、「チャット」を押すことで、先ほど作成した AI エージェントを利用できるようになります。</p>
           <div class="screenshot">
-            <img src="images/agent-step12-launch.png" alt="起動後のチャットエージェント画面のスクリーンショット">
+            <img src="images/agent-step11-use-agent.png" alt="起動後のチャットエージェント画面のスクリーンショット">
             <p class="screenshot-caption">作成したエージェントでチャットを開始</p>
           </div>
 

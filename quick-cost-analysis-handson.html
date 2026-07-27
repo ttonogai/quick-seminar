@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Quick ハンズオン｜移行後の価値を可視化する（コスト×売上分析）</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ナビゲーション -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Amazon Quick Hands-on</span>
+      <ul class="nav-links">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="#context">ねらい</a></li>
+        <li><a href="#steps">手順</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ヒーロー -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">第3部 ・ AWS 移行後の世界観</p>
+      <h1>AWS 移行後の価値を<br>可視化しよう（コスト × 売上分析）</h1>
+      <p class="hero-desc">AWS のコストデータと部門別売上を Amazon Quick で掛け合わせ、「コスト管理」から「経営に効く分析」へ。移行したからこそ見える世界を体感します。</p>
+      <a href="#steps" class="btn-primary">ハンズオンを始める</a>
+    </div>
+  </header>
+
+  <!-- 戻るリンク -->
+  <div class="section" style="padding-top: 40px; padding-bottom: 0;">
+    <a href="index.html#handson" class="back-link">← ハンズオン一覧に戻る</a>
+  </div>
+
+  <!-- 背景：OLA→MGN→Quick -->
+  <section id="context" class="section">
+    <h2 class="section-title">なぜ「コスト × 売上分析」なのか</h2>
+    <p class="section-desc">AWS 移行はゴールではなくスタートです。「OLA で現状把握 → MGN で移行」までは座学で触れたとおり。移行して終わりではなく、移行したからこそ見える価値を引き出すのが Amazon Quick の役割です。</p>
+
+    <div class="flow-steps">
+      <div class="flow-step flow-step-muted">
+        <div class="flow-step-icon">🔍</div>
+        <div class="flow-step-num">OLA（現状把握）</div>
+        <p>現環境を無料でアセスメントし、AWS 移行時の概算費用を算出。<span class="flow-step-tag">座学で紹介</span></p>
+      </div>
+      <div class="flow-step-arrow">→</div>
+      <div class="flow-step flow-step-muted">
+        <div class="flow-step-icon">🚚</div>
+        <div class="flow-step-num">MGN（移行実行）</div>
+        <p>vSphere 上の VM を AWS（EC2）へリフト&シフト。ライトサイジングもこのタイミングで。<span class="flow-step-tag">座学で紹介</span></p>
+      </div>
+      <div class="flow-step-arrow">→</div>
+      <div class="flow-step flow-step-active">
+        <div class="flow-step-icon">📊</div>
+        <div class="flow-step-num">Amazon Quick ★ここから体験</div>
+        <p>移行後、コストと売上などの業務データを掛け合わせ、「経営判断に使える情報」に変える。移行“後”の価値を引き出す主役です。</p>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <strong>💡 このパートのねらい：</strong>「移行後、コストと売上を掛け合わせて経営判断に使う」——ここが AWS コンソール（Cost Explorer 等）では代替できない Amazon Quick の価値です。
+    </div>
+  </section>
+
+  <!-- 手順 -->
+  <section id="steps" class="section section-alt">
+    <h2 class="section-title">ハンズオン：コスト × 売上分析</h2>
+    <p class="section-desc">所要時間：約 20 分 ・ 手を動かすのはここからです</p>
+
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="true">
+        <span class="accordion-icon">📊</span>
+        <span class="accordion-label">
+          <strong>データ確認 → コスト可視化 → 売上と掛け合わせ → AI 分析</strong>
+          <small>中堅企業（VM 約 60 台を AWS 移行済み）の 1 年分データを使います</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>ゴール</h4>
+          <p>AWS のコストデータ（CUR 相当）と部門別売上を Quick に取り込み、自然言語で分析します。最終的に「どの部門の IT 投資が効率的か」「使われていないのに動いている環境はないか」といった、経営に効く気づきを引き出します。</p>
+
+          <h4>ステップ 1：サンプルデータをダウンロード</h4>
+          <p>本ハンズオンでは、実際の CUR（AWS Cost and Usage Report）を想定したコストデータと、会計ソフトから出力した想定の部門別売上を使います。次のファイルをダウンロードしてください。</p>
+          <ul class="file-list">
+            <li><a href="data/cost-analysis/AWSコスト明細.csv" download>📊 AWSコスト明細.csv</a><span class="file-note">月 × システム × サービスの CUR 相当データ（部門・環境タグ付き）</span></li>
+            <li><a href="data/cost-analysis/部門別売上.csv" download>📊 部門別売上.csv</a><span class="file-note">部門別の月次売上（会計ソフト出力想定）</span></li>
+            <li><a href="data/cost-analysis/オンプレTCO参考.csv" download>📄 オンプレTCO参考.csv</a><span class="file-note">（任意）移行前オンプレとの年額 TCO 比較</span></li>
+          </ul>
+          <div class="tip-box">
+            <strong>🏢 シナリオ：</strong>オンプレの VM 約 60 台を AWS へ移行した中堅企業（年商 約 55 億円）が対象です。データはハンズオン用のサンプル（フィクション）で、金額は掛け合わせしやすいよう円に統一しています。
+          </div>
+
+          <h4>ステップ 2：Space にデータをアップロード</h4>
+          <p><a href="quick-usage.html">使い方</a>のステップ 3〜5 に従って Space を作成し、ダウンロードした CSV をすべてアップロードします。Space 名は次を使ってください。</p>
+          <div class="prompt-box">
+            <div class="prompt-label">🏷️ Space 名</div>
+            <div class="copy-field">
+              <div class="copy-field-value">
+                <span class="copy-field-text">コスト×売上分析 Space</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+          </div>
+
+          <h4>ステップ 3：チャットエージェントを作成する</h4>
+          <p><a href="quick-usage.html">使い方</a>のステップ 6 に従い、以下のプロンプトを貼り付けて「生成」します。プロンプト内で「コスト×売上分析 Space」を指定しているので、ステップ 2 でアップロードしたデータを参照するエージェントが作成されます。このエージェントに対して、以降のステップで質問していきます。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">⚙️ エージェント定義プロンプト</div>
+            <pre><code>「コスト×売上分析 Space」を利用して、AWSのコストと部門別売上を分析し、経営に役立つ気づきを提供するエージェントを作成してください。SpaceにアップロードしたAWSコスト明細と部門別売上を参照して回答してください。コストと売上は「部門」で結合でき、売上あたりのITコストも算出できます。回答は経営層にも分かりやすい平易な言葉でお願いします。</code></pre>
+          </div>
+
+          <h4>ステップ 4：まずコストを可視化する（基本）</h4>
+          <p>作成したエージェントに質問してみましょう。最初は AWS コスト単体の可視化から。ここまではコンソールでも近いことができます。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>AWSコスト明細を使って、月次のコスト推移と、サービス別（EC2・RDS・S3・データ転送など）のコスト内訳を見せて</code></pre>
+          </div>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>本番環境と開発環境で、環境別の月次コスト推移を比較して</code></pre>
+          </div>
+
+          <h4>ステップ 5：売上と掛け合わせる（Quick の真価）</h4>
+          <p>ここからが本題です。コストと売上を部門でつなぎ、「売上あたりの IT コスト（投資効率）」を出してみましょう。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>AWSコスト明細と部門別売上を部門で結合して、部門別に「売上あたりのITコスト（AWSコスト÷売上）」を計算し、効率が良い部門と悪い部門を教えて</code></pre>
+          </div>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>EC事業部の売上とAWSコストの推移を重ねて、投資効率が改善しているか見せて</code></pre>
+          </div>
+
+          <h4>ステップ 6：AI に気づきを引き出させる</h4>
+          <p>自然言語で深掘りして、コンソールでは気づきにくい「気づき」を発見しましょう。このデータにはいくつか論点が仕込まれています。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例（無駄の検出）</div>
+            <pre><code>開発アカウントのコストはこの1年でどう推移している？使われていないのに動きっぱなしのリソースがないか、気になる点を指摘して</code></pre>
+          </div>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例（最新月の変化）</div>
+            <pre><code>直近の月で最もコストが増えたシステムはどれ？前月比と、増えた理由の仮説も教えて</code></pre>
+          </div>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例（TCO 削減）</div>
+            <pre><code>オンプレTCO参考を使って、オンプレ時代と比べてAWS移行後の年間TCOがいくら削減できたか、経営層向けに1文で要約して</code></pre>
+          </div>
+          <div class="tip-box">
+            <strong>🔎 見つかるはずの気づき：</strong>① 開発環境の EC2 が夜間・休日も含め常時稼働で、使っていない時間も課金され続けている（コスト変動がほぼない） ② EC 事業部は売上成長に対しコストの伸びが緩やかで投資効率が改善 ③ ERP はライトサイジングでコスト低下 ④ 売上を持たない間接部門のコストの位置づけ。
+          </div>
+
+          <h4>ステップ 7：ダッシュボード化・レポート化（応用）</h4>
+          <p>分析結果はダッシュボードや経営レポートにまとめられます。ダッシュボードの作成には管理者権限が必要な場合があります。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 ダッシュボード作成プロンプト</div>
+            <pre><code>AWSコスト明細と部門別売上を使って、月次コスト推移、サービス別コスト内訳、部門別の「売上あたりITコスト」、本番/開発の環境別コストを可視化するコスト×売上ダッシュボードを作って</code></pre>
+          </div>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 レポート作成プロンプト</div>
+            <pre><code>この1年のAWSコストと売上の関係を要約し、経営層向けの月次コストレビュー資料（pptx）を作成して。無駄の指摘と改善アクションも含めて</code></pre>
+          </div>
+
+          <div class="tip-box">
+            <strong>🎉 完成：</strong>コストと売上を掛け合わせ、自然言語で経営に効く気づきを引き出せました。これが「移行したからこそ見える世界」です。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- パートナー向けまとめ -->
+    <div>
+      <div class="tip-box" style="margin-top: 32px;">
+        <strong>🌟 AWS だから、移行から分析までシームレス：</strong>現状把握（OLA）→ 移行（MGN）→ 価値の可視化（Quick）が同じ AWS 上でひと繋ぎ。移行した AWS のコスト（CUR）は S3 を介してそのまま Quick に取り込めるので、ツールを別々に用意しなくても「経営に効く IT 基盤」まで最短で辿り着けます。
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="index.html#handson" class="back-link">← ハンズオン一覧に戻る</a>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>&copy; 2026 Amazon Quick Hands-on. Powered by Amazon Web Services.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+      });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href.startsWith('#')) return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    document.querySelectorAll('.prompt-copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.closest('.prompt-box').querySelector('code');
+        if (code) navigator.clipboard.writeText(code.textContent).then(() => {
+          btn.textContent = '✅ コピー済み';
+          setTimeout(() => btn.textContent = '📋 コピー', 1500);
+        });
+      });
+    });
+    document.querySelectorAll('.copy-field-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.closest('.copy-field-value').querySelector('.copy-field-text').textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          btn.textContent = '✅';
+          setTimeout(() => btn.textContent = '📋', 1500);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
