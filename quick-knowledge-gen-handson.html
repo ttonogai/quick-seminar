@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Quick ハンズオン｜ナレッジ生成</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Amazon Quick Hands-on</span>
+      <ul class="nav-links">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="quick-usage.html">使い方</a></li>
+        <li><a href="#steps">手順</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">ケース ・ IT サポート／ナレッジ管理</p>
+      <h1>ナレッジ生成 Space<br>FAQ と運用手順書を自動作成する</h1>
+      <p class="hero-desc">問い合わせ履歴から FAQ を、対応記録から運用手順書を書き起こします。「対応したらナレッジが増える」流れを作ります。</p>
+      <a href="#steps" class="btn-primary">ハンズオンを始める</a>
+    </div>
+  </header>
+
+  <div class="section" style="padding-top: 40px; padding-bottom: 0;">
+    <a href="index.html#flow-scenarios" class="back-link">← シナリオ一覧に戻る</a>
+  </div>
+
+  <section id="steps" class="section">
+    <h2 class="section-title">ナレッジ生成 ハンズオン <span class="badge badge-flow">⚙️ フロー型</span></h2>
+    <p class="section-desc">所要時間：約 20 分 ・ 使う機能：Space ＋ フロー（2 本）</p>
+
+    <h4 class="block-title">このシナリオの活用イメージ</h4>
+    <p>同じ問い合わせに何度も答えている。FAQ を整備したいという話は前から出ているが、「履歴を分析して、頻出のものを選んで、FAQ の形に書き起こす」作業に手が回らない。運用手順書も同じで、対応した本人の記憶の中にしか手順が残っていない——情報システム部でよく見る状態です。</p>
+
+    <p>このシナリオでは<strong>フローを 2 本</strong>作ります。どちらも入力が決まっていて出力フォーマットが固定なので、フロー型が向いています。</p>
+
+    <div class="table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr><th>フロー</th><th>入力</th><th>出力</th><th>回すタイミング</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>① FAQ 生成</th>
+            <td>問い合わせ履歴</td>
+            <td>FAQ 形式の記事</td>
+            <td>月次でまとめて</td>
+          </tr>
+          <tr>
+            <th>② 手順書生成</th>
+            <td>対応記録 1 件</td>
+            <td>運用手順書</td>
+            <td>対応が終わったつど</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 class="block-title">このシナリオが役に立つ場面</h4>
+    <p>FAQ や手順書を整備したいが手が回っていないチームで効果が出ます。対応するたびにナレッジが増える流れが作れるので、引き継ぎや教育にかかる手間も下がります。</p>
+
+    <div class="tip-box">
+      <strong>📌 はじめに：</strong>これは<strong>フロー型</strong>のシナリオです。Part 1 は<a href="quick-usage.html#common">共通ステップ</a>（Space とデータ）、Part 2・Part 3 は<a href="quick-usage.html#guide-b">ガイド B</a>（フロー）を開きながら進めてください。エージェントの作成は行いません。
+    </div>
+
+    <!-- Part 1 -->
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="true">
+        <span class="accordion-icon">📁</span>
+        <span class="accordion-label">
+          <strong>Part 1：Space を作ってデータを入れる（ステップ 1〜2）</strong>
+          <small>問い合わせ履歴・既存 FAQ・2 つのフォーマットを読み込む ・ 操作は共通ステップ 2〜4</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>ステップ 1：Space を作成して名前を付ける</h4>
+          <p><a href="quick-usage.html#common">共通ステップ</a>のステップ 2〜3 に従って Space を作成し、次の名前を付けます。</p>
+          <div class="prompt-box">
+            <div class="prompt-label">🏷️ Space 名</div>
+            <div class="copy-field">
+              <div class="copy-field-value">
+                <span class="copy-field-text">ナレッジ生成 Space</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+          </div>
+
+          <h4>ステップ 2：データ（ナレッジ）をアップロード</h4>
+          <p>次の 4 ファイルをダウンロードして Space に取り込みます。<strong>問い合わせ履歴は社内ヘルプデスクシナリオと同じファイル</strong>です。すでにダウンロード済みならそれを使ってください。</p>
+          <ul class="file-list">
+            <li><a href="data/helpdesk/問い合わせ履歴.csv" download>📊 問い合わせ履歴.csv</a><span class="file-note">分析元：80 件の問い合わせ履歴（ヘルプデスクシナリオと共通）</span></li>
+            <li><a href="data/knowledge-gen/既存FAQ一覧.csv" download>📊 既存FAQ一覧.csv</a><span class="file-note">重複判定用：公開済み FAQ 10 件</span></li>
+            <li><a href="data/knowledge-gen/FAQフォーマット.md" download>📄 FAQフォーマット.md</a><span class="file-note">出力フォーマット：FAQ 1 件の構成 8 項目と記載ルール</span></li>
+            <li><a href="data/knowledge-gen/手順書フォーマット.md" download>📄 手順書フォーマット.md</a><span class="file-note">出力フォーマット：手順書の全 9 章と記載ルール</span></li>
+          </ul>
+          <p>5 つめの<a href="data/knowledge-gen/対応記録サンプル.md" download>対応記録サンプル.md</a>は<strong>アップロード不要</strong>です。Part 3 のステップ 8 に全文を載せているので、そこからコピーして使います。</p>
+          <div class="tip-box">
+            <strong>💡 ポイント：</strong><code>既存FAQ一覧.csv</code> を入れておくのがコツです。これがないと、すでに公開済みの FAQ を何度も作り直してしまいます。<strong>「既存にないものだけを新規として挙げる」判断ができるようになります。</strong>
+          </div>
+
+          <div class="tip-box">
+            <strong>➡️ 次は Part 2 へ：</strong>フロー型なのでエージェントは作りません（<a href="quick-usage.html#guide-a">ガイド A</a>は使いません）。Space にファイルが 4 つ入っていることを確認して Part 2 に進んでください。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Part 2 -->
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="false">
+        <span class="accordion-icon">📚</span>
+        <span class="accordion-label">
+          <strong>Part 2：フロー① 問い合わせ履歴から FAQ を作る（ステップ 3〜6）</strong>
+          <small>頻出事象を抽出して、既存 FAQ との重複を判定しながら書き起こす</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>ステップ 3：フローを作成する</h4>
+          <p>左メニューから「<strong>フロー</strong>」を選択し、「<strong>フローを作成</strong>」をクリックします（<a href="quick-usage.html#guide-b">ガイド B</a>のステップ B-2）。</p>
+
+          <h4>ステップ 4：プロンプトを入力して生成する</h4>
+          <div class="prompt-box prompt-collapsible">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 入力プロンプト（フロー① FAQ 生成）</div>
+            <pre class="prompt-code"><code>「ナレッジ生成 Space」を利用して、問い合わせ履歴から FAQ を自動作成するフローを作ってください。ナレッジとして 問い合わせ履歴.csv・既存FAQ一覧.csv・FAQフォーマット.md を参照します。以下の4ステップで構成してください。
+
+【ステップ1：ユーザー入力（テキスト）】
+利用者に以下を入力させる：
+- 対象期間（必須。例：2026-04 から 2026-06）
+- 作成する FAQ の件数（必須。例：5）
+- 重点的に扱いたいカテゴリ（任意。空欄なら全カテゴリを対象にする）
+
+【ステップ2：AI応答（履歴の分類と集計）】
+問い合わせ履歴.csv から対象期間のデータを抽出し、内容が類似する問い合わせをグループ化する：
+- グループごとに「代表的な事象」「件数」「カテゴリ」「原因分類」「平均解決時間」を一覧にする
+- 件数の多い順に並べる
+- 判断根拠として、各グループに含まれるチケットIDを列挙する
+※件数は csv の実データを数えること。推測しないこと。
+
+【ステップ3：AI応答（FAQ化の可否判定）】
+ステップ2の各グループについて、FAQフォーマット.md の「優先して FAQ 化するもの」「FAQ 化に向かないもの」の基準に照らして判定する：
+- FAQ化すべきもの／FAQ化に向かないものに分類し、理由を1行で示す
+- 権限申請やアカウント発行など利用者が自己解決できないものは、FAQ ではなく「申請導線の整備が有効」と明記する
+- 既存FAQ一覧.csv と照合し、すでに公開済みのものは【更新】既存FAQ-XX として差分の指摘にとどめる
+- 既存FAQ一覧.csv にあるにもかかわらず問い合わせが継続している事象があれば、「FAQ の内容不足または導線の問題」として指摘する
+
+【ステップ4：AI応答（FAQ の作成）】
+ステップ3で「FAQ化すべき」と判定されたものから、入力された件数分の FAQ を作成する：
+- FAQフォーマット.md の構成・項目名・順序に完全に従う。8項目すべてを含めること
+- 質問文は、利用者が検索しそうな言葉で書く。社内用語や正式なシステム名だけに頼らないこと
+- 対処手順は利用者が自分でできる操作だけを書き、管理者権限が必要な操作は「情報システム部へ依頼」とする
+- 1手順につき1操作にする
+- 問い合わせ履歴から読み取れない内容を書く場合は、末尾に (要確認) と付ける
+- 各 FAQ の冒頭に【新規】または【更新】既存FAQ-XX を明記する
+
+全体の制約：
+- 実行モードは会話モード（Conversational）にする</code></pre>
+            <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
+          </div>
+
+          <h4>ステップ 5：Space 参照を確認して実行する</h4>
+          <p>フローが「ナレッジ生成 Space」を参照しているか確認し（<a href="quick-usage.html#guide-b">ガイド B</a>のステップ B-4）、「実行モード」に切り替えて以下を入力します。</p>
+          <div class="prompt-box">
+            <div class="prompt-label">💬 入力例</div>
+            <div class="copy-field">
+              <div class="copy-field-label">対象期間</div>
+              <div class="copy-field-value">
+                <span class="copy-field-text">2026-04 から 2026-06</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+            <div class="copy-field">
+              <div class="copy-field-label">作成する FAQ の件数</div>
+              <div class="copy-field-value">
+                <span class="copy-field-text">5</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+            <div class="copy-field">
+              <div class="copy-field-label">重点的に扱いたいカテゴリ（任意）</div>
+              <div class="copy-field-value">
+                <span class="copy-field-text">端末障害</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+          </div>
+
+          <h4>ステップ 6：出力を確認する（答え合わせ）</h4>
+          <p>問い合わせ履歴 80 件のカテゴリ内訳は <strong>SaaS障害 26 / 端末障害 23 / ネットワーク 12 / アカウント 10 / 権限申請 9</strong> です。以下が出ているか確認してください。</p>
+          <ul class="file-list">
+            <li><strong>【新規】として挙がるもの</strong>：ドライバ不具合（外部モニターが映らない・カメラが認識されない）5 件、キャッシュ破損 3 件。いずれも既存 FAQ にありません</li>
+            <li><strong>FAQ 化に向かないと判定されるもの</strong>：原因分類の最多は <code>申請対応</code>（11 件）ですが、権限申請やアカウント発行は都度承認が必要で利用者が自己解決できません。<strong>「FAQ ではなく申請導線の整備が有効」</strong>という判断が出るのが正解です</li>
+            <li><strong>既存 FAQ があるのに減っていない事象</strong>：VPN 接続は <code>FAQ-02</code>（月間参照 98 回）がありながら履歴に 5 件出ています。内容不足か導線の問題という指摘</li>
+            <li><strong>更新が止まっている FAQ</strong>：<code>FAQ-04</code> <code>FAQ-07</code> は公開日から一度も更新されていません</li>
+          </ul>
+          <div class="tip-box">
+            <strong>🔍 注目してほしいところ：</strong>件数が多いものを機械的に FAQ 化しないところが、このフローの価値です。<strong>いちばん多い「申請対応」は FAQ にしても問い合わせが減りません。</strong>「FAQ 化に向かないもの」の基準をフォーマットに書いておくことで、この判断ができるようになります。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Part 3 -->
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="false">
+        <span class="accordion-icon">📖</span>
+        <span class="accordion-label">
+          <strong>Part 3：フロー② 対応記録から運用手順書を作る（ステップ 7〜9）</strong>
+          <small>担当者の記憶の中にある手順を、再現できる形に書き起こす</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>概要</h4>
+          <p>手順書の目的は、<strong>担当者が変わっても同じ結果になること</strong>です。ところが対応記録には、対応した本人が当然と思っている情報が抜けています。このフローの本当の価値は、<strong>その抜けを質問として突きつけてくる</strong>ところにあります。</p>
+
+          <h4>ステップ 7：もう 1 つフローを作成する</h4>
+          <p>同じ手順で 2 本目のフローを作成し、以下のプロンプトを貼り付けて「生成」します。</p>
+          <div class="prompt-box prompt-collapsible">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 入力プロンプト（フロー② 手順書生成）</div>
+            <pre class="prompt-code"><code>「ナレッジ生成 Space」を利用して、対応記録から運用手順書を作成するフローを作ってください。ナレッジとして 手順書フォーマット.md・問い合わせ履歴.csv を参照します。以下の4ステップで構成してください。
+
+【ステップ1：ユーザー入力（テキスト）】
+利用者に以下を入力させる：
+- 対応記録（必須。担当者が書いたメモをそのまま貼り付ける）
+- 手順書のタイトル（任意。空欄なら対応記録から推定する）
+- 対象システム名（任意）
+
+【ステップ2：AI応答（記録の構造化）】
+入力された対応記録を読み取り、次のように整理する：
+1. 何を目的とした作業か
+2. 実施された操作を時系列に並べる
+3. 使われたコマンド・画面名・サーバー名を抽出する
+4. 判明している結果・確認方法
+5. 記録に書かれていない情報を洗い出す（必要な権限、接続経路、サービス断の有無、切り戻しの可否、完了確認の具体的な値、事前連絡先など）
+※記録に書かれていないことを推測で補わないこと。5で洗い出すこと。
+
+【ステップ3：AI応答（手順書の作成）】
+ステップ2の結果と手順書フォーマット.md を使って手順書を作成する：
+- 全9章の構成・見出し・順序に完全に従う。章を削除せず、該当しない場合は「該当なし」と記載する
+- 「4. 作業手順」は1手順につき1操作に分解し、各手順に「期待される結果」を必ず書く
+- コマンドはそのままコピーできる形で記載する
+- 「適宜」「必要に応じて」といった曖昧な表現は使わない。判断が必要な場合は判断基準を書く
+- 「7. 注意事項・過去のトラブル例」には、対応記録に再発や過去の発生に関する記述がある場合、その履歴と恒久対策の必要性を必ず記載する
+- 「9. 【要追記】」には、ステップ2の5で洗い出した不明点を質問形式で列挙する。空欄にしないこと
+
+【ステップ4：AI応答（レビュー観点の提示）】
+作成した手順書について、公開前に確認すべき点を整理する：
+- 【要追記】のうち、埋めないまま運用すると事故につながる項目はどれか（優先度をつける）
+- この手順書を初めて読む担当者がつまずきそうな箇所
+- 関連して整備したほうがよい他の手順書や FAQ
+
+全体の制約：
+- 実行モードは会話モード（Conversational）にする</code></pre>
+            <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
+          </div>
+
+          <h4>ステップ 8：対応記録を貼って実行する</h4>
+          <p>下の<strong>記録 A</strong> をコピーして「対応記録」の欄に貼り付けて実行してください。担当者が走り書きしたメモという想定です。</p>
+          <p>2 件の対応記録はこのページにも載せてあります。コピーボタンで直接コピーできます。</p>
+          <div class="prompt-box prompt-collapsible">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">📋 記録 A：SSO 証明書の更新対応</div>
+            <pre class="prompt-code"><code>対応記録 / INC-2026-0605-01
+担当：藤原
+受付：2026-06-05 08:47
+
+朝から複数部署でログインできないと連絡。SSOの証明書が切れてた。
+IdPの管理画面で確認したら notAfter が 6/5 になってた。前日までは通ってた。
+
+新しい証明書を発行して、SPごとに登録し直した。
+freee、Salesforce、M365、SmartHR の4つ。全部やり直しでけっこう時間かかった。
+登録後に自分のアカウントでログイン確認してOK。
+
+9:55 に全社アナウンス出して収束。対応時間は3時間半くらい。
+
+※次回のために：証明書の有効期限は監視に入ってないので毎年これが起きる。
+　監視追加はベンダー見積待ち。</code></pre>
+            <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
+          </div>
+          <div class="prompt-box prompt-collapsible">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">📋 記録 B：ディスク領域不足からの復旧</div>
+            <pre class="prompt-code"><code>対応記録 / INC-2026-0612-01
+担当：宮本
+受付：2026-06-12 06:05
+
+朝のバッチ結果確認で NIGHTLY_SALES_AGG が ABEND してるのを発見。
+ログ見たら ERR-DB-0412、TS_WORK が満杯。
+
+df で見たら 96%。/archive の古いログを外部ストレージに退避して 71% まで下げた。
+9月と1月にも同じことやってる。ローテーション直さないと毎回これ。
+
+領域確保してから NIGHTLY_SALES_AGG を手動再実行、続けて後続3本も順番に流した。
+売上データは 8:40 に反映完了。経理部には先に連絡入れておいた。
+
+トータル2時間半。</code></pre>
+            <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
+          </div>
+          <div class="prompt-box">
+            <div class="prompt-label">💬 入力例（記録 A の場合）</div>
+            <div class="copy-field">
+              <div class="copy-field-label">手順書のタイトル</div>
+              <div class="copy-field-value">
+                <span class="copy-field-text">SSO 署名証明書の更新手順</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+            <div class="copy-field">
+              <div class="copy-field-label">対象システム名</div>
+              <div class="copy-field-value">
+                <span class="copy-field-text">SSO 基盤（IdP）</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+          </div>
+
+          <h4>ステップ 9：出力を確認する（答え合わせ）</h4>
+          <p>記録 A は「証明書を発行して各 SP に登録した」という数行のメモですが、別の担当者が再現するには情報が足りません。第 9 章に以下のような <code>【要追記】</code> が並ぶのが期待される挙動です。</p>
+          <ul class="file-list">
+            <li>IdP 管理画面へのアクセス方法と、必要な権限・ロール名</li>
+            <li>証明書の発行手順（鍵長・有効期間などのパラメータ）</li>
+            <li>SP ごとの登録先画面（freee・Salesforce・M365・SmartHR の 4 つ）</li>
+            <li>作業中にログインできなくなる利用者への周知手順</li>
+            <li>切り戻しの可否（旧証明書に戻せるのか）</li>
+            <li>完了確認の具体的な方法と正常時の値</li>
+          </ul>
+          <p>また第 7 章「注意事項」に、<strong>証明書の有効期限が監視対象外であること</strong>（記録の末尾に書かれている）が引き継がれているかも確認してください。</p>
+          <div class="tip-box">
+            <strong>🔍 注目してほしいところ：</strong><strong>【要追記】が多く出ることは失敗ではありません。</strong>手順書の穴がどこにあるかが可視化されたということです。ここを推測で埋めてしまうフローのほうが危険で、誤った手順書がそのまま流通します。「分からないことを質問として返す」のが正しい挙動です。
+          </div>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 2 件目も試す（記録 B）</div>
+            <pre><code>上の「記録 B」を貼り付けて、もう一度実行してください</code></pre>
+          </div>
+          <p>記録 B（ディスク領域不足からの復旧）は手順が具体的な一方、実行するサーバー名や退避先ストレージ、再実行コマンドが書かれていません。さらに「9月と1月にも同じことやってる」という記述から、<strong>注意事項に再発の履歴と恒久対策の必要性</strong>が書き起こされるのが望ましい挙動です。</p>
+
+          <div class="tip-box">
+            <strong>⚠️ 実務で使うときの注意：</strong>生成された FAQ・手順書は<strong>そのまま公開しないでください</strong>。特に手順書は <code>【要追記】</code> を埋める作業が本番です。フローが削るのは「体裁を整える時間」と「観点の抜け漏れを探す時間」であり、内容の正確性は実施者が担保する必要があります。
+          </div>
+
+          <div class="tip-box">
+            <strong>🎉 完成：</strong>問い合わせ履歴から FAQ を、対応記録から手順書を書き起こす 2 本のフローができました。対応するたびにナレッジが増える流れを作れます。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Part 4 -->
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="false">
+        <span class="accordion-icon">🚀</span>
+        <span class="accordion-label">
+          <strong>Part 4：現場に持ち帰る（応用）</strong>
+          <small>自社フォーマットへの差し替え・運用への組み込み・転用先</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>応用 1：自社のフォーマットに差し替える</h4>
+          <p>差し替えるのは <code>FAQフォーマット.md</code> と <code>手順書フォーマット.md</code> の 2 ファイルです。フロー側は変更しません。</p>
+          <ul>
+            <li>実際に公開している FAQ・手順書を 1 つ用意し、章構成と項目名をそのまま写す</li>
+            <li><strong>禁止事項を必ず書く</strong>（「章を削除しない」「推測で埋めない」「曖昧な表現を使わない」）。ここが出力の安定を決めます</li>
+            <li>手順書には <strong>「【要追記】」の章を必ず残す</strong>。この章がないと、抜けが埋められたように見えてしまいます</li>
+          </ul>
+
+          <h4>応用 2：運用に組み込む</h4>
+          <p>1 回作って終わりにしないための組み込み方です。</p>
+          <ul>
+            <li><strong>FAQ 生成は月次で</strong>：月末に前月分の履歴を投入し、新規候補を洗い出す。既存 FAQ の棚卸しも同時にできます</li>
+            <li><strong>手順書生成は対応のつど</strong>：障害対応が終わったら、そのまま記録を投入して手順書化する。記憶が新しいうちに <code>【要追記】</code> を埋められます</li>
+            <li><strong>生成した FAQ を Space に戻す</strong>：公開した FAQ を <code>既存FAQ一覧.csv</code> に追記すると、次回以降の重複判定が効きます</li>
+          </ul>
+
+          <h4>応用 3：他シナリオのデータを使い回す</h4>
+          <p>問い合わせ履歴は<a href="quick-helpdesk-handson.html">社内ヘルプデスク</a>と共通のファイルです。同じ Space にまとめてしまえば、「一次回答するエージェント」と「FAQ を作るフロー」を 1 つの Space で共存させられます。</p>
+          <p>同様に、<a href="quick-troubleshoot-handson.html">トラブルシュート</a>の <code>過去障害レポート.csv</code> を追加すると、障害対応の記録からも手順書を起こせるようになります。</p>
+
+          <h4>応用 4：転用しやすい他の「ナレッジ化」</h4>
+          <ul>
+            <li>顧客からの問い合わせ履歴 → 製品 FAQ・サポートサイトの記事</li>
+            <li>作業実績 → 作業標準書（製造・保守）</li>
+            <li>商談記録 → 営業ナレッジ・提案パターン集</li>
+            <li>研修の質疑 → 新人向けオンボーディング資料</li>
+            <li>過去の障害対応 → 障害対応プレイブック</li>
+          </ul>
+          <div class="tip-box">
+            <strong>💡 共通する条件：</strong>「同じことを何度も聞かれている」「対応した人の頭の中にしか残っていない」のどちらかに当てはまる業務は、このシナリオの型で対応できます。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <h4 class="handson-subgroup-title" style="margin-top:40px;">🔗 関連シナリオ</h4>
+    <p class="group-desc">同じ業務領域の別シナリオです。データを使い回せるものもあります。</p>
+
+    <a href="quick-helpdesk-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">💻</span>
+      <span class="accordion-label">
+        <strong>社内ヘルプデスク</strong>
+        <small>問い合わせ履歴を共用するシナリオ（エージェント型）</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-troubleshoot-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🚨</span>
+      <span class="accordion-label">
+        <strong>トラブルシュート</strong>
+        <small>障害対応の記録元になるシナリオ（エージェント型）</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-case-record-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🎫</span>
+      <span class="accordion-label">
+        <strong>ケース記録</strong>
+        <small>ナレッジの元になる記録を作る（フロー型）</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <nav class="scenario-nav" aria-label="シナリオの移動">
+      <a class="scenario-nav-item scenario-nav-prev" href="quick-case-record-handson.html">
+        <span class="scenario-nav-dir">← 前のシナリオ</span>
+        <span class="scenario-nav-title">🎫 ケース記録</span>
+        <span class="badge badge-flow">⚙️ フロー型</span>
+      </a>
+      <a class="scenario-nav-index" href="index.html#flow-scenarios">☰ シナリオ一覧</a>
+      <span class="scenario-nav-item scenario-nav-empty"></span>
+    </nav>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Amazon Quick Hands-on. Powered by Amazon Web Services.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+      });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href.startsWith('#')) return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    document.querySelectorAll('.prompt-copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.closest('.prompt-box').querySelector('code');
+        if (code) navigator.clipboard.writeText(code.textContent).then(() => {
+          btn.textContent = '✅ コピー済み';
+          setTimeout(() => btn.textContent = '📋 コピー', 1500);
+        });
+      });
+    });
+    document.querySelectorAll('.copy-field-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.closest('.copy-field-value').querySelector('.copy-field-text').textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          btn.textContent = '✅';
+          setTimeout(() => btn.textContent = '📋', 1500);
+        });
+      });
+    });
+    document.querySelectorAll('.prompt-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const box = btn.closest('.prompt-collapsible');
+        const expanded = box.classList.toggle('expanded');
+        btn.setAttribute('aria-expanded', expanded);
+        btn.textContent = expanded ? '折りたたむ ▲' : '全文を表示 ▼';
+      });
+    });
+  </script>
+
+</body>
+</html>

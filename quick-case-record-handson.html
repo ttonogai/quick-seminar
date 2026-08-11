@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Quick ハンズオン｜ケース記録</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="nav-logo">Amazon Quick Hands-on</span>
+      <ul class="nav-links">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="quick-usage.html">使い方</a></li>
+        <li><a href="#steps">手順</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="hero-tag">ケース ・ ヘルプデスク／情報システム</p>
+      <h1>ケース記録 Space<br>回答案と記録ドラフトを同時生成する</h1>
+      <p class="hero-desc">問い合わせ本文を貼るだけで、類似ケース・回答案・CRM 登録用の記録ドラフトが一度に出てくるフローを作ります。1 件ずつ手で記録している作業をなくします。</p>
+      <a href="#steps" class="btn-primary">ハンズオンを始める</a>
+    </div>
+  </header>
+
+  <div class="section" style="padding-top: 40px; padding-bottom: 0;">
+    <a href="index.html#flow-scenarios" class="back-link">← シナリオ一覧に戻る</a>
+  </div>
+
+  <section id="steps" class="section">
+    <h2 class="section-title">ケース記録 ハンズオン <span class="badge badge-flow">⚙️ フロー型</span></h2>
+    <p class="section-desc">所要時間：約 20 分 ・ 使う機能：Space ＋ フロー</p>
+
+    <h4 class="block-title">このシナリオの活用イメージ</h4>
+    <p>ヘルプデスク課が、社員からの問い合わせを CRM（チケット管理システム）に 1 件ずつ手で記録している状況を題材にします。1 件あたり 5〜10 分かかり、対応そのものより記録に時間を取られている。さらに記録の粒度が担当者ごとにばらついて、後から検索しても使えない——よくある状態です。</p>
+
+    <p>このシナリオがフロー型なのは、<strong>入力が「問い合わせ本文」に決まっていて、出力が CRM の項目に厳密に従う</strong>からです。毎件同じ処理を繰り返すので、手順を固定できるフローが向いています。</p>
+
+    <h4 class="block-title">このシナリオが役に立つ場面</h4>
+    <p>問い合わせや対応内容を管理システムに記録しているチームで効果が出ます。入力の手間が減るだけでなく、記録の粒度が揃うので、後から検索して使えるデータになります。</p>
+
+    <div class="tip-box">
+      <strong>📌 はじめに：</strong>これは<strong>フロー型</strong>のシナリオです。Part 1 は<a href="quick-usage.html#common">共通ステップ</a>（Space とデータ）、Part 2 は<a href="quick-usage.html#guide-b">ガイド B</a>（フロー）を開きながら進めてください。エージェントの作成は行いません。
+    </div>
+
+    <div class="tip-box">
+      <strong>🔄 CRM 製品は問いません：</strong>ケース項目の定義はファイルとして外に出しているので、自社の CRM から出力した項目定義に差し替えればそのまま動きます。Salesforce・ServiceNow・Zendesk・Jira Service Management のいずれでも同じ考え方です。
+    </div>
+
+    <!-- Part 1 -->
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="true">
+        <span class="accordion-icon">📁</span>
+        <span class="accordion-label">
+          <strong>Part 1：Space を作ってデータを入れる（ステップ 1〜2）</strong>
+          <small>項目定義・記入ガイド・過去ケース履歴を読み込む ・ 操作は共通ステップ 2〜4</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>ステップ 1：Space を作成して名前を付ける</h4>
+          <p><a href="quick-usage.html#common">共通ステップ</a>のステップ 2〜3 に従って Space を作成し、次の名前を付けます。フローはこの Space 名を指定して動くので、必ずコピーして貼り付けてください。</p>
+          <div class="prompt-box">
+            <div class="prompt-label">🏷️ Space 名</div>
+            <div class="copy-field">
+              <div class="copy-field-value">
+                <span class="copy-field-text">ケース記録 Space</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+          </div>
+
+          <h4>ステップ 2：データ（ナレッジ）をアップロード</h4>
+          <p>次の 3 ファイルをダウンロードして Space に取り込みます。それぞれ<strong>「出力フォーマット」「記載ルール」「類似検索用データ」</strong>という別の役割を持っています。</p>
+          <ul class="file-list">
+            <li><a href="data/case-record/ケース項目定義.csv" download>📊 ケース項目定義.csv</a><span class="file-note">出力フォーマット：16 項目の型・必須・選択肢</span></li>
+            <li><a href="data/case-record/対応記録の書き方ガイド.md" download>📄 対応記録の書き方ガイド.md</a><span class="file-note">記載ルール：優先度判定基準・良い例と悪い例・禁止事項</span></li>
+            <li><a href="data/case-record/過去ケース履歴.csv" download>📊 過去ケース履歴.csv</a><span class="file-note">類似検索用：3 ヶ月分の対応済みケース 28 件</span></li>
+          </ul>
+          <p>4 つめの<a href="data/case-record/問い合わせ本文サンプル.md" download>問い合わせ本文サンプル.md</a>は<strong>アップロード不要</strong>です。Part 2 のステップ 6 に全文を載せているので、そこからコピーして使います。</p>
+          <div class="tip-box">
+            <strong>💡 ポイント：</strong>選択肢を持つ項目（カテゴリ・優先度・原因区分など）を CSV で明示的に定義しているのが、このシナリオの要です。「それらしい値」を作られてしまうと CRM に登録できません。<strong>選択肢を外に出しておくことで、出力が実際のシステムに投入できる形になります。</strong>
+          </div>
+
+          <div class="tip-box">
+            <strong>➡️ 次は Part 2 へ：</strong>フロー型なのでエージェントは作りません（<a href="quick-usage.html#guide-a">ガイド A</a>は使いません）。Space にファイルが 3 つ入っていることを確認して Part 2 に進んでください。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Part 2 -->
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="false">
+        <span class="accordion-icon">⚙️</span>
+        <span class="accordion-label">
+          <strong>Part 2：フローで回答案と記録ドラフトを生成する（ステップ 3〜7）</strong>
+          <small>問い合わせ本文を貼るだけで、類似ケース・回答案・登録用ドラフトが揃う</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>ステップ 3：フローを作成する</h4>
+          <p>左メニューから「<strong>フロー</strong>」を選択し、「<strong>フローを作成</strong>」をクリックします。操作画面は<a href="quick-usage.html#guide-b">ガイド B</a>のステップ B-2 を参照してください。</p>
+
+          <h4>ステップ 4：プロンプトを入力して生成する</h4>
+          <p>以下のプロンプトを貼り付けて「生成」をクリックします。プロンプトは長いので「全文を表示」で展開できます。コピーボタンは折りたたんだままでも全文をコピーできます。</p>
+          <div class="prompt-box prompt-collapsible">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 入力プロンプト（フロー定義）</div>
+            <pre class="prompt-code"><code>「ケース記録 Space」を利用して、問い合わせ対応の回答案とケース記録ドラフトを作成するフローを作ってください。ナレッジとして ケース項目定義.csv・対応記録の書き方ガイド.md・過去ケース履歴.csv を参照します。以下の4ステップで構成してください。
+
+【ステップ1：ユーザー入力（テキスト）】
+利用者に以下を入力させる：
+- 問い合わせ本文（必須。メールやチャットの原文をそのまま貼り付ける）
+- 対応担当者名（任意）
+- 現時点で判明している追加情報（任意）
+
+【ステップ2：AI応答（類似ケースの検索）】
+過去ケース履歴.csv から、入力された問い合わせと類似するケースを最大3件抽出する：
+- 事象と原因区分の組み合わせが近いものを優先する
+- 各ケースについて「ケース番号」「件名」「原因区分」「解決策」「対応時間_分」を提示する
+- 同一の事象が3件以上見つかった場合は、その事実と発生回数を明記する
+- 類似ケースが見つからない場合は「類似ケースなし」と明示し、推測で埋めないこと
+
+【ステップ3：AI応答（回答案の作成）】
+ステップ2の結果と対応記録の書き方ガイド.md をもとに、2種類の回答案を作成する：
+（A）社内向け：対応者が使う要点の箇条書き。確認すべきこと、実施する操作、想定所要時間
+（B）依頼者向け：そのまま送れる丁寧な文面。専門用語を避け、次に何をすればよいかを明記する
+原因が特定できない場合は、断定を避け、いま分かっていることと次の確認事項を書くこと。
+問い合わせ本文の情報が不足していて分類も原因も判定できない場合は、回答案の代わりに「依頼者へ確認すべき項目」を、書き方ガイドの「情報が足りないときの聞き返し方」の観点に沿って列挙すること。
+
+【ステップ4：AI応答（ケース記録ドラフトの作成）】
+ケース項目定義.csv に従って、CRM に登録できる形のドラフトを表形式で出力する：
+- ケース項目定義.csv の「表示順」どおりに全16項目を出力する。項目の追加・削除・並べ替えは禁止
+- 選択リストの項目は、ケース項目定義.csv の「選択肢」に定義された値のみを使用する。定義外の値は絶対に使わないこと
+- 優先度は対応記録の書き方ガイド.md の判定基準に従って決定し、判定根拠を「対応内容」の冒頭に1行で記載する
+- 問い合わせ本文から判断できない項目には「要確認」と記載する。空欄にしたり推測で埋めたりしないこと
+- 「類似ケース」項目には、ステップ2で見つけたケース番号をカンマ区切りで記載する
+- 同一事象が3回以上発生している場合は、「再発防止策」にFAQ化または恒久対策の提案を必ず記載する
+- 1通の問い合わせに複数の異なるカテゴリの依頼が含まれている場合は、ケースを分けて起票すべきと明記し、それぞれのドラフトを作成する
+
+全体の制約：
+- 個人名を原因として記載しないこと
+- 未確認の推測を事実として記載しないこと
+- 実行モードは会話モード（Conversational）にする</code></pre>
+            <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
+          </div>
+          <div class="tip-box">
+            <strong>ℹ️ 注意：</strong>作成されるフローのステップ数や表現は人それぞれで微妙に異なります。大きく外れていなければそのまま進めて問題ありません。
+          </div>
+
+          <h4>ステップ 5：Space 参照の確認と実行モードへの切り替え</h4>
+          <p>生成されたフローが<strong>「ケース記録 Space」のデータを参照しているか</strong>を確認します（<a href="quick-usage.html#guide-b">ガイド B</a>のステップ B-4）。ここを飛ばすと、選択肢に存在しない値が出力されて CRM に登録できません。</p>
+          <p>確認できたら、画面右上の「<strong>実行モード</strong>」をクリックします（ステップ B-5）。</p>
+
+          <h4>ステップ 6：問い合わせ本文を貼って実行する</h4>
+          <p><strong>サンプル 1 → 2 → 3 の順</strong>に、下の本文をコピーして「問い合わせ本文」の欄へ貼り付けて実行してください。3 つとも狙いが違います。</p>
+          <p>4 つの本文はこのページにも載せてあります。コピーボタンで直接コピーできます。</p>
+          <div class="prompt-box prompt-collapsible">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">📋 サンプル 1：情報がそろっている問い合わせ</div>
+            <pre class="prompt-code"><code>情報システム部 御中
+
+お世話になっております。経理部の田口です。
+
+本日9時ごろから、経費精算システムにログインできません。
+IDとパスワードを入力して「ログイン」を押すと、
+「認証に失敗しました」という赤いメッセージが出て先に進めません。
+
+パスワードは先週変更したばかりで、メモした通りに入力しています。
+同じ部の2名にも確認しましたが、同様にログインできないようです。
+
+月末の締め処理を今日中に終える必要があるため、
+できるだけ早めにご対応いただけると助かります。
+
+経理部 田口</code></pre>
+            <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
+          </div>
+          <div class="prompt-box prompt-collapsible">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">📋 サンプル 2：情報が足りない問い合わせ</div>
+            <pre class="prompt-code"><code>印刷できません。急ぎです。よろしくお願いします。</code></pre>
+            <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
+          </div>
+          <div class="prompt-box prompt-collapsible">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">📋 サンプル 3：緊急度が高い問い合わせ</div>
+            <pre class="prompt-code"><code>情報システム部 各位
+
+製造部の第2ラインです。至急お願いします。
+
+15時10分ごろから、ライン端末（管理番号 PC-2024-0088）の画面が
+真っ暗になったまま操作できません。電源ボタンを長押ししても
+反応がなく、再起動もできない状態です。
+
+この端末が使えないと工程実績の登録ができず、
+第2ラインを止めている状況です。現場に3名待機させています。
+
+製造部 第2ライン 佐々木</code></pre>
+            <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
+          </div>
+          <div class="prompt-box prompt-collapsible">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">📋 サンプル 4：複数の事象が混ざった問い合わせ（応用）</div>
+            <pre class="prompt-code"><code>情報システム部 ご担当者様
+
+営業部の丸山です。2点ご相談があります。
+
+1点目です。先週から社内ポータルの表示が遅く、
+特に午後になると申請一覧の画面が開くまで30秒ほどかかります。
+隣の席の同僚は普通に使えているようで、私の端末だけかもしれません。
+
+2点目です。新しく配属されたメンバー2名に、
+CRMの参照権限を付けていただきたいです。
+上長の承認は取得済みです。
+
+お忙しいところ恐れ入りますが、ご確認をお願いいたします。
+
+営業部 丸山</code></pre>
+            <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
+          </div>
+          <div class="prompt-box">
+            <div class="prompt-label">💬 入力例（サンプル 1 の場合）</div>
+            <div class="copy-field">
+              <div class="copy-field-label">対応担当者名</div>
+              <div class="copy-field-value">
+                <span class="copy-field-text">藤原 美咲</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+            <div class="copy-field">
+              <div class="copy-field-label">現時点で判明している追加情報</div>
+              <div class="copy-field-value">
+                <span class="copy-field-text">同じ部署の2名からも同様の申告あり</span>
+                <button class="copy-field-btn" title="コピー">📋</button>
+              </div>
+            </div>
+          </div>
+
+          <h4>ステップ 7：出力を確認する（答え合わせ）</h4>
+          <p>サンプルごとに、以下が出ているか確認してください。すべてナレッジから導けるものです。</p>
+
+          <h5 class="block-title">サンプル 1：情報がそろっている問い合わせ</h5>
+          <ul class="file-list">
+            <li>類似ケースに <strong>CS-2026-0412 / CS-2026-0417 / CS-2026-0522</strong> の 3 件（すべて経費精算システムの認証エラー）</li>
+            <li>カテゴリ <strong>SaaS障害</strong>／サブカテゴリ <strong>認証エラー</strong>／原因区分 <strong>認証期限切れ</strong></li>
+            <li>優先度 <strong>高</strong>（複数名に同一事象＋締め処理の期限が迫っている）と、その判定根拠</li>
+            <li>再発防止策に <strong>FAQ 化または恒久対策の提案</strong>（同一事象が 3 回発生しているため）</li>
+          </ul>
+
+          <h5 class="block-title">サンプル 2：情報が足りない問い合わせ</h5>
+          <p>「印刷できません。急ぎです。」だけの問い合わせです。<strong>ここが一番大事な確認ポイントです。</strong></p>
+          <ul class="file-list">
+            <li>判断できない項目に <strong>「要確認」</strong>が入っている（推測で埋めていない）</li>
+            <li>回答案の代わりに<strong>依頼者へ聞き返す項目</strong>が列挙されている（いつ・誰が・何が・どうなる・業務影響・直前の変化）</li>
+          </ul>
+          <div class="tip-box">
+            <strong>🔍 注目してほしいところ：</strong>ここで「プリンターのドライバ不具合と推定されます」などと<strong>もっともらしく埋めてしまうフローは、実務では使えません</strong>。分からないことを分からないと言えるかどうかが、業務に組み込めるかの分かれ目です。「要確認」が並ぶのが正しい挙動です。
+          </div>
+
+          <h5 class="block-title">サンプル 3：緊急度が高い問い合わせ</h5>
+          <ul class="file-list">
+            <li>優先度 <strong>緊急</strong>（製造ラインが停止＝事業活動の停止）と、その判定根拠</li>
+            <li>類似ケースに <strong>CS-2026-0523</strong>（製造ライン端末の起動不可でライン停止）</li>
+            <li>解決策に<strong>予備機への切替</strong>が含まれている（過去ケースの解決策を踏まえている）</li>
+          </ul>
+
+          <div class="tip-box">
+            <strong>⚠️ 実務で使うときの注意：</strong>CRM への<strong>書き込みまで自動化するかは慎重に判断してください</strong>。このハンズオンは「ドラフトを生成して担当者が確認して登録する」形にしています。記録内容の責任は担当者にあり、フローが削るのは入力の手間だけです。自動登録まで踏み込む場合は、権限設計と監査ログの検討が別途必要になります。
+          </div>
+
+          <div class="tip-box">
+            <strong>🎉 完成：</strong>問い合わせ本文を貼るだけで、類似ケース・回答案・CRM 登録用ドラフトが揃うフローができました。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Part 3 -->
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="false">
+        <span class="accordion-icon">🚀</span>
+        <span class="accordion-label">
+          <strong>Part 3：現場に持ち帰る（応用）</strong>
+          <small>自社の CRM 項目への差し替え・複数依頼の分割・傾向分析</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>応用 1：自社の CRM 項目に差し替える</h4>
+          <p>差し替えるのは <code>ケース項目定義.csv</code> だけです。フロー側は変更しません。</p>
+          <ol>
+            <li>自社の CRM から項目定義（項目名・型・必須・選択肢）を出力する</li>
+            <li><code>ケース項目定義.csv</code> と同じ列構成に整える</li>
+            <li>選択肢は <code>/</code> 区切りで、CRM に登録されている値を<strong>正確に</strong>書く</li>
+            <li>「記入ルール」列に、自社の記載ルールを書く</li>
+          </ol>
+          <div class="tip-box">
+            <strong>💡 ポイント：</strong>選択肢の表記ゆれ（全角と半角、スペースの有無）がそのまま出力に出ます。CRM からエクスポートした値をコピーして使うのが確実です。
+          </div>
+
+          <h4>応用 2：複数の依頼が混ざった問い合わせ（サンプル 4）</h4>
+          <p>ステップ 6 に載せているサンプル 4 を入力してみてください。1 通のメールに「社内ポータルが遅い」（障害）と「CRM の権限を付けてほしい」（権限申請）という別カテゴリの依頼が混在しています。</p>
+          <p>カテゴリは 1 つしか選べないルールなので、<strong>ケースを 2 件に分けて起票すべきと提案されるのが望ましい挙動</strong>です。1 件に押し込めてしまうと、後から「権限申請の対応履歴」を検索しても出てこなくなります。</p>
+
+          <h4>応用 3：溜まった記録から傾向を読む</h4>
+          <p>記録が構造化されて溜まると、そこから分析ができるようになります。これは対話で深掘りする作業なので、同じ Space にエージェントを立てるのが向いています（<a href="quick-usage.html#guide-a">ガイド A</a>のステップ A-1）。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">⚙️ エージェント定義プロンプト（分析用）</div>
+            <pre><code>「ケース記録 Space」を利用して、ヘルプデスクの対応履歴を分析するエージェントを作成してください。過去ケース履歴.csv をもとに、カテゴリ別の件数・対応時間の傾向・再発している事象・原因区分の偏りに回答してください。数値は必ず csv の値をもとに計算し、根拠となるケース番号を示してください。</code></pre>
+          </div>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>同じ事象が繰り返し発生しているケースを抽出して、FAQ化すべき順に並べてください</code></pre>
+          </div>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">💬 質問例</div>
+            <pre><code>再発防止策に「未実施」と書かれている案件を洗い出して、放置による影響を評価してください</code></pre>
+          </div>
+
+          <h4>応用 4：転用しやすい他の「1 件ずつの記録作業」</h4>
+          <p>同じ型（項目定義＋記載ルール＋過去履歴）は、ヘルプデスク以外にも当てはまります。</p>
+          <ul>
+            <li>顧客からの問い合わせ・クレーム対応記録（CRM への記録）</li>
+            <li>商談記録・訪問報告（SFA への記録）</li>
+            <li>不具合報告・品質記録（不具合管理システムへの記録）</li>
+            <li>設備点検の記録（点検結果の構造化）</li>
+            <li>採用面接の評価記録（評価項目に沿った記録）</li>
+          </ul>
+          <div class="tip-box">
+            <strong>💡 共通する条件：</strong>「登録先の項目が決まっている」「毎回同じ形で書く」「過去の記録を参照したい」の 3 つが揃う作業は、すべてこのシナリオの型で対応できます。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <h4 class="handson-subgroup-title" style="margin-top:40px;">🔗 関連シナリオ</h4>
+    <p class="group-desc">同じ業務領域の別シナリオです。データを使い回せるものもあります。</p>
+
+    <a href="quick-helpdesk-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">💻</span>
+      <span class="accordion-label">
+        <strong>社内ヘルプデスク</strong>
+        <small>同じ履歴データで一次回答を試す（エージェント型）</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-troubleshoot-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🚨</span>
+      <span class="accordion-label">
+        <strong>トラブルシュート</strong>
+        <small>原因が分からない障害の切り分け（エージェント型）</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-knowledge-gen-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">📚</span>
+      <span class="accordion-label">
+        <strong>ナレッジ生成</strong>
+        <small>溜まった記録を FAQ・手順書にする（フロー型）</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <nav class="scenario-nav" aria-label="シナリオの移動">
+      <a class="scenario-nav-item scenario-nav-prev" href="quick-monthly-report-handson.html">
+        <span class="scenario-nav-dir">← 前のシナリオ</span>
+        <span class="scenario-nav-title">📝 月次報告書</span>
+        <span class="badge badge-flow">⚙️ フロー型</span>
+      </a>
+      <a class="scenario-nav-index" href="index.html#flow-scenarios">☰ シナリオ一覧</a>
+      <a class="scenario-nav-item scenario-nav-next" href="quick-knowledge-gen-handson.html">
+        <span class="scenario-nav-dir">次のシナリオ →</span>
+        <span class="scenario-nav-title">📚 ナレッジ生成</span>
+        <span class="badge badge-flow">⚙️ フロー型</span>
+      </a>
+    </nav>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Amazon Quick Hands-on. Powered by Amazon Web Services.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+      });
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href.startsWith('#')) return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    document.querySelectorAll('.prompt-copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.closest('.prompt-box').querySelector('code');
+        if (code) navigator.clipboard.writeText(code.textContent).then(() => {
+          btn.textContent = '✅ コピー済み';
+          setTimeout(() => btn.textContent = '📋 コピー', 1500);
+        });
+      });
+    });
+    document.querySelectorAll('.copy-field-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const text = btn.closest('.copy-field-value').querySelector('.copy-field-text').textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          btn.textContent = '✅';
+          setTimeout(() => btn.textContent = '📋', 1500);
+        });
+      });
+    });
+    document.querySelectorAll('.prompt-toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const box = btn.closest('.prompt-collapsible');
+        const expanded = box.classList.toggle('expanded');
+        btn.setAttribute('aria-expanded', expanded);
+        btn.textContent = expanded ? '折りたたむ ▲' : '全文を表示 ▼';
+      });
+    });
+  </script>
+
+</body>
+</html>
