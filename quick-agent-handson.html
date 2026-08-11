@@ -26,8 +26,8 @@
     <div class="hero-inner">
       <p class="hero-tag">Amazon Quick ハンズオン</p>
       <h1>自分専用の<br>AI 検索エージェントを作成する</h1>
-      <p class="hero-desc">MCP 連携で AWS の最新情報を常に検索できる、あなた専用の AI エージェントを作りましょう。</p>
-      <a href="#mcp" class="btn-primary">ハンズオンを始める</a>
+      <p class="hero-desc">MCP 連携で AWS の最新情報を常に検索できる、あなた専用の AI エージェントを作りましょう。MCP の設定は講師側で完了しているので、エージェントの作成から始めます。</p>
+      <a href="#agent" class="btn-primary">ハンズオンを始める</a>
     </div>
   </header>
 
@@ -91,15 +91,21 @@
 
   <!-- MCP 設定 -->
   <section id="mcp" class="section section-alt">
-    <h2 class="section-title">実践 1：AWS Knowledge MCP を設定する</h2>
-    <p class="section-desc">MCP 連携で最新情報を常に検索できるようにします。</p>
+    <h2 class="section-title">実践 1：AWS Knowledge MCP を設定する <span class="badge badge-guide">🔑 管理者のみ</span></h2>
+    <p class="section-desc">MCP 連携で最新情報を常に検索できるようにします。この設定は Amazon Quick の<strong>管理者権限が必要</strong>です。</p>
+
+    <div class="tip-box tip-box-note">
+      <strong>🔑 この設定は管理者ユーザーのみ実施できます：</strong>MCP（インテグレーション）の登録はテナント全体に影響する設定のため、<strong>一般ユーザーの画面には表示されません</strong>。当日は<strong>講師側で設定済み</strong>ですので、参加者のみなさんは<a href="#agent">実践 2：AWS 検索エージェントを作成する</a>から進めてください。
+      <br><br>
+      MCP は<strong>一度設定すればテナント内の全ユーザーが利用できます</strong>。以下の手順は「自社に持ち帰って管理者が設定するとき」の参考用です。手順を確認したい方だけ下のカードを開いてください。
+    </div>
 
     <div class="accordion">
-      <button class="accordion-btn" aria-expanded="true">
+      <button class="accordion-btn" aria-expanded="false">
         <span class="accordion-icon">🔌</span>
         <span class="accordion-label">
-          <strong>MCP の設定手順（ステップ 1〜6）</strong>
-          <small>インテグレーション設定 → 検証 → 有効化</small>
+          <strong>MCP の設定手順（ステップ 1〜6） <span class="badge badge-guide">🔑 管理者向け</span></strong>
+          <small>インテグレーション設定 → 検証 → 有効化 ・ 参加者は開かなくて大丈夫です</small>
         </span>
         <span class="accordion-arrow">▼</span>
       </button>
@@ -109,7 +115,7 @@
           <h4>ステップ 1：インテグレーションページを開く</h4>
           <p>インテグレーションページを開きます。本ページでは、さまざまな外部システムとの連携オプションが表示されます。画面上部の「アクション」をクリックし、「Model Context Protocol」セクションを見つけて MCP 統合情報の設定を開始します。</p>
           <div class="screenshot">
-            <img src="images/mcp-step1-integrations.png" alt="インテグレーションページとアクションメニューのスクリーンショット">
+            <img src="images/mcp-step1-integrations.png" alt="インテグレーションページとアクションメニューのスクリーンショット" width="1327" height="912">
             <p class="screenshot-caption">アクション → Model Context Protocol を選択</p>
           </div>
 
@@ -124,14 +130,14 @@
             <pre><code>https://knowledge-mcp.global.api.aws</code></pre>
           </div>
           <div class="screenshot">
-            <img src="images/mcp-step2-endpoint.png" alt="名前とエンドポイント入力画面のスクリーンショット">
+            <img src="images/mcp-step2-endpoint.png" alt="名前とエンドポイント入力画面のスクリーンショット" width="1913" height="1114">
             <p class="screenshot-caption">名前・説明・エンドポイントを入力</p>
           </div>
 
           <h4>ステップ 3：認証情報を検証する</h4>
           <p>MCP 統合を設定する前に、認証情報が正しく設定されているかを確認します。「作成して続行」ボタンをクリックして、接続に必要な認証情報を検証します。</p>
           <div class="screenshot">
-            <img src="images/mcp-step3-validate.png" alt="認証情報の検証画面のスクリーンショット">
+            <img src="images/mcp-step3-validate.png" alt="認証情報の検証画面のスクリーンショット" width="1901" height="1118">
             <p class="screenshot-caption">「作成して続行」で認証情報を検証</p>
           </div>
 
@@ -141,7 +147,7 @@
             <strong>ℹ️ 補足：</strong>本 MCP サーバは AWS のドキュメント検索・取得、関連コンテンツの取得などが可能です。
           </div>
           <div class="screenshot">
-            <img src="images/mcp-step4-review-action.png" alt="Review Action 画面のスクリーンショット">
+            <img src="images/mcp-step4-review-action.png" alt="Review Action 画面のスクリーンショット" width="1896" height="1104">
             <p class="screenshot-caption">Review Action で操作内容を確認</p>
           </div>
 
@@ -151,14 +157,14 @@
             <strong>💡 ポイント：</strong>ここで同じ Quick Suite のアカウントを利用しているユーザに対して、自分が設定した MCP サーバを共有することが可能です。一人が設定すれば組織全体に共有できます。
           </div>
           <div class="screenshot">
-            <img src="images/mcp-step5-complete.png" alt="設定完了画面のスクリーンショット">
+            <img src="images/mcp-step5-complete.png" alt="設定完了画面のスクリーンショット" width="1902" height="1107">
             <p class="screenshot-caption">「完了」で MCP 設定が完了</p>
           </div>
 
           <h4>ステップ 6：アクションが有効になったことを確認する</h4>
           <p>「アクション」タブを押すと、利用可能なアクションが一覧表示されます。ここで MCP 統合が有効になったことを確認してください。</p>
           <div class="screenshot">
-            <img src="images/mcp-step6-actions-tab.png" alt="アクションタブの一覧表示スクリーンショット">
+            <img src="images/mcp-step6-actions-tab.png" alt="アクションタブの一覧表示スクリーンショット" width="1794" height="434">
             <p class="screenshot-caption">アクションタブで MCP 統合の有効化を確認</p>
           </div>
 
@@ -169,8 +175,8 @@
 
   <!-- エージェント作成 -->
   <section id="agent" class="section">
-    <h2 class="section-title">実践 2：AWS 検索エージェントを作成する</h2>
-    <p class="section-desc">MCP 初期設定が完了していれば、すべての利用者が実行できます。ぜひご体験ください。</p>
+    <h2 class="section-title">実践 2：AWS 検索エージェントを作成する <span class="badge badge-self">🧑‍💻 全員</span></h2>
+    <p class="section-desc"><strong>参加者のみなさんはここから始めてください。</strong>MCP の初期設定は講師側で完了しているので、一般ユーザーの権限でそのまま実行できます。</p>
 
     <div class="accordion">
       <button class="accordion-btn" aria-expanded="true">
@@ -187,7 +193,7 @@
           <h4>ステップ 7：チャットエージェントを作成する</h4>
           <p>MCP 統合が完了したら、チャットエージェント画面に移動し、「チャットエージェントを作成」を押してください。ここから先は、あなた専用の AI Agent を作成します。</p>
           <div class="screenshot">
-            <img src="images/agent-step7-create-agent.png" alt="チャットエージェント作成画面のスクリーンショット">
+            <img src="images/agent-step7-create-agent.png" alt="チャットエージェント作成画面のスクリーンショット" width="1346" height="768">
             <p class="screenshot-caption">「チャットエージェントを作成」を押下</p>
           </div>
 
@@ -207,7 +213,7 @@ AWSに関する質問は、AWS Knowledge MCPを使って最新情報を取得で
             出力トーンは［<strong>トーン・スタイル</strong>］にします。
           </div>
           <div class="screenshot">
-            <img src="images/agent-step8-initial-prompt.png" alt="初期プロンプト設定画面のスクリーンショット">
+            <img src="images/agent-step8-initial-prompt.png" alt="初期プロンプト設定画面のスクリーンショット" width="1346" height="768">
             <p class="screenshot-caption">初期プロンプトを入力</p>
           </div>
 
@@ -219,7 +225,7 @@ AWSに関する質問は、AWS Knowledge MCPを使って最新情報を取得で
             <pre><code>Amazon Quickという新しいサービスの概要を教えて</code></pre>
           </div>
           <div class="screenshot">
-            <img src="images/agent-step9-confirm-preview.png" alt="設定確認とプレビュー画面のスクリーンショット">
+            <img src="images/agent-step9-confirm-preview.png" alt="設定確認とプレビュー画面のスクリーンショット" width="1346" height="768">
             <p class="screenshot-caption">アクションに「AWS Knowledge Base」があることを確認してプレビューで質問</p>
           </div>
 
@@ -229,7 +235,7 @@ AWSに関する質問は、AWS Knowledge MCPを使って最新情報を取得で
           <h4>ステップ 11：作成したエージェントを利用する</h4>
           <p>起動完了後、チャットエージェントが作成されていることを確認し、「チャット」を押すことで、先ほど作成した AI エージェントを利用できるようになります。</p>
           <div class="screenshot">
-            <img src="images/agent-step11-use-agent.png" alt="起動後のチャットエージェント画面のスクリーンショット">
+            <img src="images/agent-step11-use-agent.png" alt="起動後のチャットエージェント画面のスクリーンショット" width="1346" height="768">
             <p class="screenshot-caption">作成したエージェントでチャットを開始</p>
           </div>
 

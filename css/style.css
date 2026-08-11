@@ -159,6 +159,26 @@ a:hover {
   margin-right: auto;
 }
 
+/* section-alt 直下の要素は、クラス側で横マージンを 0 指定していても中央揃えを維持する
+   （margin: 16px 0 などの短縮指定に上書きされて左寄せになるのを防ぐ） */
+.section-alt > .tip-box,
+.section-alt > .block-title,
+.section-alt > .group-desc,
+.section-alt > .handson-group-title,
+.section-alt > .handson-subgroup-title,
+.section-alt > .compare-table,
+.section-alt > .table-wrap,
+.section-alt > .guide-route,
+.section-alt > .accordion,
+.section-alt > .prompt-box,
+.section-alt > .screenshot,
+.section-alt > p,
+.section-alt > ul,
+.section-alt > ol {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .section-title {
   font-size: 1.8rem;
   font-weight: 800;
@@ -494,6 +514,115 @@ a:hover {
   color: #6b5900;
 }
 
+/* ===== シナリオ間の移動ナビ（ページ下部） ===== */
+.scenario-nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: stretch;
+  gap: 12px;
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--aws-border);
+}
+
+.scenario-nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #fff;
+  border: 1px solid #e3e8ec;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 12px 16px;
+  text-decoration: none;
+  color: var(--aws-text);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.scenario-nav-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+}
+
+.scenario-nav-prev {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.scenario-nav-next {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.scenario-nav-dir {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--aws-orange);
+}
+
+.scenario-nav-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.scenario-nav-item .badge {
+  margin-left: 0;
+  align-self: flex-start;
+}
+
+.scenario-nav-next .badge {
+  align-self: flex-end;
+}
+
+.scenario-nav-empty {
+  border: 1px dashed #e3e8ec;
+  border-radius: var(--radius);
+  background: transparent;
+  box-shadow: none;
+}
+
+.scenario-nav-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 12px 18px;
+  border: 1px solid var(--aws-border);
+  border-radius: var(--radius);
+  background: var(--aws-light);
+  color: var(--aws-text);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.scenario-nav-index:hover {
+  background: #fff;
+}
+
+@media (max-width: 700px) {
+  .scenario-nav {
+    grid-template-columns: 1fr;
+  }
+  .scenario-nav-next {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .scenario-nav-next .badge {
+    align-self: flex-start;
+  }
+  .scenario-nav-empty {
+    display: none;
+  }
+}
+
+/* 権限・前提条件などを目立たせる tip-box（警告ではなく「お知らせ」のトーン） */
+.tip-box-note {
+  background: #eef4fb;
+  border-left-color: #1a56a8;
+  color: #1c3f66;
+}
+
 /* ===== トラブルシューティング ===== */
 .troubleshoot-box {
   border: 1px solid var(--aws-border);
@@ -679,9 +808,18 @@ a:hover {
 
 .screenshot img {
   max-width: 100%;
+  /* width/height 属性から縦横比を確定させ、遅延読み込み時のレイアウトずれ（アンカー飛び先のずれ）を防ぐ */
+  height: auto;
   border-radius: 8px;
   border: 1px solid var(--aws-border);
   box-shadow: var(--shadow);
+}
+
+/* アンカーで見出しに飛んだとき、固定ナビの下に隠れないようにする */
+.handson-group-title,
+.handson-subgroup-title,
+.section-title {
+  scroll-margin-top: 80px;
 }
 
 .screenshot-caption {
@@ -945,6 +1083,18 @@ a:hover {
   border-left: 4px solid var(--aws-orange);
 }
 
+/* ===== テーブルの横スクロールラッパー ===== */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 24px;
+}
+
+.table-wrap .compare-table {
+  min-width: 640px;
+  margin-bottom: 0;
+}
+
 /* ===== 比較テーブル ===== */
 .compare-table {
   width: 100%;
@@ -969,6 +1119,12 @@ a:hover {
   background: var(--aws-dark);
   color: #fff;
   font-weight: 700;
+}
+
+.compare-table tbody th {
+  background: var(--aws-light);
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .compare-table tbody tr:last-child td {
@@ -1044,6 +1200,112 @@ a:hover {
   margin-top: 8px;
 }
 
+/* ===== ガイドの進み方（共通 → A / B の分岐図） ===== */
+.guide-route {
+  margin: 0 0 24px;
+}
+
+.guide-route-common {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.guide-route-common::after {
+  content: "▼";
+  position: absolute;
+  left: 50%;
+  bottom: -24px;
+  transform: translateX(-50%);
+  color: var(--aws-orange);
+  font-size: 0.9rem;
+}
+
+.guide-route-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--aws-orange);
+  margin-bottom: 6px;
+}
+
+.guide-route-common > a,
+.guide-route-branch {
+  display: block;
+  background: #fff;
+  border: 1px solid #e3e8ec;
+  border-left: 4px solid var(--aws-orange);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px 18px;
+  text-decoration: none;
+  color: var(--aws-text);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.guide-route-common > a:hover,
+.guide-route-branch:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+}
+
+.guide-route-common > a strong,
+.guide-route-branch strong {
+  display: block;
+  font-size: 0.98rem;
+}
+
+.guide-route-common > a small,
+.guide-route-branch small {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.8rem;
+  color: var(--aws-text-light);
+}
+
+.guide-route-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.guide-route-branch .badge {
+  margin-left: 0;
+  margin-bottom: 8px;
+}
+
+.guide-route-agent {
+  border-left-color: #5b3fa8;
+}
+
+.guide-route-flow {
+  border-left-color: #a34a00;
+}
+
+@media (max-width: 640px) {
+  .guide-route-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== 補足の一行メモ（本文中） ===== */
+.note-inline {
+  font-size: 0.86rem;
+  color: var(--aws-text-light);
+  background: var(--aws-light);
+  border-left: 3px solid #d5dbe0;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin: 0 0 14px;
+}
+
+/* ===== ハンズオン一覧のサブグループ見出し（シナリオの型） ===== */
+.handson-subgroup-title {
+  margin: 24px 0 6px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--aws-dark);
+}
+
 /* ===== ハンズオン グループ説明 ===== */
 .group-desc {
   font-size: 0.9rem;
@@ -1080,6 +1342,19 @@ a:hover {
   background: #fff3d6;
   color: #8a6300;
   border: 1px solid #ffe0a3;
+}
+
+/* シナリオの型バッジ */
+.badge-agent {
+  background: #f0eafc;
+  color: #5b3fa8;
+  border: 1px solid #d8c9f5;
+}
+
+.badge-flow {
+  background: #ffeade;
+  color: #a34a00;
+  border: 1px solid #ffcfae;
 }
 
 /* 「まずはこちら」ガイドを強調 */

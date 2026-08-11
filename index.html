@@ -48,7 +48,7 @@
   <!-- ハンズオン内容 -->
   <section id="handson" class="section section-alt">
     <h2 class="section-title">ハンズオン内容</h2>
-    <p class="section-desc">第1部・第2部を講師と一緒に進めたあと、第3部は各自で業務シナリオを選んで進めます。</p>
+    <p class="section-desc">第1部・第2部を講師と一緒に進めたあと、共通ガイドを手順書として開きながら、第3部は各自で業務シナリオを選んで進めます。</p>
 
     <div class="handson-list">
 
@@ -68,7 +68,7 @@
       <span class="accordion-icon">🤖</span>
       <span class="accordion-label">
         <strong>自分専用の AI 検索エージェントを作成しよう <span class="badge badge-live">👥 講師と一緒</span></strong>
-        <small>所要時間：約 15 分 ・ MCP 連携で AWS の最新情報を検索</small>
+        <small>所要時間：約 15 分 ・ MCP 連携で AWS の最新情報を検索（MCP 設定は管理者のみ・講師が事前設定）</small>
       </span>
       <span class="accordion-arrow">→</span>
     </a>
@@ -78,19 +78,6 @@
       <span class="accordion-label">
         <strong>フローで提案資料を自動作成しよう <span class="badge badge-live">👥 講師と一緒</span></strong>
         <small>所要時間：約 15 分 ・ 入力するだけで AWS 提案資料を自動生成</small>
-      </span>
-      <span class="accordion-arrow">→</span>
-    </a>
-
-    <!-- 共通ガイド：第2部・第3部の前に -->
-    <h3 class="handson-group-title">共通ガイド（第2部・第3部の前に）</h3>
-    <p class="group-desc">第2部・第3部は、いずれも「Space を作る → データを入れる → エージェントを作る」という同じ操作が土台になります。手を動かし始める前に、下の「使い方」で基本の流れをつかんでおきましょう。</p>
-
-    <a href="quick-usage.html" class="accordion accordion-link accordion-link-guide">
-      <span class="accordion-icon">🧭</span>
-      <span class="accordion-label">
-        <strong>使い方：Space とエージェントの作り方 <span class="badge badge-guide">📘 まずはこちら</span></strong>
-        <small>所要時間：約 10 分 ・ 第2部・第3部で共通して使う基本操作</small>
       </span>
       <span class="accordion-arrow">→</span>
     </a>
@@ -108,14 +95,30 @@
       <span class="accordion-arrow">→</span>
     </a>
 
+    <!-- 共通ガイド：第3部の前に -->
+    <h3 class="handson-group-title">共通ガイド（第3部の前に）</h3>
+    <p class="group-desc">ここから先は各自で進めます。第1部・第2部で講師と一緒に操作した内容を、自分で再現するための手順書です。<strong>まず全シナリオ共通の「Space を作る」</strong>、そのあとシナリオの型に応じて「エージェントを作る（ガイド A）」か「フローを作る（ガイド B）」のどちらか一方へ進みます。</p>
+
+    <a href="quick-usage.html" class="accordion accordion-link accordion-link-guide">
+      <span class="accordion-icon">🧭</span>
+      <span class="accordion-label">
+        <strong>使い方：Space・エージェント・フローの作り方 <span class="badge badge-guide">📘 第3部の手順書</span></strong>
+        <small>共通：Space（約 7 分）＋ ガイド A：エージェント（約 5 分）または ガイド B：フロー（約 10 分）</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
     <!-- 第3部：各自で進める（業務シナリオ別） -->
     <h3 class="handson-group-title">第3部：各自で進める（業務シナリオ別）</h3>
-    <p class="group-desc">ここからは各自で。第2部で覚えた「Space → データ → エージェント」の操作を、現場に近い 3 つの業務シナリオに応用します。時間の許す限り 3 つとも試して、活用イメージを広げましょう。</p>
+    <p class="group-desc">シナリオは「エージェント型」4 本と「フロー型」3 本の全 7 本です。<strong>探すときはエージェント、繰り返すときはフロー</strong>。全部やる必要はありません。自分の業務に近いものを 1〜2 本選んで試してください。</p>
+
+    <h4 class="handson-subgroup-title" id="agent-scenarios">◆ エージェント型 ─ 対話しながら深掘りする</h4>
+    <p class="group-desc">毎回違うことを聞く業務に向いています。進め方は<a href="quick-usage.html#common">共通ステップ</a> → <a href="quick-usage.html#guide-a">ガイド A</a>です。</p>
 
     <a href="quick-maintenance-handson.html" class="accordion accordion-link">
       <span class="accordion-icon">🔧</span>
       <span class="accordion-label">
-        <strong>保守サービス：訪問計画と顧客対応を支援しよう <span class="badge badge-self">🧑‍💻 各自で</span></strong>
+        <strong>保守サービス：訪問計画と顧客対応を支援しよう <span class="badge badge-agent">💬 エージェント型</span></strong>
         <small>所要時間：約 15 分 ・ SLA 判断・フォローアップ・契約更新提案</small>
       </span>
       <span class="accordion-arrow">→</span>
@@ -124,8 +127,17 @@
     <a href="quick-helpdesk-handson.html" class="accordion accordion-link">
       <span class="accordion-icon">💻</span>
       <span class="accordion-label">
-        <strong>社内ヘルプデスク：IT 一次対応を自動化しよう <span class="badge badge-self">🧑‍💻 各自で</span></strong>
+        <strong>社内ヘルプデスク：IT 一次対応を自動化しよう <span class="badge badge-agent">💬 エージェント型</span></strong>
         <small>所要時間：約 15 分 ・ FAQ 一次回答・申請案内・傾向分析</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-troubleshoot-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🚨</span>
+      <span class="accordion-label">
+        <strong>トラブルシュート：エラーから解決策を提示しよう <span class="badge badge badge-agent">💬 エージェント型</span></strong>
+        <small>所要時間：約 15 分 ・ 生ログを貼るだけ・原因候補・案内文・エスカレ判定</small>
       </span>
       <span class="accordion-arrow">→</span>
     </a>
@@ -133,8 +145,38 @@
     <a href="quick-attendance-handson.html" class="accordion accordion-link">
       <span class="accordion-icon">🕐</span>
       <span class="accordion-label">
-        <strong>就業・勤怠運用：問い合わせ対応と自動チェック <span class="badge badge-self">🧑‍💻 各自で</span></strong>
+        <strong>就業・勤怠運用：問い合わせ対応と自動チェック <span class="badge badge-agent">💬 エージェント型</span></strong>
         <small>所要時間：約 15 分 ・ 規則の根拠つき回答・残業リスク分析・自動通知</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <h4 class="handson-subgroup-title" id="flow-scenarios">◆ フロー型 ─ 定型作業を自動化する</h4>
+    <p class="group-desc">毎月・毎週など同じ手順を繰り返す業務に向いています。進め方は<a href="quick-usage.html#common">共通ステップ</a> → <a href="quick-usage.html#guide-b">ガイド B</a>です。</p>
+
+    <a href="quick-monthly-report-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">📝</span>
+      <span class="accordion-label">
+        <strong>月次報告書：作業実績から報告書を自動生成 <span class="badge badge-flow">⚙️ フロー型</span></strong>
+        <small>所要時間：約 20 分 ・ 転記作業をゼロに・前月比コメント・特記事項の自動抽出</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-case-record-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🎫</span>
+      <span class="accordion-label">
+        <strong>ケース記録：回答案と記録ドラフトを同時生成 <span class="badge badge badge-flow">⚙️ フロー型</span></strong>
+        <small>所要時間：約 20 分 ・ CRM への1件ずつの記録をなくす・類似ケース検索</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-knowledge-gen-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">📚</span>
+      <span class="accordion-label">
+        <strong>ナレッジ生成：FAQ と運用手順書を自動作成 <span class="badge badge badge-flow">⚙️ フロー型</span></strong>
+        <small>所要時間：約 20 分 ・ 履歴からFAQ・対応記録から手順書・穴の可視化</small>
       </span>
       <span class="accordion-arrow">→</span>
     </a>
@@ -166,12 +208,27 @@
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const href = a.getAttribute('href');
-        if (!href.startsWith('#')) return;
-        e.preventDefault();
+        if (!href.startsWith('#') || href === '#') return;
         const target = document.querySelector(href);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', href);
       });
     });
+
+    // ===== ハッシュ付きで開かれたときの位置合わせ =====
+    // シナリオページから #handson や #flow-scenarios で戻ってきたとき、
+    // フォント読み込みなどで高さが変わっても目的の位置に留まるよう二段で補正する
+    function scrollToHash() {
+      const id = location.hash.replace('#', '');
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
+    }
+    scrollToHash();
+    window.addEventListener('load', scrollToHash);
+    window.addEventListener('hashchange', scrollToHash);
   </script>
 
 </body>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amazon Quick ハンズオン｜使い方（Space とエージェントの作り方）</title>
+  <title>Amazon Quick ハンズオン｜使い方（Space・エージェント・フローの作り方）</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -14,7 +14,9 @@
       <span class="nav-logo">Amazon Quick Hands-on</span>
       <ul class="nav-links">
         <li><a href="index.html">トップ</a></li>
-        <li><a href="#flow">基本の流れ</a></li>
+        <li><a href="#common">共通：Space</a></li>
+        <li><a href="#guide-a">A：エージェント</a></li>
+        <li><a href="#guide-b">B：フロー</a></li>
         <li><a href="#next">次のステップ</a></li>
       </ul>
     </div>
@@ -23,9 +25,9 @@
   <!-- ヒーロー -->
   <header class="hero">
     <div class="hero-inner">
-      <p class="hero-tag">共通ガイド（第2部・第3部の前に）</p>
-      <h1>使い方<br>Space とエージェントの作り方</h1>
-      <p class="hero-desc">第2部（コスト × 売上分析）と第3部（業務シナリオ）で共通する、Amazon Quick 上で Space を作りエージェントを動かすまでの基本操作です。まずここで流れをつかんでから各パートに進みましょう。</p>
+      <p class="hero-tag">共通ガイド（第3部の前に）</p>
+      <h1>使い方<br>Space・エージェント・フローの作り方</h1>
+      <p class="hero-desc">第1部・第2部で講師と一緒に操作した内容を、第3部で自分で再現するための手順書です。「共通：Space を作る」→「ガイド A：エージェントを作る」または「ガイド B：フローを作る」の 3 部構成です。</p>
       <a href="#flow" class="btn-primary">流れを見る</a>
     </div>
   </header>
@@ -38,100 +40,433 @@
   <!-- 基本の流れ -->
   <section id="flow" class="section">
     <h2 class="section-title">基本の流れ</h2>
-    <p class="section-desc">所要時間：約 10 分 ・ どのハンズオンでも手順は同じです</p>
+    <p class="section-desc">共通ステップ 約 7 分 ＋ ガイド A 約 5 分 または ガイド B 約 10 分</p>
 
     <div class="tip-box">
-      <strong>📌 このページの位置づけ：</strong>ここでは「Space の作り方」「エージェントの作り方」という共通操作を説明します。Space 名・アップロードするデータ・エージェント定義プロンプト・質問例といった<strong>ケースごとの具体的な中身は、各ハンズオンページに記載</strong>しています。まず本ページで流れをつかみ、各ハンズオンページの値をコピーしながら進めてください。
+      <strong>📌 このページの位置づけ：</strong>ここでは Amazon Quick の<strong>操作手順</strong>だけを説明します。Space 名・アップロードするデータ・プロンプト・質問例といった<strong>シナリオごとの具体的な中身は、各シナリオページに記載</strong>しています。<strong>このページを開きながら、シナリオページの値をコピーして進める</strong>のが基本の使い方です。
     </div>
+
+    <h4 class="block-title">3 部構成になっています</h4>
+    <p>どのシナリオでも、まず<strong>共通ステップ</strong>で Space を作ってデータを入れます。そのあと、シナリオの型に応じてガイド A かガイド B のどちらか一方へ進みます。</p>
+
+    <div class="guide-route">
+      <div class="guide-route-common">
+        <span class="guide-route-label">すべてのシナリオ共通</span>
+        <a href="#common"><strong>共通：Space を作ってデータを入れる</strong><small>ステップ 1〜4</small></a>
+      </div>
+      <div class="guide-route-split">
+        <a href="#guide-a" class="guide-route-branch guide-route-agent">
+          <span class="badge badge-agent">💬 エージェント型</span>
+          <strong>ガイド A：エージェントを作る</strong>
+          <small>ステップ A-1〜A-2</small>
+        </a>
+        <a href="#guide-b" class="guide-route-branch guide-route-flow">
+          <span class="badge badge-flow">⚙️ フロー型</span>
+          <strong>ガイド B：フローを作る</strong>
+          <small>ステップ B-1〜B-7</small>
+        </a>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <strong>💡 ガイド A と B は両方やらなくて大丈夫：</strong>各シナリオページの冒頭に、そのシナリオがエージェント型かフロー型かが書かれています。<strong>自分が選んだシナリオの型に対応するガイドだけ</strong>読んでください。両方の違いを体感したい場合は、フロー型シナリオの「応用」でエージェントも作れます。
+    </div>
+
+    <h4 class="block-title">エージェントとフローの使い分け</h4>
+    <p>ひとことで言うと、<strong>探すときはエージェント、繰り返すときはフロー</strong>です。第3部のシナリオは、この 2 つの型に分かれています。</p>
+
+    <div class="table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>チャットエージェント（ガイド A）</th>
+            <th>フロー（ガイド B）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>向いているケース</th>
+            <td>毎回違うことを聞く。対話しながら深掘りする</td>
+            <td>毎月・毎週など、同じ手順を繰り返す</td>
+          </tr>
+          <tr>
+            <th>入力のしかた</th>
+            <td>自由な質問を投げる</td>
+            <td>決まった入力項目に値を入れる（対象月・顧客名など）</td>
+          </tr>
+          <tr>
+            <th>出力</th>
+            <td>質問に応じてその都度変わる</td>
+            <td>フォーマットを固定できる</td>
+          </tr>
+          <tr>
+            <th>処理のしかた</th>
+            <td>1 回の応答で返す</td>
+            <td>集計 → 作成 → 仕上げと、複数ステップを順番に処理する</td>
+          </tr>
+          <tr>
+            <th>例</th>
+            <td>「6 月に SLA を超過した案件は？」と聞く</td>
+            <td>月次報告書を毎月作る</td>
+          </tr>
+          <tr>
+            <th>第3部のシナリオ</th>
+            <td>保守サービス／社内ヘルプデスク／トラブルシュート／就業・勤怠運用</td>
+            <td>月次報告書／ケース記録／ナレッジ生成</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ===== 共通ステップ ===== -->
+    <h3 class="handson-group-title" id="common">共通：Space を作ってデータを入れる</h3>
+    <p class="group-desc"><strong>すべてのシナリオで必要な操作です。</strong>エージェントもフローも、Space に入れたデータを参照して動きます。ここを飛ばすと、どちらも自社データを見てくれません。</p>
 
     <div class="accordion">
       <button class="accordion-btn" aria-expanded="true">
-        <span class="accordion-icon">🧭</span>
+        <span class="accordion-icon">📁</span>
         <span class="accordion-label">
-          <strong>ステップ 1〜7：Space 作成 → ナレッジ追加 → エージェント作成 → 質問</strong>
-          <small>Amazon Quick の画面で操作します</small>
+          <strong>ステップ 1〜4：ログイン → Space 作成 → 命名 → データのアップロード</strong>
+          <small>所要時間：約 7 分 ・ 全シナリオ共通</small>
         </span>
         <span class="accordion-arrow">▼</span>
       </button>
       <div class="accordion-content">
         <div class="handson-body">
 
-          <h4>ステップ 1：このガイドの位置づけ</h4>
-          <p>このページでは、第2部・第3部で共通して使う基本操作（Space を作る → データを入れる → エージェントを作る → 質問する）を学びます。まずここで流れをつかんでから、次のパートで実際に手を動かします。</p>
-          <ul>
-            <li><a href="quick-cost-analysis-handson.html">第2部：コスト × 売上分析</a>（AWS コスト × 売上で経営分析／講師と一緒）</li>
-            <li><a href="quick-maintenance-handson.html">第3部：保守サービス</a>（フィールド保守の訪問計画・顧客対応）</li>
-            <li><a href="quick-helpdesk-handson.html">第3部：社内ヘルプデスク</a>（IT 一次対応の自動化）</li>
-            <li><a href="quick-attendance-handson.html">第3部：就業・勤怠運用</a>（勤怠の問い合わせ対応と自動チェック）</li>
-          </ul>
-          <p>どのパートでも、Space とエージェントの基本操作はまったく同じです。</p>
-
-          <h4>ステップ 2：Amazon Quick にログイン</h4>
+          <h4>ステップ 1：Amazon Quick にログイン</h4>
           <p>当日配布された URL・認証情報で Amazon Quick にログインします。ブラウザで <code>https://quicksight.aws.amazon.com/</code> にアクセスするか、AWS マネジメントコンソールの検索窓に「Quick」と入力して <strong>Amazon Quick</strong> を開いても同じ画面に到達できます。</p>
 
-          <h4>ステップ 3：Space を作成する</h4>
+          <h4>ステップ 2：Space を作成する</h4>
           <p>左側のペインメニューから「<strong>スペース</strong>」を選択し、「<strong>スペースを作成する</strong>」をクリックします。新しい Space の編集画面に遷移します。</p>
           <div class="screenshot">
-            <img src="images/usage/step03_select_create_space.png" alt="スペースを選択して作成する画面" loading="lazy">
+            <img src="images/usage/step03_select_create_space.png" alt="スペースを選択して作成する画面" loading="lazy" width="1415" height="757">
             <p class="screenshot-caption">左ペインから「スペース」を選択→「スペースを作成する」をクリック</p>
           </div>
           <div class="tip-box">
-            <strong>💡 Space とは：</strong>エージェントが回答の根拠として参照するデータ（ナレッジ）をまとめて格納する「データ空間」です。
+            <strong>💡 Space とは：</strong>エージェントやフローが回答・生成の根拠として参照するデータ（ナレッジ）をまとめて格納する「データ空間」です。
           </div>
 
-          <h4>ステップ 4：Space に名前を付ける</h4>
-          <p>スペースに名前を付けます。各ハンズオンページに記載された <strong>Space 名</strong>をコピーして貼り付けてください。</p>
+          <h4>ステップ 3：Space に名前を付ける</h4>
+          <p>スペースに名前を付けます。各シナリオページに記載された <strong>Space 名</strong>をコピーして貼り付けてください。</p>
+          <div class="tip-box">
+            <strong>⚠️ 名前は正確に：</strong>Space 名はあとでプロンプトから「『〇〇 Space』を利用して」と指定します。シナリオページの表記と 1 文字でも違うと参照されないことがあるので、必ずコピーして貼り付けてください。
+          </div>
           <div class="screenshot">
-            <img src="images/usage/step04_name_space.png" alt="Quick で Space 名を入力する画面" loading="lazy">
+            <img src="images/usage/step04_name_space.png" alt="Quick で Space 名を入力する画面" loading="lazy" width="1415" height="757">
             <p class="screenshot-caption">Space 名を入力</p>
           </div>
 
-          <h4>ステップ 5：データ（ナレッジ）をアップロードする</h4>
+          <h4>ステップ 4：データ（ナレッジ）をアップロードする</h4>
           <ol>
-            <li>各ハンズオンページの「データファイル」からファイルをすべてダウンロードします（CSV・Markdown）</li>
+            <li>各シナリオページの「データファイル」からファイルをすべてダウンロードします（CSV・Markdown）</li>
             <li>Space 画面右上の「<strong>ナレッジを追加</strong>」→「<strong>ファイルのアップロード</strong>」を選択</li>
             <li>ダウンロードしたファイルをすべて選んでアップロード</li>
           </ol>
           <div class="screenshot">
-            <img src="images/usage/step05_add_knowledge.png" alt="ナレッジを追加メニュー" loading="lazy">
+            <img src="images/usage/step05_add_knowledge.png" alt="ナレッジを追加メニュー" loading="lazy" width="1415" height="757">
             <p class="screenshot-caption">「ナレッジを追加」→「ファイルのアップロード」</p>
           </div>
           <div class="screenshot">
-            <img src="images/usage/step05_upload_done.png" alt="ファイルアップロード完了の状態" loading="lazy">
+            <img src="images/usage/step05_upload_done.png" alt="ファイルアップロード完了の状態" loading="lazy" width="1415" height="757">
             <p class="screenshot-caption">ファイルがアップロードされた状態</p>
           </div>
+          <div class="tip-box">
+            <strong>ℹ️ アップロードしないファイルもあります：</strong>シナリオによっては「貼り付け用」のファイル（ログサンプル・問い合わせ本文など）が含まれます。これらは Space に入れず、チャットやフローの入力欄に貼り付けて使います。各シナリオページで区別して書かれています。
+          </div>
 
-          <h4>ステップ 6：チャットエージェントを作成する</h4>
+          <div class="tip-box">
+            <strong>➡️ 次に進む先：</strong>Space にファイルが入ったら、シナリオの型に応じて分岐します。<strong>エージェント型なら<a href="#guide-a">ガイド A</a>、フロー型なら<a href="#guide-b">ガイド B</a></strong>へ進んでください。
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ガイド A ===== -->
+    <h3 class="handson-group-title" id="guide-a">ガイド A：エージェントを作る</h3>
+    <p class="group-desc"><span class="badge badge-agent">💬 エージェント型</span> のシナリオで使います。Space のデータに質問できるエージェントを立てます。<strong>共通ステップを終えてから</strong>進めてください。</p>
+
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="false">
+        <span class="accordion-icon">💬</span>
+        <span class="accordion-label">
+          <strong>ステップ A-1〜A-2：エージェントを作成 → 質問する</strong>
+          <small>所要時間：約 5 分 ・ エージェント型のシナリオで参照してください</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>ステップ A-1：チャットエージェントを作成する</h4>
           <ol>
             <li>左ペインから「<strong>チャットエージェント</strong>」→「<strong>チャットエージェントを作成</strong>」をクリック（Space は自動保存されるのでそのまま進んで大丈夫です）</li>
-            <li>各ハンズオンページの「<strong>エージェント定義プロンプト</strong>」をコピーし、プロンプト入力欄に貼り付け</li>
+            <li>各シナリオページの「<strong>エージェント定義プロンプト</strong>」をコピーし、プロンプト入力欄に貼り付け</li>
             <li>「<strong>生成</strong>」をクリック</li>
           </ol>
           <div class="screenshot">
-            <img src="images/usage/step06_1_agent_pane.png" alt="チャットエージェントのペイン" loading="lazy">
+            <img src="images/usage/step06_1_agent_pane.png" alt="チャットエージェントのペイン" loading="lazy" width="1415" height="757">
             <p class="screenshot-caption">左ペインから「チャットエージェント」を選択</p>
           </div>
           <div class="screenshot">
-            <img src="images/usage/step06_2_create_agent.png" alt="エージェント作成画面" loading="lazy">
+            <img src="images/usage/step06_2_create_agent.png" alt="エージェント作成画面" loading="lazy" width="1415" height="757">
             <p class="screenshot-caption">「チャットエージェントを作成」</p>
           </div>
           <div class="screenshot">
-            <img src="images/usage/step06_3_paste_generate.png" alt="プロンプトを貼り付けて生成" loading="lazy">
+            <img src="images/usage/step06_3_paste_generate.png" alt="プロンプトを貼り付けて生成" loading="lazy" width="1415" height="757">
             <p class="screenshot-caption">プロンプトを貼り付けて「生成」</p>
           </div>
           <div class="tip-box">
             <strong>💡 ポイント：</strong>AI がプロンプトを解釈し、エージェントの名前・説明・ガードレールまで自動構成します。複雑なシステムプロンプト設計は不要です。数分でエージェントが完成します。
           </div>
           <div class="screenshot">
-            <img src="images/usage/step06_4_agent_done.png" alt="エージェント完成の画面" loading="lazy">
+            <img src="images/usage/step06_4_agent_done.png" alt="エージェント完成の画面" loading="lazy" width="1415" height="757">
             <p class="screenshot-caption">エージェント完成</p>
           </div>
 
-          <h4>ステップ 7：エージェントに質問してみる</h4>
-          <p>完成したら画面下部のチャット欄から質問しましょう。各ハンズオンページの「質問してみよう」にある質問例をそのままコピーしてもOKです。回答にはアップロードしたデータが根拠として使われます。</p>
+          <h4>ステップ A-2：エージェントに質問してみる</h4>
+          <p>完成したら画面下部のチャット欄から質問しましょう。各シナリオページの「質問してみよう」にある質問例をそのままコピーしてもOKです。回答にはアップロードしたデータが根拠として使われます。</p>
           <div class="screenshot">
-            <img src="images/usage/step07_agent_ready.png" alt="エージェントの回答例" loading="lazy">
+            <img src="images/usage/step07_agent_ready.png" alt="エージェントの回答例" loading="lazy" width="1415" height="757">
             <p class="screenshot-caption">アップロードしたデータに基づいた回答が返ってくる</p>
+          </div>
+
+          <h5 class="block-title">自分でエージェント定義プロンプトを書くときの型</h5>
+          <p>ハンズオンのあと自分の業務に応用するときは、次の型に沿って書くとうまくいきます。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">⚙️ エージェント定義プロンプトの型（雛形）</div>
+            <pre><code>「〇〇 Space」を利用して、△△を支援するエージェントを作成してください。（ファイル名1）・（ファイル名2）を参照して回答してください。
+
+回答のルール：
+- 数値は必ず（データファイル名）の値をもとに計算し、根拠となるID・番号を示すこと
+- データから読み取れない内容を答える場合は「データには記載がありません」と明示すること
+- 推測を述べる場合は「※要検証」と付けること
+
+（必要に応じて）出力の形式：
+【1】〜
+【2】〜
+【3】〜</code></pre>
+          </div>
+          <p>うまく動くプロンプトには共通点が 3 つあります。</p>
+          <ol>
+            <li><strong>冒頭で Space 名を明示する</strong> …「『〇〇 Space』を利用して」と書くことで、自社データを参照します</li>
+            <li><strong>根拠を示させる</strong> …「根拠となる ID を示すこと」と書くと、検算できる回答になります</li>
+            <li><strong>分からないときの振る舞いを決める</strong> …「記載がありません」と言わせることで、それらしい作り話を防げます</li>
+          </ol>
+
+          <h5 class="block-title">うまくいかないときは</h5>
+          <div class="table-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr><th>症状</th><th>よくある原因</th><th>対処</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>アップロードしたデータを見てくれない</td>
+                  <td>プロンプトに Space 名が入っていない</td>
+                  <td>プロンプト冒頭に「『〇〇 Space』を利用して」を追記して再生成</td>
+                </tr>
+                <tr>
+                  <td>データにない内容を答える</td>
+                  <td>分からないときの振る舞いが指定されていない</td>
+                  <td>「データから読み取れない場合は『記載がありません』と明示する」を追記</td>
+                </tr>
+                <tr>
+                  <td>数値が合わない</td>
+                  <td>集計の指示が曖昧</td>
+                  <td>「csv の値のみを使用」「合計が内訳の合計と一致しているか検算する」を追記</td>
+                </tr>
+                <tr>
+                  <td>回答が長すぎる／短すぎる</td>
+                  <td>出力形式が指定されていない</td>
+                  <td>【1】【2】【3】のように出力ブロックを明示的に指定する</td>
+                </tr>
+                <tr>
+                  <td>Space が選択肢に出てこない</td>
+                  <td>Space の作成・保存が完了していない</td>
+                  <td><a href="#common">共通ステップ</a>のステップ 2〜4 に戻り、アップロード完了を確認する</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ガイド B ===== -->
+    <h3 class="handson-group-title" id="guide-b">ガイド B：フローを作る</h3>
+    <p class="group-desc"><span class="badge badge-flow">⚙️ フロー型</span> のシナリオで使います。「毎月の報告書作成」のように決まった手順を繰り返す作業を、入力するだけで完成する仕組みに変えます。<strong>共通ステップを終えてから</strong>進めてください。</p>
+
+    <div class="accordion">
+      <button class="accordion-btn" aria-expanded="false">
+        <span class="accordion-icon">⚙️</span>
+        <span class="accordion-label">
+          <strong>ステップ B-1〜B-7：フロー作成 → Space 参照 → 実行モード → 結果確認</strong>
+          <small>所要時間：約 10 分 ・ フロー型のシナリオで参照してください</small>
+        </span>
+        <span class="accordion-arrow">▼</span>
+      </button>
+      <div class="accordion-content">
+        <div class="handson-body">
+
+          <h4>ステップ B-1：フローとは</h4>
+          <p>フローは、<strong>複数の処理を順番に実行する仕組み</strong>です。「入力を受け取る → データを集計する → 文書を作成する → 仕上げる」といった手順を一度定義しておけば、次回からは入力するだけで同じ品質の成果物が出てきます。</p>
+          <p>エージェントとの違いは、<strong>手順と出力フォーマットが固定される</strong>ことです。毎月の報告書のように「同じ形で出したい」作業に向いています。逆に、その都度違うことを調べたい場合はエージェント（<a href="#guide-a">ガイド A</a>）のほうが適しています。</p>
+          <div class="tip-box">
+            <strong>💡 第1部との違い：</strong>第1部の<a href="quick-flow-handson.html">フローハンズオン</a>で作ったフローは、Web 検索と一般知識をもとに提案資料を作るものでした。第3部のシナリオで作るフローは、<strong>Space にアップロードした自社データを参照する</strong>点が異なります。この違いがステップ B-4 のポイントです。
+          </div>
+
+          <h4>ステップ B-2：フローを作成する</h4>
+          <p>左メニューから「<strong>フロー</strong>」を選択し、「<strong>フローを作成</strong>」をクリックします。</p>
+          <div class="screenshot">
+            <img src="images/flow/flow-step1-select-flow.png" alt="左メニューから「フロー」を選択" loading="lazy" width="1346" height="768">
+            <p class="screenshot-caption">左メニューから「フロー」を選択</p>
+          </div>
+          <div class="screenshot">
+            <img src="images/flow/flow-step2-create-flow.png" alt="「フローを作成」をクリック" loading="lazy" width="1346" height="768">
+            <p class="screenshot-caption">「フローを作成」をクリック</p>
+          </div>
+
+          <h4>ステップ B-3：プロンプトを貼り付けて生成する</h4>
+          <p>各シナリオページの「<strong>フロー定義プロンプト</strong>」をコピーして入力欄に貼り付け、「<strong>生成</strong>」をクリックします。エージェントと同じで、プロンプトから AI がフローの各ステップを自動で組み立てます。</p>
+          <div class="screenshot">
+            <img src="images/flow/flow-step3-prompt.png" alt="プロンプトを入力" loading="lazy" width="1346" height="768">
+            <p class="screenshot-caption">プロンプトを貼り付けて「生成」</p>
+          </div>
+          <div class="screenshot">
+            <img src="images/flow/flow-step4-generated.png" alt="フローが作成された状態" loading="lazy" width="1346" height="768">
+            <p class="screenshot-caption">フローが作成された状態</p>
+          </div>
+          <div class="tip-box">
+            <strong>ℹ️ 生成結果はぶれます：</strong>作成されるフローのステップ数や表現は人それぞれで微妙に異なります。シナリオページの記載と多少違っても、大きく外れていなければそのまま進めて問題ありません。
+          </div>
+
+          <h5 class="block-title">自分でフロープロンプトを書くときの型</h5>
+          <p>ハンズオンのあと自分の業務に応用するときは、次の型に沿って書くとうまくいきます。</p>
+          <div class="prompt-box">
+            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
+            <div class="prompt-label">⚙️ フロー定義プロンプトの型（雛形）</div>
+            <pre><code>「〇〇 Space」を利用して、△△を自動作成するフローを作ってください。以下の4ステップで構成してください。
+
+【ステップ1：ユーザー入力（テキスト）】
+利用者に以下を入力させる：
+- 入力項目1（必須。例：〜）
+- 入力項目2（必須。例：〜）
+- 入力項目3（任意）
+
+【ステップ2：AI応答（集計・抽出）】
+どのファイルから、どの条件で、何を抽出・集計するかを箇条書きで具体的に指定する。
+※数値は元データの値のみを使用し、推測は行わないこと。合計が内訳の合計と一致していることを検算すること。
+
+【ステップ3：AI応答（本文の作成）】
+ステップ2の結果と、テンプレートファイルを使って成果物を作成する。
+- 章構成・見出し・表の列はテンプレートに完全に従う。列の追加・削除・並べ替えは禁止
+- 文体は見本ファイルに合わせる
+- 元データにない数値を書く場合は末尾に (推定) と付ける
+
+【ステップ4：AI応答（仕上げ）】
+ステップ3の成果物をもとに、説明メモやメール文面などの補助成果物を作成する。
+
+全体の制約：
+- 実行モードは会話モード（Conversational）にする</code></pre>
+          </div>
+          <p>うまく動くプロンプトには共通点が 3 つあります。</p>
+          <ol>
+            <li><strong>冒頭で Space 名を明示する</strong> …「『〇〇 Space』を利用して」と書くことで、フローが自社データを参照します</li>
+            <li><strong>入力項目を箇条書きで列挙する</strong> … これがないと入力欄が 1 つにまとまってしまいます</li>
+            <li><strong>禁止事項を書く</strong> …「列の並べ替えは禁止」「推測は行わない」のように、やってほしくないことを明示すると出力が安定します</li>
+          </ol>
+
+          <h4>ステップ B-4：Space を参照しているか確認する</h4>
+          <p>ここがフローで一番つまずきやすいところです。生成されたフローが、<strong>本当に Space のデータを見ているか</strong>を確認します。</p>
+          <ol>
+            <li>生成された各ステップを開き、<strong>参照先（データソース／ナレッジ）に自分が作った Space が指定されているか</strong>を確認します</li>
+            <li>指定されていない場合は、そのステップの参照先として Space を選び直します</li>
+            <li>ステップの指示文にファイル名（例：<code>作業実績表.csv</code>）が含まれているかも確認します</li>
+          </ol>
+          <div class="tip-box">
+            <strong>⚠️ ここを飛ばすと：</strong>Space を参照していないフローは、それらしい文章を作りますが<strong>数値がデータと合いません</strong>。実行後に「答え合わせ」の数字が合わない場合、まずこのステップに戻ってください。
+          </div>
+          <div class="tip-box">
+            <strong>💡 直し方：</strong>参照先の指定が見つからない・選び直せない場合は、プロンプトの冒頭に「<strong>必ず『〇〇 Space』のナレッジのみを参照し、Web 検索や一般知識は使用しないこと</strong>」を追記して、もう一度生成し直すのが早いです。
+          </div>
+          <!-- TODO: 実機確認のうえ、参照先設定画面のスクリーンショットを images/flow/ に追加して差し替える -->
+
+          <h4>ステップ B-5：実行モードに切り替える</h4>
+          <p>フローの編集が終わったら、画面右上の「<strong>実行モード</strong>」をクリックします。ここを切り替えないと入力欄が表示されません。</p>
+          <div class="screenshot">
+            <div class="img-annotate">
+              <img src="images/flow/flow-step5-run-mode.png" alt="画面右上の「実行モード」をクリック" loading="lazy" width="1346" height="768">
+              <span class="click-box" style="top:13.5%; left:65%; width:14.5%; height:6.5%;"></span>
+            </div>
+            <p class="screenshot-caption">画面右上の「実行モード」をクリック</p>
+          </div>
+
+          <h4>ステップ B-6：入力して開始する</h4>
+          <p>プロンプトで定義した入力項目が、それぞれ別の欄として表示されます。各シナリオページの「入力例」をコピーして入力し、「<strong>開始</strong>」をクリックします。</p>
+          <div class="screenshot">
+            <img src="images/flow/flow-step6-input.png" alt="入力欄に値を入力" loading="lazy" width="1346" height="768">
+            <p class="screenshot-caption">各欄に値を入力して「開始」</p>
+          </div>
+
+          <h4>ステップ B-7：結果を確認する</h4>
+          <p>フローがステップを順番に実行し、成果物が出力されます。各シナリオページに「答え合わせ」がある場合は、そこに書かれた数字や指摘が含まれているか確認してください。</p>
+          <div class="screenshot">
+            <img src="images/flow/flow-step7-result.png" alt="フローの実行結果" loading="lazy" width="1346" height="768">
+            <p class="screenshot-caption">フローが順番に実行され、成果物が出力される</p>
+          </div>
+          <div class="tip-box">
+            <strong>⚠️ 実務で使うときは：</strong>顧客提出物や社外向け資料をフローで作る場合、<strong>数値は必ず人が検算してください</strong>。フローが削るのは「転記と体裁を整える時間」であり、内容の責任は変わりません。「AI がドラフトを作り、担当者が確定する」形が現実的です。
+          </div>
+
+          <h5 class="block-title">うまくいかないときは</h5>
+          <div class="table-wrap">
+            <table class="compare-table">
+              <thead>
+                <tr><th>症状</th><th>よくある原因</th><th>対処</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>フローが Space のデータを見てくれない</td>
+                  <td>プロンプトに Space 名が入っていない／参照先が未設定</td>
+                  <td>ステップ B-4 を確認。プロンプト冒頭に「『〇〇 Space』を利用して」を追記して再生成</td>
+                </tr>
+                <tr>
+                  <td>数値が元データと合わない</td>
+                  <td>集計ステップで推測が混ざっている</td>
+                  <td>「元データの値のみを使用」「検算すること」をプロンプトに追記</td>
+                </tr>
+                <tr>
+                  <td>入力欄が 1 つしか表示されない</td>
+                  <td>入力項目が分割されずに生成された</td>
+                  <td>【ステップ1：ユーザー入力】に項目を箇条書きで列挙して再生成</td>
+                </tr>
+                <tr>
+                  <td>入力欄が表示されない</td>
+                  <td>編集モードのまま</td>
+                  <td>画面右上の「実行モード」に切り替える（ステップ B-5）</td>
+                </tr>
+                <tr>
+                  <td>生成されたステップ数が手順書と違う</td>
+                  <td>AI の生成結果は毎回ぶれる</td>
+                  <td>大きく違わなければそのまま進めて問題なし</td>
+                </tr>
+                <tr>
+                  <td>出力フォーマットが毎回変わる</td>
+                  <td>テンプレートの指定が弱い</td>
+                  <td>「テンプレートに完全に従う」「列の追加・削除・並べ替えは禁止」を追記。完成版の見本ファイルも Space に入れる</td>
+                </tr>
+                <tr>
+                  <td>Space が選択肢に出てこない</td>
+                  <td>Space の作成・保存が完了していない</td>
+                  <td><a href="#common">共通ステップ</a>のステップ 2〜4 に戻り、アップロード完了を確認する</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
         </div>
@@ -141,26 +476,16 @@
 
   <!-- 次のステップ -->
   <section id="next" class="section section-alt">
-    <h2 class="section-title">次のステップ</h2>
-    <p class="section-desc">ここで学んだ「Space → データ → エージェント」の基本操作は、第2部・第3部の両方で使います。まずは第2部（講師と一緒にコスト×売上分析）、その後は第3部で自分の業務に近いシナリオを試してみましょう。</p>
+    <h2 class="section-title">次のステップ：シナリオを選ぶ</h2>
+    <p class="section-desc">自分の業務に近いものから試してください。全部やる必要はありません。どのシナリオも<a href="#common">共通ステップ</a>から始めて、型に応じたガイドへ進みます。</p>
 
-    <a href="quick-cost-analysis-handson.html" class="accordion accordion-link">
-      <span class="accordion-icon">📊</span>
-      <span class="accordion-label">
-        <strong>第2部：コスト × 売上分析（移行後の価値を可視化）</strong>
-        <small>AWS コスト × 売上で経営分析・無駄の発見・TCO 削減 ・ 講師と一緒</small>
-      </span>
-      <span class="accordion-arrow">→</span>
-    </a>
-
-    <div>
-      <h3 class="handson-group-title" style="margin-top: 24px;">第3部：業務シナリオ（各自で）</h3>
-    </div>
+    <h4 class="handson-subgroup-title">◆ エージェント型 ─ 対話しながら深掘りする</h4>
+    <p class="group-desc">進め方：共通ステップ（1〜4）→ <a href="#guide-a">ガイド A</a>（A-1〜A-2）</p>
 
     <a href="quick-maintenance-handson.html" class="accordion accordion-link">
       <span class="accordion-icon">🔧</span>
       <span class="accordion-label">
-        <strong>保守サービス：訪問計画と顧客対応を支援しよう</strong>
+        <strong>保守サービス：訪問計画と顧客対応を支援しよう <span class="badge badge-agent">💬 エージェント型</span></strong>
         <small>SLA 判断・フォローアップ・契約更新提案</small>
       </span>
       <span class="accordion-arrow">→</span>
@@ -169,8 +494,17 @@
     <a href="quick-helpdesk-handson.html" class="accordion accordion-link">
       <span class="accordion-icon">💻</span>
       <span class="accordion-label">
-        <strong>社内ヘルプデスク：IT 一次対応を自動化しよう</strong>
+        <strong>社内ヘルプデスク：IT 一次対応を自動化しよう <span class="badge badge-agent">💬 エージェント型</span></strong>
         <small>FAQ 一次回答・申請案内・傾向分析</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-troubleshoot-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🚨</span>
+      <span class="accordion-label">
+        <strong>トラブルシュート：エラーから解決策を提示しよう <span class="badge badge-agent">💬 エージェント型</span></strong>
+        <small>生ログを貼るだけ・原因候補・案内文・エスカレ判定</small>
       </span>
       <span class="accordion-arrow">→</span>
     </a>
@@ -178,8 +512,50 @@
     <a href="quick-attendance-handson.html" class="accordion accordion-link">
       <span class="accordion-icon">🕐</span>
       <span class="accordion-label">
-        <strong>就業・勤怠運用：問い合わせ対応と自動チェック</strong>
+        <strong>就業・勤怠運用：問い合わせ対応と自動チェック <span class="badge badge-agent">💬 エージェント型</span></strong>
         <small>規則の根拠つき回答・残業リスク分析・自動通知</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <h4 class="handson-subgroup-title">◆ フロー型 ─ 定型作業を自動化する</h4>
+    <p class="group-desc">進め方：共通ステップ（1〜4）→ <a href="#guide-b">ガイド B</a>（B-1〜B-7）</p>
+
+    <a href="quick-monthly-report-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">📝</span>
+      <span class="accordion-label">
+        <strong>月次報告書：作業実績から報告書を自動生成 <span class="badge badge-flow">⚙️ フロー型</span></strong>
+        <small>転記作業をゼロに・前月比コメント・特記事項の自動抽出</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-case-record-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">🎫</span>
+      <span class="accordion-label">
+        <strong>ケース記録：回答案と記録ドラフトを同時生成 <span class="badge badge-flow">⚙️ フロー型</span></strong>
+        <small>CRM への1件ずつの記録をなくす・類似ケース検索</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <a href="quick-knowledge-gen-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">📚</span>
+      <span class="accordion-label">
+        <strong>ナレッジ生成：FAQ と運用手順書を自動作成 <span class="badge badge-flow">⚙️ フロー型</span></strong>
+        <small>履歴からFAQ・対応記録から手順書・穴の可視化</small>
+      </span>
+      <span class="accordion-arrow">→</span>
+    </a>
+
+    <h4 class="handson-subgroup-title">◆ 復習（第1部・第2部）</h4>
+    <p class="group-desc">講師と一緒に進めたパートをもう一度確認したいとき</p>
+
+    <a href="quick-cost-analysis-handson.html" class="accordion accordion-link">
+      <span class="accordion-icon">📊</span>
+      <span class="accordion-label">
+        <strong>第2部：コスト × 売上分析（移行後の価値を可視化）</strong>
+        <small>使う機能：Space ＋ エージェント</small>
       </span>
       <span class="accordion-arrow">→</span>
     </a>
@@ -201,15 +577,49 @@
         btn.setAttribute('aria-expanded', !expanded);
       });
     });
+    // 見出しの直後にあるアコーディオンを開く
+    function expandAccordionAfter(head) {
+      let el = head.nextElementSibling;
+      while (el && !el.classList.contains('accordion')) el = el.nextElementSibling;
+      const btn = el && el.querySelector('.accordion-btn');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+    }
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const href = a.getAttribute('href');
-        if (!href.startsWith('#')) return;
-        e.preventDefault();
+        if (!href.startsWith('#') || href === '#') return;
         const target = document.querySelector(href);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (!target) return;
+        e.preventDefault();
+        expandAccordionAfter(target);
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', href);
       });
     });
+    document.querySelectorAll('.prompt-copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const code = btn.closest('.prompt-box').querySelector('code');
+        if (code) navigator.clipboard.writeText(code.textContent).then(() => {
+          btn.textContent = '✅ コピー済み';
+          setTimeout(() => btn.textContent = '📋 コピー', 1500);
+        });
+      });
+    });
+    // アンカーで指定されたガイドを展開し、その見出しへ確実にスクロールする
+    function focusTarget(smooth) {
+      const id = location.hash.replace('#', '');
+      if (!id) return;
+      const head = document.getElementById(id);
+      if (!head) return;
+      expandAccordionAfter(head);
+      head.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+    }
+
+    // 初期表示：DOM 構築直後と、画像の読み込み完了後の 2 回位置を合わせる
+    // （遅延読み込み画像で高さが変わり、飛び先がずれるのを補正）
+    focusTarget(false);
+    window.addEventListener('load', () => focusTarget(false));
+    window.addEventListener('hashchange', () => focusTarget(true));
   </script>
 
 </body>

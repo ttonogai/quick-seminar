@@ -1,0 +1,51 @@
+================================================================
+障害ログサンプル
+ハンズオン用。エージェントのチャット欄にケース単位でそのまま貼り付けてください。
+================================================================
+
+
+########## ケース A：夜間バッチが異常終了した ##########
+（業務部門から「朝出社したら前日の売上データが反映されていない」と連絡あり）
+
+2026-06-12 02:14:03 [INFO ] batch-scheduler  JOB_START jobId=NIGHTLY_SALES_AGG seq=1/4
+2026-06-12 02:14:05 [INFO ] batch-scheduler  connecting datasource=erp_primary
+2026-06-12 02:31:47 [WARN ] erp-db-01        tablespace usage TS_WORK 94% (threshold 85%)
+2026-06-12 02:38:12 [ERROR] erp-db-01        ERR-DB-0412 unable to extend table space TS_WORK by 8192 blocks
+2026-06-12 02:38:12 [ERROR] batch-runner     transaction rollback jobId=NIGHTLY_SALES_AGG rows_processed=182443
+2026-06-12 02:38:13 [ERROR] batch-scheduler  JOB_ABEND jobId=NIGHTLY_SALES_AGG exit=8
+2026-06-12 02:40:00 [ERROR] batch-scheduler  ERR-BATCH-0104 predecessor job not completed, skipping jobId=NIGHTLY_STOCK_SYNC
+2026-06-12 02:45:00 [ERROR] batch-scheduler  ERR-BATCH-0104 predecessor job not completed, skipping jobId=NIGHTLY_REPORT_GEN
+2026-06-12 03:00:00 [ERROR] batch-scheduler  ERR-BATCH-0104 predecessor job not completed, skipping jobId=NIGHTLY_DWH_LOAD
+2026-06-12 06:00:01 [INFO ] batch-scheduler  daily summary: 1 abend, 3 skipped, 0 success
+
+
+########## ケース B：朝からログインできないという連絡が続いている ##########
+（8時40分ごろから、複数部門・複数システムで同時に発生）
+
+2026-06-05 08:41:12 [WARN ] sso-gateway   SAML response received issuer=idp.example-corp.local
+2026-06-05 08:41:12 [ERROR] sso-gateway   ERR-AUTH-0271 SAML signature validation failed: certificate has expired (notAfter=2026-06-05T00:00:00Z)
+2026-06-05 08:41:12 [ERROR] sso-gateway   auth denied user=e10045 sp=freee-kaikei
+2026-06-05 08:41:30 [ERROR] sso-gateway   ERR-AUTH-0271 SAML signature validation failed: certificate has expired
+2026-06-05 08:41:30 [ERROR] sso-gateway   auth denied user=e10132 sp=salesforce
+2026-06-05 08:42:05 [ERROR] sso-gateway   ERR-AUTH-0271 SAML signature validation failed: certificate has expired
+2026-06-05 08:42:05 [ERROR] sso-gateway   auth denied user=e10078 sp=microsoft365
+2026-06-05 08:43:00 [ERROR] sso-gateway   ERR-AUTH-0271 SAML signature validation failed: certificate has expired
+2026-06-05 08:43:00 [ERROR] sso-gateway   auth denied user=e10021 sp=smarthr
+2026-06-05 08:45:00 [WARN ] sso-gateway   auth failure rate 100% over last 5min (attempts=214)
+2026-06-05 08:47:22 [INFO ] helpdesk-tel  incoming call volume 18 calls in 10min (avg 3)
+
+
+########## ケース C：午後になると社内ポータルが重い ##########
+（「開けるけどすごく遅い」「自分は普通に使えている」と申告が分かれている）
+
+2026-06-27 13:02:11 [INFO ] portal-ap-01  active connections 42/50
+2026-06-27 13:18:44 [WARN ] portal-ap-01  active connections 49/50
+2026-06-27 13:19:02 [ERROR] portal-ap-01  ERR-APP-0533 connection pool exhausted: timeout waiting for idle object (waited 30000ms)
+2026-06-27 13:19:02 [ERROR] portal-ap-01  request failed uri=/portal/workflow/list user=e10203 elapsed=30011ms
+2026-06-27 13:19:15 [ERROR] portal-ap-01  ERR-APP-0533 connection pool exhausted: timeout waiting for idle object
+2026-06-27 13:21:40 [INFO ] portal-ap-02  active connections 11/50
+2026-06-27 13:23:08 [WARN ] erp-db-01     slow query 8.4s SELECT ... FROM wf_task WHERE assignee = ? AND status IN (...)
+2026-06-27 13:25:00 [WARN ] portal-ap-01  active connections 50/50 (held longest 00:14:52)
+2026-06-27 13:31:12 [ERROR] portal-ap-01  ERR-APP-0533 connection pool exhausted: timeout waiting for idle object
+2026-06-27 14:05:00 [INFO ] portal-ap-01  active connections 50/50
+2026-06-27 14:05:00 [INFO ] portal-ap-02  active connections 9/50
