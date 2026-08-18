@@ -58,7 +58,7 @@
         <a href="#guide-a" class="guide-route-branch guide-route-agent">
           <span class="badge badge-agent">💬 エージェント型</span>
           <strong>ガイド A：エージェントを作る</strong>
-          <small>ステップ A-1〜A-2</small>
+          <small>ステップ A-1〜A-3</small>
         </a>
         <a href="#guide-b" class="guide-route-branch guide-route-flow">
           <span class="badge badge-flow">⚙️ フロー型</span>
@@ -192,7 +192,7 @@
       <button class="accordion-btn" aria-expanded="false">
         <span class="accordion-icon">💬</span>
         <span class="accordion-label">
-          <strong>ステップ A-1〜A-2：エージェントを作成 → 質問する</strong>
+          <strong>ステップ A-1〜A-3：エージェントを作成 → 質問する → 保存して参照データを確認</strong>
           <small>所要時間：約 5 分 ・ エージェント型のシナリオで参照してください</small>
         </span>
         <span class="accordion-arrow">▼</span>
@@ -233,8 +233,23 @@
             <p class="screenshot-caption">アップロードしたデータに基づいた回答が返ってくる</p>
           </div>
 
+          <h4>ステップ A-3：エージェントを保存して参照データを確認する</h4>
+          <p>「<strong>チャットエージェントを起動</strong>」をクリックすると、エージェントが保存されます。次回からは左ペインの一覧から呼び出せます。</p>
+          <div class="screenshot">
+            <img src="images/usage/step08_1_launch_agent.png" alt="チャットエージェントを起動をクリックして保存" loading="lazy" width="1436" height="762">
+            <p class="screenshot-caption">「チャットエージェントを起動」で保存される</p>
+          </div>
+          <p>ページ下部までスクロールすると、<strong>エージェントが参照するデータ</strong>を確認できます。下の例では、ナレッジソースに Space がリンクされています。</p>
+          <div class="screenshot">
+            <img src="images/usage/step08_2_knowledge_source.png" alt="ナレッジソースにSpaceがリンクされている画面" loading="lazy" width="1436" height="762">
+            <p class="screenshot-caption">ナレッジソースに Space がリンクされている</p>
+          </div>
+          <div class="tip-box">
+            <strong>💡 ここを必ず確認：</strong>ナレッジソースに Space がリンクされていない場合、エージェントはアップロードしたデータを見ずに一般知識で答えてしまいます。<strong>回答の根拠がおかしいと感じたら、まずここを確認してください。</strong>
+          </div>
+
           <h5 class="block-title">自分でエージェント定義プロンプトを書くときの型</h5>
-          <p>ハンズオンのあと自分の業務に応用するときは、次の型に沿って書くとうまくいきます。</p>
+          <p>ハンズオンのあと自分の業務に応用するときは、次の型をたたき台にすると、ひとまずエージェントとして形になります。あとは実際に質問しながら少しずつ直していくのがおすすめです。</p>
           <div class="prompt-box">
             <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
             <div class="prompt-label">⚙️ エージェント定義プロンプトの型（雛形）</div>
@@ -346,7 +361,7 @@
           </div>
 
           <h5 class="block-title">自分でフロープロンプトを書くときの型</h5>
-          <p>ハンズオンのあと自分の業務に応用するときは、次の型に沿って書くとうまくいきます。</p>
+          <p>ハンズオンのあと自分の業務に応用するときは、次の型をたたき台にすると、ひとまずフローとして形になります。あとは実際に動かしながら少しずつ直していくのがおすすめです。</p>
           <div class="prompt-box">
             <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
             <div class="prompt-label">⚙️ フロー定義プロンプトの型（雛形）</div>
@@ -388,13 +403,16 @@
             <li>指定されていない場合は、そのステップの参照先として Space を選び直します</li>
             <li>ステップの指示文にファイル名（例：<code>作業実績表.csv</code>）が含まれているかも確認します</li>
           </ol>
+          <div class="screenshot">
+            <img src="images/flow/flow-step4b-space-reference.png" alt="フローのステップに Space が参照先として指定されている画面" loading="lazy" width="1436" height="762">
+            <p class="screenshot-caption">ステップの参照先に自分が作った Space が指定されている</p>
+          </div>
           <div class="tip-box">
             <strong>⚠️ ここを飛ばすと：</strong>Space を参照していないフローは、それらしい文章を作りますが<strong>数値がデータと合いません</strong>。実行後に「答え合わせ」の数字が合わない場合、まずこのステップに戻ってください。
           </div>
           <div class="tip-box">
             <strong>💡 直し方：</strong>参照先の指定が見つからない・選び直せない場合は、プロンプトの冒頭に「<strong>必ず『〇〇 Space』のナレッジのみを参照し、Web 検索や一般知識は使用しないこと</strong>」を追記して、もう一度生成し直すのが早いです。
           </div>
-          <!-- TODO: 実機確認のうえ、参照先設定画面のスクリーンショットを images/flow/ に追加して差し替える -->
 
           <h4>ステップ B-5：実行モードに切り替える</h4>
           <p>フローの編集が終わったら、画面右上の「<strong>実行モード</strong>」をクリックします。ここを切り替えないと入力欄が表示されません。</p>
@@ -480,7 +498,7 @@
     <p class="section-desc">自分の業務に近いものから試してください。全部やる必要はありません。どのシナリオも<a href="#common">共通ステップ</a>から始めて、型に応じたガイドへ進みます。</p>
 
     <h4 class="handson-subgroup-title">◆ エージェント型 ─ 対話しながら深掘りする</h4>
-    <p class="group-desc">進め方：共通ステップ（1〜4）→ <a href="#guide-a">ガイド A</a>（A-1〜A-2）</p>
+    <p class="group-desc">進め方：共通ステップ（1〜4）→ <a href="#guide-a">ガイド A</a>（A-1〜A-3）</p>
 
     <a href="quick-maintenance-handson.html" class="accordion accordion-link">
       <span class="accordion-icon">🔧</span>

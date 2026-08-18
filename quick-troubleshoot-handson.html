@@ -78,11 +78,8 @@
             <li><a href="data/troubleshoot/エラーコード対応集.md" download>📄 エラーコード対応集.md</a><span class="file-note">12 種のエラーコードの症状・原因候補・一次対処・エスカレーション基準</span></li>
             <li><a href="data/troubleshoot/過去障害レポート.csv" download>📊 過去障害レポート.csv</a><span class="file-note">直近 10 ヶ月の障害 12 件と恒久対策の実施状況</span></li>
           </ul>
-          <ul class="file-list">
-            <li><a href="data/troubleshoot/障害ログサンプル.txt" download>📝 障害ログサンプル.txt</a><span class="file-note">貼り付け用の生ログ 3 ケース。<strong>アップロード不要</strong>。ステップ 4 にも全文を掲載しています</span></li>
-          </ul>
           <div class="tip-box">
-            <strong>💡 ポイント：</strong>ログはアップロードせず、<strong>その場で貼り付ける</strong>のがこのシナリオの狙いです。実務でも障害のたびにログをアップロードするのは現実的ではありません。「手元のログを投げれば答えが返る」形が、実際の使い方に一番近くなります。
+            <strong>💡 ポイント：</strong>アップロードするのはこの 2 ファイルだけです。障害ログは<strong>その場で貼り付ける</strong>のがこのシナリオの狙いです。実務でも障害のたびにログをアップロードするのは現実的ではありません。「手元のログを投げれば答えが返る」形が、実際の使い方に一番近くなります。
           </div>
 
           <h4>ステップ 3：チャットエージェントを作成</h4>
@@ -135,11 +132,6 @@
 2026-06-12 06:00:01 [INFO ] batch-scheduler  daily summary: 1 abend, 3 skipped, 0 success</code></pre>
             <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
           </div>
-          <div class="prompt-box">
-            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
-            <div class="prompt-label">💬 貼り付けたあとの追加質問</div>
-            <pre><code>このエラーは過去に発生していますか？恒久対策は実施済みですか？</code></pre>
-          </div>
           <div class="tip-box">
             <strong>🔍 注目してほしいところ：</strong><code>ERR-DB-0412</code> は 2025-09-12・2026-01-28・2026-06-03 と<strong>3 回発生し、恒久対策「ログローテーション設定の見直し」がすべて未実施</strong>です。ログ 1 枚では見えない「対策が放置されて再発している」構造が、過去障害レポートと突き合わせることで浮かび上がります。
           </div>
@@ -164,11 +156,6 @@
 2026-06-05 08:47:22 [INFO ] helpdesk-tel  incoming call volume 18 calls in 10min (avg 3)</code></pre>
             <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
           </div>
-          <div class="prompt-box">
-            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
-            <div class="prompt-label">💬 貼り付けたあとの追加質問</div>
-            <pre><code>この事象はエスカレーション基準に該当しますか？該当する基準の番号も教えてください</code></pre>
-          </div>
           <div class="tip-box">
             <strong>🔍 注目してほしいところ：</strong>このケースは <strong>E-1（全社業務停止）と E-2（認証基盤起因で複数システムに同時影響）の両方に該当</strong>します。一次対処より先に報告が必要なケースだと判定できるかがポイントです。こちらも過去に一度発生しており、恒久対策の「証明書有効期限の監視追加」が未実施のままです。
           </div>
@@ -192,11 +179,6 @@
 2026-06-27 14:05:00 [INFO ] portal-ap-01  active connections 50/50
 2026-06-27 14:05:00 [INFO ] portal-ap-02  active connections 9/50</code></pre>
             <button class="prompt-toggle-btn" aria-expanded="false">全文を表示 ▼</button>
-          </div>
-          <div class="prompt-box">
-            <button class="prompt-copy-btn" title="コピー">📋 コピー</button>
-            <div class="prompt-label">💬 貼り付けたあとの追加質問</div>
-            <pre><code>ap-01とap-02の状態を比較して、単なるアクセス集中なのか別の問題があるのか教えてください</code></pre>
           </div>
           <div class="tip-box">
             <strong>🔍 注目してほしいところ：</strong><code>portal-ap-01</code> は 50/50 で飽和している一方、<code>portal-ap-02</code> は 9〜11 しか使われていません。<strong>アクセス集中ではなくロードバランサの振り分けの偏り</strong>が読み取れます。あわせて 8.4 秒の slow query も出ており、DB 側の応答遅延がコネクション滞留を招いている可能性も指摘できます。
@@ -231,36 +213,6 @@
         </div>
       </div>
     </div>
-
-    <h4 class="handson-subgroup-title" style="margin-top:40px;">🔗 関連シナリオ</h4>
-    <p class="group-desc">同じ業務領域の別シナリオです。データを使い回せるものもあります。</p>
-
-    <a href="quick-helpdesk-handson.html" class="accordion accordion-link">
-      <span class="accordion-icon">💻</span>
-      <span class="accordion-label">
-        <strong>社内ヘルプデスク</strong>
-        <small>IT 一次対応の一次回答・傾向分析（エージェント型）</small>
-      </span>
-      <span class="accordion-arrow">→</span>
-    </a>
-
-    <a href="quick-case-record-handson.html" class="accordion accordion-link">
-      <span class="accordion-icon">🎫</span>
-      <span class="accordion-label">
-        <strong>ケース記録</strong>
-        <small>対応内容を CRM 登録用に構造化（フロー型）</small>
-      </span>
-      <span class="accordion-arrow">→</span>
-    </a>
-
-    <a href="quick-knowledge-gen-handson.html" class="accordion accordion-link">
-      <span class="accordion-icon">📚</span>
-      <span class="accordion-label">
-        <strong>ナレッジ生成</strong>
-        <small>障害対応を手順書に書き起こす（フロー型）</small>
-      </span>
-      <span class="accordion-arrow">→</span>
-    </a>
 
     <nav class="scenario-nav" aria-label="シナリオの移動">
       <a class="scenario-nav-item scenario-nav-prev" href="quick-helpdesk-handson.html">
